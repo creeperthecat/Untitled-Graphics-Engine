@@ -27,10 +27,10 @@ Open Developer Command Prompt for VS 2022.
 Navigate to the repo directory e.g.
 ```cd C:\Users\username\path\to\repo```
 
-Run cmake using the preset Release/Debug
+Run cmake using the preset release/debug
 ```
-cmake --preset Release
-cmake --build --preset Release
+cmake --preset release
+cmake --build --preset release
 ```
 The executable should build in bin/app.exe
 
