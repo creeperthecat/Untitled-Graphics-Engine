@@ -1,0 +1,34 @@
+\doxysection{Indexed\+Shape.\+hpp}
+\hypertarget{IndexedShape_8hpp_source}{}\label{IndexedShape_8hpp_source}\index{src/headers/IndexedShape.hpp@{src/headers/IndexedShape.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Shape.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classIndexedShape}{IndexedShape}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classShape}{Shape}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classIndexedShape_a76f918d2224dc589ce59c1ed50ef445f}{Indices}}\ =\ std::vector<unsigned\ int>;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \ \ \mbox{\hyperlink{classIndexedShape_a0f2dd8346d995bb90374801104810d71}{IndexedShape}}(std::vector<Vertex>\ \&\&shape,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classStride}{Stride}}\ \&stride,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classIndexedShape_a76f918d2224dc589ce59c1ed50ef445f}{Indices}}\ \&indices)}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classShape}{Shape}}\{std::move(shape),\ stride\},\ m\_indices\{indices\}\ \{\}}
+\DoxyCodeLine{00025\ \ \ \mbox{\hyperlink{classIndexedShape_af3a9e48ed1dd65e3da520194a965d87d}{IndexedShape}}(\textcolor{keyword}{const}\ std::vector<Vertex>\ \&shape,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classStride}{Stride}}\ \&stride,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classIndexedShape_a76f918d2224dc589ce59c1ed50ef445f}{Indices}}\ \&indices)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classShape}{Shape}}\{shape,\ stride\},\ m\_indices\{indices\}\ \{\}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \mbox{\hyperlink{classIndexedShape_a293070aba0bda0bb78fbb2754cc514bb}{IndexedShape}}(std::vector<float>\ \&\&shape,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classStride}{Stride}}\ \&stride,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classIndexedShape_a76f918d2224dc589ce59c1ed50ef445f}{Indices}}\ \&indices);}
+\DoxyCodeLine{00039\ \ \ \mbox{\hyperlink{classIndexedShape_a2912295a3569ead82c1e7bb45ae3f6fe}{IndexedShape}}(\textcolor{keyword}{const}\ std::vector<float>\ \&shape,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classStride}{Stride}}\ \&stride,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classIndexedShape_a76f918d2224dc589ce59c1ed50ef445f}{Indices}}\ \&indices\ =\ \{\});}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{classIndexedShape_a015910c832cdc054cc20ae3c5e880a76}{getIndices}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_indices.data();\ \}}
+\DoxyCodeLine{00045\ \ \ std::size\_t\ \mbox{\hyperlink{classIndexedShape_aac783ccd2467a4650f23d73e895e702b}{indicesSize}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_indices.size()\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ int);}
+\DoxyCodeLine{00047\ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \mbox{\hyperlink{classIndexedShape_a76f918d2224dc589ce59c1ed50ef445f}{Indices}}\ m\_indices\{\};}
+\DoxyCodeLine{00052\ \};}
+
+\end{DoxyCode}

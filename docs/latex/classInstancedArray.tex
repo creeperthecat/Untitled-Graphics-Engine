@@ -1,0 +1,206 @@
+\doxysection{Instanced\+Array\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classInstancedArray}{}\label{classInstancedArray}\index{InstancedArray$<$ T $>$@{InstancedArray$<$ T $>$}}
+
+
+Implementation of \doxylink{classBuffer}{Buffer} using instancing.  
+
+
+
+
+{\ttfamily \#include $<$Instanced\+Array.\+hpp$>$}
+
+
+
+Inheritance diagram for Instanced\+Array\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classInstancedArray__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Instanced\+Array\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classInstancedArray__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInstancedArray_aee2570b1af34f5cd74211eff19ae348d}{Instanced\+Array}} (const \mbox{\hyperlink{classShape}{Shape}} \&shape, const std\+::vector$<$ T $>$ \&instance\+Data, const \mbox{\hyperlink{classStride}{Stride}} \&data\+Stride=\{sizeof(T)/sizeof(float)\})
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classInstancedArray}{Instanced\+Array} using a \doxylink{classShape}{Shape} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classInstancedArray_a418c2d1afd2aa4f9fca0ba70466f5921}{Instanced\+Array}} (const std\+::vector$<$ float $>$ \&shape, const \mbox{\hyperlink{classStride}{Stride}} \&stride, const std\+::vector$<$ T $>$ \&instance\+Data, const \mbox{\hyperlink{classStride}{Stride}} \&data\+Stride=\{sizeof(T)/sizeof(float)\})
+\begin{DoxyCompactList}\small\item\em Override to avoid needing to construct a \doxylink{classShape}{Shape} Equivalent to constructing and passing a \doxylink{classShape}{Shape}. \end{DoxyCompactList}\item 
+\Hypertarget{classInstancedArray_af0a15a3cf2d96d928ea126b67a3cefad}\label{classInstancedArray_af0a15a3cf2d96d928ea126b67a3cefad} 
+{\bfseries Instanced\+Array} (const \mbox{\hyperlink{classInstancedArray}{Instanced\+Array}} \&buffer)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor for \doxylink{classInstancedArray}{Instanced\+Array}. \end{DoxyCompactList}\item 
+\Hypertarget{classInstancedArray_a1e7c4c795ea993995f140930e7c6c0cb}\label{classInstancedArray_a1e7c4c795ea993995f140930e7c6c0cb} 
+{\bfseries Instanced\+Array} (\mbox{\hyperlink{classInstancedArray}{Instanced\+Array}} \&\&buffer) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor for \doxylink{classInstancedArray}{Instanced\+Array}. \end{DoxyCompactList}\item 
+\Hypertarget{classInstancedArray_a59f6234c122704cc5aacfb9b2603be42}\label{classInstancedArray_a59f6234c122704cc5aacfb9b2603be42} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Instanced\+Array} () noexcept override
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classInstancedArray}{Instanced\+Array}, frees memory held, if not being used by another instance. \end{DoxyCompactList}\item 
+\Hypertarget{classInstancedArray_a6875df75975d8398fb0e621392c6241a}\label{classInstancedArray_a6875df75975d8398fb0e621392c6241a} 
+\mbox{\hyperlink{classInstancedArray}{Instanced\+Array}} \& {\bfseries operator=} (const \mbox{\hyperlink{classInstancedArray}{Instanced\+Array}} \&buffer)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator for \doxylink{classInstancedArray}{Instanced\+Array}. \end{DoxyCompactList}\item 
+\Hypertarget{classInstancedArray_a7c79411237e34e70d6cf0fcee5e948c4}\label{classInstancedArray_a7c79411237e34e70d6cf0fcee5e948c4} 
+\mbox{\hyperlink{classInstancedArray}{Instanced\+Array}} \& {\bfseries operator=} (\mbox{\hyperlink{classInstancedArray}{Instanced\+Array}} \&\&buffer) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator for \doxylink{classInstancedArray}{Instanced\+Array}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classInstancedArray}{Instanced\+Array}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classInstancedArray_a3cd9a18ea178960791cf4b4e681eca9f}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Clones this instance of \doxylink{classInstancedArray}{Instanced\+Array}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInstancedArray_a26529662afe9a6060b3c61ae20907dcb}{draw}} (unsigned int draw\+Mode=GL\+\_\+\+TRIANGLES) const override
+\begin{DoxyCompactList}\small\item\em Function which binds vertex array and draws all instances to the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVertexArray}{Vertex\+Array}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVertexArray_a9e823dda6c6d94476e5a25e96388441a}{Vertex\+Array}} (const \mbox{\hyperlink{classShape}{Shape}} \&shape)
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{classVertexArray}{Vertex\+Array} using a \doxylink{classShape}{Shape} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVertexArray_a29e3dd03aec672b7f253615b5f5f1da6}{Vertex\+Array}} (const std\+::vector$<$ float $>$ \&shape, const \mbox{\hyperlink{classStride}{Stride}} \&stride)
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{classVertexArray}{Vertex\+Array} using a vector of floats and a \doxylink{classStride}{Stride}. \end{DoxyCompactList}\item 
+{\bfseries Vertex\+Array} (const \mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \&buffer)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor for \doxylink{classVertexArray}{Vertex\+Array}. \end{DoxyCompactList}\item 
+{\bfseries Vertex\+Array} (\mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \&\&buffer) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor for \doxylink{classVertexArray}{Vertex\+Array}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Vertex\+Array} () noexcept override
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classVertexArray}{Vertex\+Array}, frees memory held by VAO and VBO, if not used by another instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \& {\bfseries operator=} (const \mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \&buffer)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator for \doxylink{classVertexArray}{Vertex\+Array}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \& {\bfseries operator=} (\mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \&\&buffer) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator for \doxylink{classVertexArray}{Vertex\+Array}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBuffer}{Buffer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Buffer} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classBuffer}{Buffer}. \end{DoxyCompactList}\item 
+unsigned int {\bfseries get\+VAO} () const
+\begin{DoxyCompactList}\small\item\em Gets the Vertex Array \doxylink{classObject}{Object} held by this instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classVertexArray}{Vertex\+Array}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Vertex\+Array} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for derived classes to use. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVertexArray_ae3452c56abf5dd5cf07e6f2ee01551e2}{assign\+Attributes}} (const \mbox{\hyperlink{classStride}{Stride}} \&stride)
+\begin{DoxyCompactList}\small\item\em Assign vertex attributes using the supplied \doxylink{classStride}{Stride}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVertexArray_ab3e7e8b44ce726d533a6e06ea9fd0be3}{generate\+Buffer}} (const \mbox{\hyperlink{classShape}{Shape}} \&shape)
+\begin{DoxyCompactList}\small\item\em Generate the VAO and VBO and set buffer data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVertexArray_a2d917ff2f1dcefeb337dea4e95f13c96}{bind\+Shape}} (const \mbox{\hyperlink{classShape}{Shape}} \&shape)
+\begin{DoxyCompactList}\small\item\em Initialise buffers using a \doxylink{classShape}{Shape}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classBuffer}{Buffer}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Buffer} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for derived classes to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classVertexArray}{Vertex\+Array}}}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int {\bfseries m\+\_\+\+VBO} \{\}
+\begin{DoxyCompactList}\small\item\em Vertex \doxylink{classBuffer}{Buffer} \doxylink{classObject}{Object} for storing vertex data. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+vertex\+Count} \{0\}
+\begin{DoxyCompactList}\small\item\em Total number of vertices in shape, needed for draw call. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBuffer}{Buffer}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ unsigned int $>$ \mbox{\hyperlink{classBuffer_adeef898e529daba7775a411f45df74a0}{m\+\_\+\+VAO}} \{std\+::make\+\_\+shared$<$unsigned int$>$(0)\}
+\begin{DoxyCompactList}\small\item\em Shared pointer to Vertex Array Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Instanced\+Array$<$ T $>$}
+Implementation of \doxylink{classBuffer}{Buffer} using instancing. 
+
+Useful for drawing many copies of objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classInstancedArray_aee2570b1af34f5cd74211eff19ae348d}\label{classInstancedArray_aee2570b1af34f5cd74211eff19ae348d} 
+\index{InstancedArray$<$ T $>$@{InstancedArray$<$ T $>$}!InstancedArray@{InstancedArray}}
+\index{InstancedArray@{InstancedArray}!InstancedArray$<$ T $>$@{InstancedArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InstancedArray()}{InstancedArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classInstancedArray}{Instanced\+Array}}$<$ T $>$\mbox{\hyperlink{classInstancedArray}{\+::\+Instanced\+Array}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classShape}{Shape}} \&}]{shape,  }\item[{const std\+::vector$<$ T $>$ \&}]{instance\+Data,  }\item[{const \mbox{\hyperlink{classStride}{Stride}} \&}]{data\+Stride = {\ttfamily \{sizeof(T)/sizeof(float)\}} }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classInstancedArray}{Instanced\+Array} using a \doxylink{classShape}{Shape} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & Constructed \doxylink{classShape}{Shape} object used for processing vertices. \\
+\hline
+{\em instance\+Data} & Vector of data to pass to each instance. \\
+\hline
+{\em data\+Stride} & \doxylink{classStride}{Stride} object specifying how to split T into floats, e.\+g. 4,4,4,4 for a 4x4 matrix \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classInstancedArray_a418c2d1afd2aa4f9fca0ba70466f5921}\label{classInstancedArray_a418c2d1afd2aa4f9fca0ba70466f5921} 
+\index{InstancedArray$<$ T $>$@{InstancedArray$<$ T $>$}!InstancedArray@{InstancedArray}}
+\index{InstancedArray@{InstancedArray}!InstancedArray$<$ T $>$@{InstancedArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InstancedArray()}{InstancedArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classInstancedArray}{Instanced\+Array}}$<$ T $>$\mbox{\hyperlink{classInstancedArray}{\+::\+Instanced\+Array}} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{shape,  }\item[{const \mbox{\hyperlink{classStride}{Stride}} \&}]{stride,  }\item[{const std\+::vector$<$ T $>$ \&}]{instance\+Data,  }\item[{const \mbox{\hyperlink{classStride}{Stride}} \&}]{data\+Stride = {\ttfamily \{sizeof(T)~/~sizeof(float)\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Override to avoid needing to construct a \doxylink{classShape}{Shape} Equivalent to constructing and passing a \doxylink{classShape}{Shape}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & Flattened array of vertices stored as a sequence of floats. \\
+\hline
+{\em stride} & \doxylink{classStride}{Stride} to define vertex attributes. \\
+\hline
+{\em instance\+Data} & Vector of data to pass to each instance. \\
+\hline
+{\em data\+Stride} & \doxylink{classStride}{Stride} object specifying how to split T into floats, e.\+g. 4,4,4,4 for a 4x4 matrix \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classInstancedArray_a3cd9a18ea178960791cf4b4e681eca9f}\label{classInstancedArray_a3cd9a18ea178960791cf4b4e681eca9f} 
+\index{InstancedArray$<$ T $>$@{InstancedArray$<$ T $>$}!clone@{clone}}
+\index{clone@{clone}!InstancedArray$<$ T $>$@{InstancedArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classInstancedArray}{Instanced\+Array}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classInstancedArray}{Instanced\+Array}}$<$ T $>$\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clones this instance of \doxylink{classInstancedArray}{Instanced\+Array}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a new \doxylink{classInstancedArray}{Instanced\+Array} copied from this \doxylink{classInstancedArray}{Instanced\+Array}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classVertexArray_a24265cd9c733466f3156ad75f1ed53bb}{Vertex\+Array}}.
+
+\Hypertarget{classInstancedArray_a26529662afe9a6060b3c61ae20907dcb}\label{classInstancedArray_a26529662afe9a6060b3c61ae20907dcb} 
+\index{InstancedArray$<$ T $>$@{InstancedArray$<$ T $>$}!draw@{draw}}
+\index{draw@{draw}!InstancedArray$<$ T $>$@{InstancedArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classInstancedArray}{Instanced\+Array}}$<$ T $>$\+::draw (\begin{DoxyParamCaption}\item[{unsigned int}]{draw\+Mode = {\ttfamily GL\+\_\+TRIANGLES} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Function which binds vertex array and draws all instances to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em draw\+Mode} & Specifies how to draw the vertices in the buffer. Usually drawn as triangles by default. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classVertexArray_a96ef56f7f2367832ec811f5937425048}{Vertex\+Array}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Instanced\+Array.\+hpp\end{DoxyCompactItemize}

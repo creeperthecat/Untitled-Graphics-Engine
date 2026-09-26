@@ -1,0 +1,5 @@
+<map id="Model" name="Model">
+<area shape="rect" id="Node000001" title="The Model class implements drawing a 3d model file to the screen." alt="" coords="6,79,69,104"/>
+<area shape="rect" id="Node000002" href="$classObject.html" title="Abstract class for creating and drawing objects." alt="" coords="5,5,69,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="40,44,40,79,35,79,35,44"/>
+</map>

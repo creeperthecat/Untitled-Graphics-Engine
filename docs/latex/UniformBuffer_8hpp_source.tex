@@ -1,0 +1,44 @@
+\doxysection{Uniform\+Buffer.\+hpp}
+\hypertarget{UniformBuffer_8hpp_source}{}\label{UniformBuffer_8hpp_source}\index{src/headers/UniformBuffer.hpp@{src/headers/UniformBuffer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Window.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}glm/gtc/type\_ptr.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classUniformBuffer}{UniformBuffer}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \mbox{\hyperlink{classUniformBuffer}{UniformBuffer}}(std::size\_t\ size);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00018\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUniformBuffer_a44cb72507959b1ba40651b31468a32ab}{bind}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUniformBuffer_a633c29a6b25ab6d5801cc3538321ad63}{storeData}}(\textcolor{keywordtype}{int}\ offset,\ \textcolor{keyword}{const}\ T\ \&value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00027\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUniformBuffer_ac0f6063619fd2d5fa309157e6aa708b7}{addData}}(\textcolor{keyword}{const}\ T\ \&value);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00030\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classUniformBuffer_aa97c6e8b9684440e6a9ace9ffbc4b79f}{getID}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ *m\_ID;\ \}}
+\DoxyCodeLine{00032\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classUniformBuffer_aa041e3afa6c091d4a95f3986f7f6df1d}{getOffset}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_offset;\ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ std::unique\_ptr<unsigned\ int>\ m\_ID\{\textcolor{keyword}{nullptr}\};}
+\DoxyCodeLine{00036\ \ \ std::size\_t\ m\_size\{\};}
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{int}\ m\_offset\{0\};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{void}\ generateBuffer();}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUniformBuffer_a633c29a6b25ab6d5801cc3538321ad63}{UniformBuffer::storeData}}(\textcolor{keywordtype}{int}\ offset,\ \textcolor{keyword}{const}\ T\ \&value)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00044\ \ \ assert(offset\ +\ \textcolor{keyword}{sizeof}(T)\ <=\ m\_size\ \&\&\ \textcolor{stringliteral}{"{}Memory\ overflow."{}});}
+\DoxyCodeLine{00045\ \ \ glBufferSubData(GL\_UNIFORM\_BUFFER,\ offset,\ \textcolor{keyword}{sizeof}(T),\ glm::value\_ptr(value));}
+\DoxyCodeLine{00046\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUniformBuffer_ac0f6063619fd2d5fa309157e6aa708b7}{UniformBuffer::addData}}(\textcolor{keyword}{const}\ T\ \&value)\ \{}
+\DoxyCodeLine{00049\ \ \ \mbox{\hyperlink{classUniformBuffer_a633c29a6b25ab6d5801cc3538321ad63}{storeData}}(m\_offset,\ value);}
+\DoxyCodeLine{00050\ \ \ m\_offset\ +=\ \textcolor{keyword}{sizeof}(value);}
+\DoxyCodeLine{00051\ \}}
+
+\end{DoxyCode}

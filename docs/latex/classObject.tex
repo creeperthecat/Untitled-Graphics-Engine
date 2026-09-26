@@ -1,0 +1,94 @@
+\doxysection{Object Class Reference}
+\hypertarget{classObject}{}\label{classObject}\index{Object@{Object}}
+
+
+Abstract class for creating and drawing objects.  
+
+
+
+
+{\ttfamily \#include $<$Object.\+hpp$>$}
+
+
+
+Inheritance diagram for Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{classObject__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classObject_a667b53eb43baedc1ea63b7a420e22ca2}\label{classObject_a667b53eb43baedc1ea63b7a420e22ca2} 
+const \mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Shader} () const
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the shader used by this object. \end{DoxyCompactList}\item 
+\Hypertarget{classObject_aa395f809acaca8b8100ee7614888c65f}\label{classObject_aa395f809acaca8b8100ee7614888c65f} 
+void {\bfseries set\+Shader} (\mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}shader)
+\begin{DoxyCompactList}\small\item\em Sets the \doxylink{classShader}{Shader} used by this object. \end{DoxyCompactList}\item 
+\Hypertarget{classObject_a1b3e5d03fe4c6ff5858275b25af9e92f}\label{classObject_a1b3e5d03fe4c6ff5858275b25af9e92f} 
+void {\bfseries set\+ID} (unsigned int ID)
+\begin{DoxyCompactList}\small\item\em Sets object ID for use in \doxylink{classRenderer}{Renderer}. \end{DoxyCompactList}\item 
+\Hypertarget{classObject_a51ea97f4d48730cd56860576cd7dc656}\label{classObject_a51ea97f4d48730cd56860576cd7dc656} 
+unsigned int {\bfseries get\+ID} ()
+\begin{DoxyCompactList}\small\item\em Gets object ID for use in \doxylink{classRenderer}{Renderer}. \end{DoxyCompactList}\item 
+\Hypertarget{classObject_afd9e1cf36fb5f58012e31144399189c7}\label{classObject_afd9e1cf36fb5f58012e31144399189c7} 
+unsigned int {\bfseries get\+VAO} ()
+\begin{DoxyCompactList}\small\item\em Gets VAO used by owned \doxylink{classBuffer}{Buffer}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classObject_afcc65c4a0a42dc6159b5751c7972521d}{draw}} (unsigned int draw\+Mode=GL\+\_\+\+TRIANGLES) const =0
+\begin{DoxyCompactList}\small\item\em Draws object to the screen. \end{DoxyCompactList}\item 
+\Hypertarget{classObject_ad405a082a0ef9a641cd5b83ff6dd33c0}\label{classObject_ad405a082a0ef9a641cd5b83ff6dd33c0} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Object} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classObject}{Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classObject_afe9eeddd7068a37f62d3276a2fb49864}\label{classObject_afe9eeddd7068a37f62d3276a2fb49864} 
+{\bfseries Object} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for use in derived classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classObject_a7e9c32a0ddc09790dec66d2ac3bb5e40}\label{classObject_a7e9c32a0ddc09790dec66d2ac3bb5e40} 
+unsigned int {\bfseries m\+\_\+\+ID} \{\}
+\begin{DoxyCompactList}\small\item\em \doxylink{classObject}{Object} ID used by \doxylink{classRenderer}{Renderer} to identify objects. \end{DoxyCompactList}\item 
+\Hypertarget{classObject_a34cc6472495d0b562aaaa9d88c375017}\label{classObject_a34cc6472495d0b562aaaa9d88c375017} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ {\bfseries m\+\_\+buffer} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em \doxylink{classBuffer}{Buffer} instance needed to draw vertices to the screen. \end{DoxyCompactList}\item 
+\Hypertarget{classObject_a69ef113490d3a8a50f2c4af614529d3c}\label{classObject_a69ef113490d3a8a50f2c4af614529d3c} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classShader}{Shader}} $>$ {\bfseries m\+\_\+shader} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em \doxylink{classShader}{Shader} instance to determine how to draw object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for creating and drawing objects. 
+
+Used in \doxylink{classRenderer}{Renderer}. Can only be initialised after initialisation of \doxylink{classRenderer}{Renderer}. Derived classes must implement the draw function. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classObject_afcc65c4a0a42dc6159b5751c7972521d}\label{classObject_afcc65c4a0a42dc6159b5751c7972521d} 
+\index{Object@{Object}!draw@{draw}}
+\index{draw@{draw}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void Object\+::draw (\begin{DoxyParamCaption}\item[{unsigned int}]{draw\+Mode = {\ttfamily GL\+\_\+TRIANGLES} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Draws object to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em draw\+Mode} & Specifies how to draw the vertices in the buffer. Usually \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classCubemap_adb1830e575f9fef038e8c45ddd6a9a6d}{Cubemap}}, \mbox{\hyperlink{classInstancedModel_a3a9a38d27f22b1f00fa7580912d4d3ea}{Instanced\+Model$<$ T $>$}}, \mbox{\hyperlink{classModel_ab585a996dcebcb3c353380795785262b}{Model}}, and \mbox{\hyperlink{classPrimitive_aff1f44a2958273ac0367d8c610e2b2ea}{Primitive}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Object.\+hpp\item 
+src/classes/Object.\+cpp\end{DoxyCompactItemize}

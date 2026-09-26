@@ -1,0 +1,240 @@
+\doxysection{Renderer Class Reference}
+\hypertarget{classRenderer}{}\label{classRenderer}\index{Renderer@{Renderer}}
+
+
+\doxylink{classRenderer}{Renderer} class which handles rendering of objects.  
+
+
+
+
+{\ttfamily \#include $<$Renderer.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRenderer_aa84052251eb9d0a68df60c878e02553c}\label{classRenderer_aa84052251eb9d0a68df60c878e02553c} 
+using {\bfseries Key\+Bind} = std\+::function$<$ void()$>$
+\begin{DoxyCompactList}\small\item\em Type alias for defining keybinds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRenderer_a50b47f673e0e4f7b5fef74ddd908efa5}{Renderer}} (\mbox{\hyperlink{classWindow}{Window}} \&\&window, const \mbox{\hyperlink{classCamera}{Camera}} \&camera)
+\begin{DoxyCompactList}\small\item\em Initialises the renderer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRenderer_a449ab01e110efc259f59eef175abeb22}{Renderer}} (std\+::string\+\_\+view window\+Name, const \mbox{\hyperlink{classCamera}{Camera}} \&camera)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classWindow}{Window} and initialises the renderer. \end{DoxyCompactList}\item 
+\Hypertarget{classRenderer_a59c09ec7a99b4cafddc056893a049984}\label{classRenderer_a59c09ec7a99b4cafddc056893a049984} 
+virtual void {\bfseries start} ()
+\begin{DoxyCompactList}\small\item\em Custom start function to be executed before render loop. \end{DoxyCompactList}\item 
+\Hypertarget{classRenderer_a2c0c44152a14ace4713b51c325ebf5a7}\label{classRenderer_a2c0c44152a14ace4713b51c325ebf5a7} 
+virtual void {\bfseries update} ()
+\begin{DoxyCompactList}\small\item\em Custom update function called at each iteration of render loop. \end{DoxyCompactList}\item 
+\Hypertarget{classRenderer_a935975d7fac3ac151811a78c80b36732}\label{classRenderer_a935975d7fac3ac151811a78c80b36732} 
+virtual void {\bfseries on\+Terminate} ()
+\begin{DoxyCompactList}\small\item\em Custom terminate function to be called after the window is closed. \end{DoxyCompactList}\item 
+\Hypertarget{classRenderer_ad3b84741ffefad45b61eee6175b51e85}\label{classRenderer_ad3b84741ffefad45b61eee6175b51e85} 
+float {\bfseries delta\+Time} () const
+\begin{DoxyCompactList}\small\item\em Returns the time passed since the last frame. \end{DoxyCompactList}\item 
+\Hypertarget{classRenderer_a95268b5089e626505dd2dd6ac55791eb}\label{classRenderer_a95268b5089e626505dd2dd6ac55791eb} 
+const \mbox{\hyperlink{classWindow}{Window}} \& {\bfseries get\+Window} () const
+\begin{DoxyCompactList}\small\item\em Returns \doxylink{classWindow}{Window} for use with opengl functions, such as closing window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObject}{Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classRenderer_a0cb5c66f625197b5d483c5c680bc364e}{get\+Object}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets an object referenced by index. \end{DoxyCompactList}\item 
+\Hypertarget{classRenderer_a54aa85ddc12b8004873456a011932d36}\label{classRenderer_a54aa85ddc12b8004873456a011932d36} 
+\mbox{\hyperlink{classCamera}{Camera}} \& {\bfseries get\+Camera} ()
+\begin{DoxyCompactList}\small\item\em Returns \doxylink{classCamera}{Camera} to alter view of scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRenderer_aac03d8e188330486d5a3aad4bf784002}{set\+Keybind}} (unsigned int keycode, \mbox{\hyperlink{classRenderer_aa84052251eb9d0a68df60c878e02553c}{Key\+Bind}} keybind)
+\begin{DoxyCompactList}\small\item\em Sets keybind. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRenderer_a593d5545d03a29184bece7922c730c08}{set\+Mouse\+Callback}} (std\+::function$<$ void(GLFWwindow \texorpdfstring{$\ast$}{*}window, double x\+Pos, double y\+Pos)$>$ mouse\+Callback)
+\begin{DoxyCompactList}\small\item\em Sets callback for mouse position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRenderer_ad72bb8ccb700d678c7b6da93cc24ca82}{set\+Scroll\+Callback}} (std\+::function$<$ void(GLFWwindow \texorpdfstring{$\ast$}{*}window, double x\+Offset, double y\+Offset)$>$ scroll\+Callback)
+\begin{DoxyCompactList}\small\item\em Sets callback for when the mouse is scrolled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRenderer_a08fe445e910bd3fd243483238ec1af5a}{set\+Clear\+Color}} (const glm\+::vec3 \&color)
+\begin{DoxyCompactList}\small\item\em Sets clear colour for window background. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRenderer_a909bbe6a34b5cf447b9b99016a96e207}{set\+Clear\+Color}} (float red, float green, float blue)
+\begin{DoxyCompactList}\small\item\em Sets clear colour for window background. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRenderer_a0e06874a35df9914c58a0ff8480ac2c2}{add\+Object}} (\mbox{\hyperlink{classObject}{Object}} \texorpdfstring{$\ast$}{*}object)
+\begin{DoxyCompactList}\small\item\em Adds an object to the scene. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classRenderer_accb7c66cafde1d4900566bee4b091787}{add\+Objects}} (const std\+::vector$<$ \mbox{\hyperlink{classObject}{Object}} \texorpdfstring{$\ast$}{*} $>$ \&objects)
+\begin{DoxyCompactList}\small\item\em Adds a list of objects to the scene. \end{DoxyCompactList}\item 
+\Hypertarget{classRenderer_aea08e9a81c0c44bc6553f0e2bf5e44dc}\label{classRenderer_aea08e9a81c0c44bc6553f0e2bf5e44dc} 
+void {\bfseries render\+Loop} ()
+\begin{DoxyCompactList}\small\item\em Executes render loop. Will loop indefinitely until \doxylink{classWindow}{Window} is closed. \end{DoxyCompactList}\item 
+\Hypertarget{classRenderer_ad41f44a7320e212c19b178e03c0c4333}\label{classRenderer_ad41f44a7320e212c19b178e03c0c4333} 
+void {\bfseries close\+Window} ()
+\begin{DoxyCompactList}\small\item\em Closes window, which ends the render loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classRenderer}{Renderer} class which handles rendering of objects. 
+
+Internally stores a \doxylink{classCamera}{Camera}, \doxylink{classWindow}{Window} and a list of \doxylink{classObject}{Object} instances. User code can inherit \doxylink{classRenderer}{Renderer} and provide implementations of the \doxylink{classRenderer_a59c09ec7a99b4cafddc056893a049984}{start()} and \doxylink{classRenderer_a2c0c44152a14ace4713b51c325ebf5a7}{update()} functions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRenderer_a50b47f673e0e4f7b5fef74ddd908efa5}\label{classRenderer_a50b47f673e0e4f7b5fef74ddd908efa5} 
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Renderer\+::\+Renderer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWindow}{Window}} \&\&}]{window,  }\item[{const \mbox{\hyperlink{classCamera}{Camera}} \&}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialises the renderer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \doxylink{classWindow}{Window} object for the renderer to use. Must be in a valid state for rendering to succeed. \\
+\hline
+{\em camera} & \doxylink{classCamera}{Camera} object used for viewing the scene. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRenderer_a449ab01e110efc259f59eef175abeb22}\label{classRenderer_a449ab01e110efc259f59eef175abeb22} 
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Renderer\+::\+Renderer (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{window\+Name,  }\item[{const \mbox{\hyperlink{classCamera}{Camera}} \&}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a new \doxylink{classWindow}{Window} and initialises the renderer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+Name} & Name of the new window. \\
+\hline
+{\em camera} & \doxylink{classCamera}{Camera} object used for viewing the scene. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRenderer_a0e06874a35df9914c58a0ff8480ac2c2}\label{classRenderer_a0e06874a35df9914c58a0ff8480ac2c2} 
+\index{Renderer@{Renderer}!addObject@{addObject}}
+\index{addObject@{addObject}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{addObject()}{addObject()}}
+{\footnotesize\ttfamily int Renderer\+::add\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObject}{Object}} \texorpdfstring{$\ast$}{*}}]{object }\end{DoxyParamCaption})}
+
+
+
+Adds an object to the scene. 
+
+\begin{DoxyReturn}{Returns}
+ID assigned to object. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em object} & \doxylink{classObject}{Object} to add to the scene. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRenderer_accb7c66cafde1d4900566bee4b091787}\label{classRenderer_accb7c66cafde1d4900566bee4b091787} 
+\index{Renderer@{Renderer}!addObjects@{addObjects}}
+\index{addObjects@{addObjects}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{addObjects()}{addObjects()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Renderer\+::add\+Objects (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classObject}{Object}} \texorpdfstring{$\ast$}{*} $>$ \&}]{objects }\end{DoxyParamCaption})}
+
+
+
+Adds a list of objects to the scene. 
+
+\begin{DoxyReturn}{Returns}
+A vector of IDs of the objects. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em objects} & Vector of objects to add to the scene. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRenderer_a0cb5c66f625197b5d483c5c680bc364e}\label{classRenderer_a0cb5c66f625197b5d483c5c680bc364e} 
+\index{Renderer@{Renderer}!getObject@{getObject}}
+\index{getObject@{getObject}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{getObject()}{getObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObject}{Object}} \texorpdfstring{$\ast$}{*} Renderer\+::get\+Object (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Gets an object referenced by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The ID of the object . \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRenderer_a08fe445e910bd3fd243483238ec1af5a}\label{classRenderer_a08fe445e910bd3fd243483238ec1af5a} 
+\index{Renderer@{Renderer}!setClearColor@{setClearColor}}
+\index{setClearColor@{setClearColor}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{setClearColor()}{setClearColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Renderer\+::set\+Clear\+Color (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{color }\end{DoxyParamCaption})}
+
+
+
+Sets clear colour for window background. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & A vec3 of the rgb colour to use. Values must be between 0 and 1. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRenderer_a909bbe6a34b5cf447b9b99016a96e207}\label{classRenderer_a909bbe6a34b5cf447b9b99016a96e207} 
+\index{Renderer@{Renderer}!setClearColor@{setClearColor}}
+\index{setClearColor@{setClearColor}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{setClearColor()}{setClearColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Renderer\+::set\+Clear\+Color (\begin{DoxyParamCaption}\item[{float}]{red,  }\item[{float}]{green,  }\item[{float}]{blue }\end{DoxyParamCaption})}
+
+
+
+Sets clear colour for window background. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em red} & floating point red value between 0 and 1. \\
+\hline
+{\em green} & floating point green value between 0 and 1. \\
+\hline
+{\em blue} & floating point blue value between 0 and 1. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRenderer_aac03d8e188330486d5a3aad4bf784002}\label{classRenderer_aac03d8e188330486d5a3aad4bf784002} 
+\index{Renderer@{Renderer}!setKeybind@{setKeybind}}
+\index{setKeybind@{setKeybind}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{setKeybind()}{setKeybind()}}
+{\footnotesize\ttfamily void Renderer\+::set\+Keybind (\begin{DoxyParamCaption}\item[{unsigned int}]{keycode,  }\item[{\mbox{\hyperlink{classRenderer_aa84052251eb9d0a68df60c878e02553c}{Key\+Bind}}}]{keybind }\end{DoxyParamCaption})}
+
+
+
+Sets keybind. 
+
+The keybind function is called when the specified key is pressed. \Hypertarget{classRenderer_a593d5545d03a29184bece7922c730c08}\label{classRenderer_a593d5545d03a29184bece7922c730c08} 
+\index{Renderer@{Renderer}!setMouseCallback@{setMouseCallback}}
+\index{setMouseCallback@{setMouseCallback}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{setMouseCallback()}{setMouseCallback()}}
+{\footnotesize\ttfamily void Renderer\+::set\+Mouse\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(GLFWwindow \texorpdfstring{$\ast$}{*}window, double x\+Pos, double y\+Pos)$>$}]{mouse\+Callback }\end{DoxyParamCaption})}
+
+
+
+Sets callback for mouse position. 
+
+Can be used to rotate camera with mouse movement. 
+\begin{DoxyParams}{Parameters}
+{\em mouse\+Callback} & The callback function to use. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRenderer_ad72bb8ccb700d678c7b6da93cc24ca82}\label{classRenderer_ad72bb8ccb700d678c7b6da93cc24ca82} 
+\index{Renderer@{Renderer}!setScrollCallback@{setScrollCallback}}
+\index{setScrollCallback@{setScrollCallback}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{setScrollCallback()}{setScrollCallback()}}
+{\footnotesize\ttfamily void Renderer\+::set\+Scroll\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(GLFWwindow \texorpdfstring{$\ast$}{*}window, double x\+Offset, double y\+Offset)$>$}]{scroll\+Callback }\end{DoxyParamCaption})}
+
+
+
+Sets callback for when the mouse is scrolled. 
+
+Can be used to zoom in scene when scrolled. 
+\begin{DoxyParams}{Parameters}
+{\em scroll\+Callback} & The callback function to use. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Renderer.\+hpp\item 
+src/classes/Renderer.\+cpp\end{DoxyCompactItemize}

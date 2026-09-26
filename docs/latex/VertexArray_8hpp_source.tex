@@ -1,0 +1,47 @@
+\doxysection{Vertex\+Array.\+hpp}
+\hypertarget{VertexArray_8hpp_source}{}\label{VertexArray_8hpp_source}\index{src/headers/VertexArray.hpp@{src/headers/VertexArray.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Buffer.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}ModelData.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Shape.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Stride.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Utility.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVertexArray}{VertexArray}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBuffer}{Buffer}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \mbox{\hyperlink{classVertexArray_a25fc7595ddc1ae1ae9688795af4f67e8}{VertexArray}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classShape}{Shape}}\ \&shape);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \ \ \mbox{\hyperlink{classVertexArray_a29e3dd03aec672b7f253615b5f5f1da6}{VertexArray}}(\textcolor{keyword}{const}\ std::vector<float>\ \&shape,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classStride}{Stride}}\ \&stride)}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classVertexArray}{VertexArray}}\{\mbox{\hyperlink{classShape}{Shape}}\{shape,\ stride\}\}\ \{\}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{classVertexArray_a480d8e2e2edcd512b77956aa3250cfbb}{VertexArray}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVertexArray}{VertexArray}}\ \&buffer)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00031\ \ \ \mbox{\hyperlink{classVertexArray_abeb11bd8552687df21a7664dbdc215fc}{VertexArray}}(\mbox{\hyperlink{classVertexArray}{VertexArray}}\ \&\&buffer)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00034\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classVertexArray_a91c9db989e84543bf6ad04c84a7f40e3}{\string~VertexArray}}()\ noexcept\textcolor{keyword}{\ override\ }\{\ free(\mbox{\hyperlink{classBuffer_adeef898e529daba7775a411f45df74a0}{m\_VAO}},\ \mbox{\hyperlink{classVertexArray_a470bcaf08711551219f1a5d7abbee75a}{m\_VBO}});\ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \ \mbox{\hyperlink{classVertexArray}{VertexArray}}\ \&\mbox{\hyperlink{classVertexArray_a9436db830fa17679a0e45b9042eeb71b}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVertexArray}{VertexArray}}\ \&buffer);}
+\DoxyCodeLine{00039\ \ \ \mbox{\hyperlink{classVertexArray}{VertexArray}}\ \&\mbox{\hyperlink{classVertexArray_a9436db830fa17679a0e45b9042eeb71b}{operator=}}(\mbox{\hyperlink{classVertexArray}{VertexArray}}\ \&\&buffer)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00043\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classVertexArray}{VertexArray}}\ *\mbox{\hyperlink{classVertexArray_a24265cd9c733466f3156ad75f1ed53bb}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVertexArray_a96ef56f7f2367832ec811f5937425048}{draw}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ drawMode\ =\ GL\_TRIANGLES)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00052\ \ \ \mbox{\hyperlink{classVertexArray_a25fc7595ddc1ae1ae9688795af4f67e8}{VertexArray}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classVertexArray_a470bcaf08711551219f1a5d7abbee75a}{m\_VBO}}\{\};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classVertexArray_ac3931f97e478c66ee3b70b919994ffea}{m\_vertexCount}}\{0\};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVertexArray_ae3452c56abf5dd5cf07e6f2ee01551e2}{assignAttributes}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classStride}{Stride}}\ \&stride);}
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVertexArray_ab3e7e8b44ce726d533a6e06ea9fd0be3}{generateBuffer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classShape}{Shape}}\ \&shape);}
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVertexArray_a2d917ff2f1dcefeb337dea4e95f13c96}{bindShape}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classShape}{Shape}}\ \&shape);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ free(std::shared\_ptr<unsigned\ int>\ VAO,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ VBO);}
+\DoxyCodeLine{00072\ \};}
+
+\end{DoxyCode}

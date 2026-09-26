@@ -1,0 +1,183 @@
+\doxysection{Window Class Reference}
+\hypertarget{classWindow}{}\label{classWindow}\index{Window@{Window}}
+
+
+The \doxylink{classWindow}{Window} class is used to create an opengl context and a view of the scene.  
+
+
+
+
+{\ttfamily \#include $<$Window.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWindow_ade6ac98d1e5ae6bbb8dadbfb4e327b92}{Window}} (std\+::string\+\_\+view name=\{"{}Window"{}\}, int width=800, int height=600)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classWindow}{Window}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWindow_afeaf34c891e6b3b8d7c70eec737806fa}{Window}} (const \mbox{\hyperlink{classWindow}{Window}} \&window)
+\begin{DoxyCompactList}\small\item\em Copy constructor for \doxylink{classWindow}{Window}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWindow_ad3e9e7f6f0ac8fe48d6582ab6c5b1bc8}{Window}} (\mbox{\hyperlink{classWindow}{Window}} \&\&window) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor for \doxylink{classWindow}{Window}. \end{DoxyCompactList}\item 
+\Hypertarget{classWindow_a245d821e6016fa1f6970ccbbedd635f6}\label{classWindow_a245d821e6016fa1f6970ccbbedd635f6} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Window} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classWindow}{Window}. Calls \doxylink{classWindow_adb197056d79de77c9a5856770e56e933}{close()}. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWindow}{Window}} \& \mbox{\hyperlink{classWindow_a32fc81345fb163d3378d2d29eee1c74a}{operator=}} (const \mbox{\hyperlink{classWindow}{Window}} \&window)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator for \doxylink{classWindow}{Window}. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWindow}{Window}} \& \mbox{\hyperlink{classWindow_a44f0c4b97cdafb41c0bfef5bc0968d01}{operator=}} (\mbox{\hyperlink{classWindow}{Window}} \&\&window) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator for \doxylink{classWindow}{Window}. \end{DoxyCompactList}\item 
+\Hypertarget{classWindow_a775b0bf43095eac0bc64363f1e83290f}\label{classWindow_a775b0bf43095eac0bc64363f1e83290f} 
+{\bfseries operator GLFWwindow \texorpdfstring{$\ast$}{*}} () const
+\begin{DoxyCompactList}\small\item\em Implicit typecasting to GLFWwindow for use with opengl functions. \end{DoxyCompactList}\item 
+\Hypertarget{classWindow_a887326e7d08baf941628adb79c575cb2}\label{classWindow_a887326e7d08baf941628adb79c575cb2} 
+{\bfseries operator bool} () const
+\begin{DoxyCompactList}\small\item\em Returns true if in a valid state. \end{DoxyCompactList}\item 
+\Hypertarget{classWindow_a35fe56fa471a7e5c031dc658f97146d9}\label{classWindow_a35fe56fa471a7e5c031dc658f97146d9} 
+GLFWwindow \texorpdfstring{$\ast$}{*} {\bfseries get} () const
+\begin{DoxyCompactList}\small\item\em Returns internal GLFWwindow. Consider using implicit typecasting instead. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWindow_a985b092a7c5e9e15700d9ed7dea0c5b9}{clear}} (float red=0.\+1f, float green=0.\+1f, float blue=0.\+1f) const
+\begin{DoxyCompactList}\small\item\em Fills the window screen using the specified colour. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWindow_aa8ec8893483c3df41ed52b04dc79d6df}{clear}} (const glm\+::vec3 \&color) const
+\begin{DoxyCompactList}\small\item\em Fills the window screen using the specified colour. \end{DoxyCompactList}\item 
+\Hypertarget{classWindow_adb197056d79de77c9a5856770e56e933}\label{classWindow_adb197056d79de77c9a5856770e56e933} 
+void {\bfseries close} () const
+\begin{DoxyCompactList}\small\item\em Closes window, if one exists. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classWindow_a24ec3b91abc7689a10a983d08cac1217}{get\+Ratio}} () const
+\begin{DoxyCompactList}\small\item\em Gets aspect ratio of window. \end{DoxyCompactList}\item 
+\Hypertarget{classWindow_a60757b2b0dbcec9889e3a09f5655adbe}\label{classWindow_a60757b2b0dbcec9889e3a09f5655adbe} 
+int {\bfseries get\+Height} () const
+\begin{DoxyCompactList}\small\item\em Returns height of window in pixels. \end{DoxyCompactList}\item 
+\Hypertarget{classWindow_aee31a875d654a8c8f7d796d072657791}\label{classWindow_aee31a875d654a8c8f7d796d072657791} 
+int {\bfseries get\+Width} () const
+\begin{DoxyCompactList}\small\item\em Returns width of window in pixels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWindow_aa38cb2caebd16fb3837307b0c04b96a4}{terminate}} ()
+\begin{DoxyCompactList}\small\item\em Terminates glfw functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classWindow}{Window} class is used to create an opengl context and a view of the scene. 
+
+Used in \doxylink{classRenderer}{Renderer} during render loop. Must be initialised before initialisation of \doxylink{classObject}{Object}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classWindow_ade6ac98d1e5ae6bbb8dadbfb4e327b92}\label{classWindow_ade6ac98d1e5ae6bbb8dadbfb4e327b92} 
+\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Window\+::\+Window (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name = {\ttfamily \{"{}Window"{}\}},  }\item[{int}]{width = {\ttfamily 800},  }\item[{int}]{height = {\ttfamily 600} }\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classWindow}{Window}. 
+
+Initialises context for opengl functions and creates a window. If an error occurs, sets to invalid state and deletes any held memory. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the new window. \\
+\hline
+{\em width} & Width of the new window. \\
+\hline
+{\em height} & Height of the new window. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classWindow_afeaf34c891e6b3b8d7c70eec737806fa}\label{classWindow_afeaf34c891e6b3b8d7c70eec737806fa} 
+\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Window\+::\+Window (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWindow}{Window}} \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for \doxylink{classWindow}{Window}. 
+
+Creates a new window using the same parameters. \Hypertarget{classWindow_ad3e9e7f6f0ac8fe48d6582ab6c5b1bc8}\label{classWindow_ad3e9e7f6f0ac8fe48d6582ab6c5b1bc8} 
+\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Window\+::\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWindow}{Window}} \&\&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move constructor for \doxylink{classWindow}{Window}. 
+
+Transfers ownership of window to this class instance. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWindow_aa8ec8893483c3df41ed52b04dc79d6df}\label{classWindow_aa8ec8893483c3df41ed52b04dc79d6df} 
+\index{Window@{Window}!clear@{clear}}
+\index{clear@{clear}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Window\+::clear (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{color }\end{DoxyParamCaption}) const}
+
+
+
+Fills the window screen using the specified colour. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & Color to fill the window with. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classWindow_a985b092a7c5e9e15700d9ed7dea0c5b9}\label{classWindow_a985b092a7c5e9e15700d9ed7dea0c5b9} 
+\index{Window@{Window}!clear@{clear}}
+\index{clear@{clear}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Window\+::clear (\begin{DoxyParamCaption}\item[{float}]{red = {\ttfamily 0.1f},  }\item[{float}]{green = {\ttfamily 0.1f},  }\item[{float}]{blue = {\ttfamily 0.1f} }\end{DoxyParamCaption}) const}
+
+
+
+Fills the window screen using the specified colour. 
+
+Uses a light grey by default. 
+\begin{DoxyParams}{Parameters}
+{\em red} & floating point red value between 0 and 1. \\
+\hline
+{\em green} & floating point green value between 0 and 1. \\
+\hline
+{\em blue} & floating point blue value between 0 and 1. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classWindow_a24ec3b91abc7689a10a983d08cac1217}\label{classWindow_a24ec3b91abc7689a10a983d08cac1217} 
+\index{Window@{Window}!getRatio@{getRatio}}
+\index{getRatio@{getRatio}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{getRatio()}{getRatio()}}
+{\footnotesize\ttfamily float Window\+::get\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets aspect ratio of window. 
+
+Used in \doxylink{classRenderer}{Renderer} when constructing perspective matrix. \Hypertarget{classWindow_a32fc81345fb163d3378d2d29eee1c74a}\label{classWindow_a32fc81345fb163d3378d2d29eee1c74a} 
+\index{Window@{Window}!operator=@{operator=}}
+\index{operator=@{operator=}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWindow}{Window}} \& Window\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWindow}{Window}} \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator for \doxylink{classWindow}{Window}. 
+
+Calls \doxylink{classWindow_adb197056d79de77c9a5856770e56e933}{close()}, then creates new window using same parameters. \Hypertarget{classWindow_a44f0c4b97cdafb41c0bfef5bc0968d01}\label{classWindow_a44f0c4b97cdafb41c0bfef5bc0968d01} 
+\index{Window@{Window}!operator=@{operator=}}
+\index{operator=@{operator=}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWindow}{Window}} \& Window\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWindow}{Window}} \&\&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move assignment operator for \doxylink{classWindow}{Window}. 
+
+Calls \doxylink{classWindow_adb197056d79de77c9a5856770e56e933}{close()}, then transfers ownership. \Hypertarget{classWindow_aa38cb2caebd16fb3837307b0c04b96a4}\label{classWindow_aa38cb2caebd16fb3837307b0c04b96a4} 
+\index{Window@{Window}!terminate@{terminate}}
+\index{terminate@{terminate}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}}
+{\footnotesize\ttfamily void Window\+::terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Terminates glfw functions. 
+
+Cannot be used in callback functions. Called automatically by \doxylink{classRenderer}{Renderer} after render loop. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Window.\+hpp\item 
+src/classes/Window.\+cpp\end{DoxyCompactItemize}

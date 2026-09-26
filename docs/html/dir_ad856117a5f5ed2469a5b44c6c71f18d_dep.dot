@@ -1,0 +1,18 @@
+digraph "asteroids/src"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_4fd76b77dff5ce1cd2fcfeb46098a0dd {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="asteroids", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_4fd76b77dff5ce1cd2fcfeb46098a0dd.html",tooltip=""]
+  subgraph clusterdir_ad856117a5f5ed2469a5b44c6c71f18d {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_ad856117a5f5ed2469a5b44c6c71f18d.html",tooltip=""]
+    dir_ad856117a5f5ed2469a5b44c6c71f18d [shape=plaintext, label="src"];
+  dir_8e77ef7d817c594c100cebd5d35b995a [label="classes", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_8e77ef7d817c594c100cebd5d35b995a.html",tooltip=""];
+  dir_88be6b5b6aff122bc677a895da84b22c [label="headers", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_88be6b5b6aff122bc677a895da84b22c.html",tooltip=""];
+  dir_2ddd77279a06cf89ca1d43c916a73710 [label="main", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_2ddd77279a06cf89ca1d43c916a73710.html",tooltip=""];
+  }
+  }
+}

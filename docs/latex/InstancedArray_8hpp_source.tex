@@ -1,0 +1,54 @@
+\doxysection{Instanced\+Array.\+hpp}
+\hypertarget{InstancedArray_8hpp_source}{}\label{InstancedArray_8hpp_source}\index{src/headers/InstancedArray.hpp@{src/headers/InstancedArray.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Shape.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Stride.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Utility.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}VertexArray.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classInstancedArray}{InstancedArray}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classVertexArray}{VertexArray}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(T)\ \%\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float})\ ==\ 0);}
+\DoxyCodeLine{00020\ \ \ \mbox{\hyperlink{classInstancedArray_aee2570b1af34f5cd74211eff19ae348d}{InstancedArray}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classShape}{Shape}}\ \&shape,\ \textcolor{keyword}{const}\ std::vector<T>\ \&instanceData,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classStride}{Stride}}\ \&dataStride\ =\ \{\textcolor{keyword}{sizeof}(T)\ /\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float})\});}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{classInstancedArray_a418c2d1afd2aa4f9fca0ba70466f5921}{InstancedArray}}(\textcolor{keyword}{const}\ std::vector<float>\ \&shape,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classStride}{Stride}}\ \&stride,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<T>\ \&instanceData,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classStride}{Stride}}\ \&dataStride\ =\ \{\textcolor{keyword}{sizeof}(T)\ /\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float})\})}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classInstancedArray}{InstancedArray}}\{\mbox{\hyperlink{classShape}{Shape}}\{shape,\ stride\},\ instanceData,\ dataStride\}\ \{\}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{classInstancedArray_af0a15a3cf2d96d928ea126b67a3cefad}{InstancedArray}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classInstancedArray}{InstancedArray}}\ \&buffer)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00038\ \ \ \mbox{\hyperlink{classInstancedArray_a1e7c4c795ea993995f140930e7c6c0cb}{InstancedArray}}(\mbox{\hyperlink{classInstancedArray}{InstancedArray}}\ \&\&buffer)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00041\ \ \ \mbox{\hyperlink{classInstancedArray_a59f6234c122704cc5aacfb9b2603be42}{\string~InstancedArray}}()\ noexcept\textcolor{keyword}{\ override\ }\{\ free(\mbox{\hyperlink{classBuffer_adeef898e529daba7775a411f45df74a0}{m\_VAO}},\ m\_instanceBuffer);\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \ \ \mbox{\hyperlink{classInstancedArray}{InstancedArray}}\ \&\mbox{\hyperlink{classInstancedArray_a6875df75975d8398fb0e621392c6241a}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classInstancedArray}{InstancedArray}}\ \&buffer);}
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{classInstancedArray}{InstancedArray}}\ \&\mbox{\hyperlink{classInstancedArray_a7c79411237e34e70d6cf0fcee5e948c4}{operator=}}(\mbox{\hyperlink{classInstancedArray}{InstancedArray}}\ \&\&buffer)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00050\ \ \ \mbox{\hyperlink{classInstancedArray}{InstancedArray}}\ *\mbox{\hyperlink{classInstancedArray_a3cd9a18ea178960791cf4b4e681eca9f}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInstancedArray_a26529662afe9a6060b3c61ae20907dcb}{draw}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ drawMode\ =\ GL\_TRIANGLES)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \textcolor{comment}{//\ Shared\ pointers\ for\ arrays}}
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_instanceBuffer\{\};}
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{int}\ m\_instanceSize\{0\};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \textcolor{comment}{//\ Functions\ for\ initialisation.}}
+\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{void}\ generateBuffer(\textcolor{keyword}{const}\ \mbox{\hyperlink{classShape}{Shape}}\ \&shape,\ \textcolor{keyword}{const}\ std::vector<T>\ \&instanceData);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \textcolor{keywordtype}{void}\ bindShape(\textcolor{keyword}{const}\ \mbox{\hyperlink{classShape}{Shape}}\ \&shape,\ \textcolor{keyword}{const}\ std::vector<T>\ \&instanceData,}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classStride}{Stride}}\ \&dataStride);}
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordtype}{void}\ assignData(\textcolor{keywordtype}{int}\ start\_index,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classStride}{Stride}}\ \&stride);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00070\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ free(std::shared\_ptr<unsigned\ int>\ VAO,}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ instanceBuffer);}
+\DoxyCodeLine{00072\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#include\ "{}InstancedArray.tpp"{}}}
+
+\end{DoxyCode}

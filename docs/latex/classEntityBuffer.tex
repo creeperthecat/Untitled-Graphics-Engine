@@ -1,0 +1,176 @@
+\doxysection{Entity\+Buffer Class Reference}
+\hypertarget{classEntityBuffer}{}\label{classEntityBuffer}\index{EntityBuffer@{EntityBuffer}}
+
+
+Implementation of \doxylink{classBuffer}{Buffer} using a Entity Buffering.  
+
+
+
+
+{\ttfamily \#include $<$Entity\+Buffer.\+hpp$>$}
+
+
+
+Inheritance diagram for Entity\+Buffer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{classEntityBuffer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Entity\+Buffer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{classEntityBuffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEntityBuffer_afbe870c2f75a8a7694aa1399ed2c7780}{Entity\+Buffer}} (const \mbox{\hyperlink{classIndexedShape}{Indexed\+Shape}} \&shape)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classEntityBuffer}{Entity\+Buffer} using an \doxylink{classIndexedShape}{Indexed\+Shape} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityBuffer_a4c17c032deea961559f70e2a0762cd4b}{Entity\+Buffer}} (const std\+::vector$<$ float $>$ \&shape, const \mbox{\hyperlink{classStride}{Stride}} \&stride, const \mbox{\hyperlink{classIndexedShape_a76f918d2224dc589ce59c1ed50ef445f}{Indexed\+Shape\+::\+Indices}} \&indices)
+\begin{DoxyCompactList}\small\item\em Override to avoid needing to construct an \doxylink{classIndexedShape}{Indexed\+Shape} Equivalent to constructing and passing an \doxylink{classIndexedShape}{Indexed\+Shape}. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBuffer_a426b06344711e22f1022a7529f430125}\label{classEntityBuffer_a426b06344711e22f1022a7529f430125} 
+{\bfseries Entity\+Buffer} (const \mbox{\hyperlink{classEntityBuffer}{Entity\+Buffer}} \&buffer)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor for \doxylink{classEntityBuffer}{Entity\+Buffer}. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBuffer_addf35580db42eeeb26c2f73cf7067bee}\label{classEntityBuffer_addf35580db42eeeb26c2f73cf7067bee} 
+{\bfseries Entity\+Buffer} (\mbox{\hyperlink{classEntityBuffer}{Entity\+Buffer}} \&\&buffer) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor for \doxylink{classEntityBuffer}{Entity\+Buffer}. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBuffer_a3fe676fbd763dc9ffc4c2353fc8c40e4}\label{classEntityBuffer_a3fe676fbd763dc9ffc4c2353fc8c40e4} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Entity\+Buffer} () noexcept override
+\begin{DoxyCompactList}\small\item\em Destructor for Entity, frees memory held by EBO, if not held by another instance. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBuffer_a06c0508c0d5dec081c58437d1f6229f9}\label{classEntityBuffer_a06c0508c0d5dec081c58437d1f6229f9} 
+\mbox{\hyperlink{classEntityBuffer}{Entity\+Buffer}} \& {\bfseries operator=} (const \mbox{\hyperlink{classEntityBuffer}{Entity\+Buffer}} \&buffer)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator for \doxylink{classEntityBuffer}{Entity\+Buffer}. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBuffer_ad1bf7377d8afeae831d8c492cc2dca24}\label{classEntityBuffer_ad1bf7377d8afeae831d8c492cc2dca24} 
+\mbox{\hyperlink{classEntityBuffer}{Entity\+Buffer}} \& {\bfseries operator=} (\mbox{\hyperlink{classEntityBuffer}{Entity\+Buffer}} \&\&buffer) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator for \doxylink{classEntityBuffer}{Entity\+Buffer}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityBuffer}{Entity\+Buffer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBuffer_a902b9195fe0181c21564b8dcbcdec340}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Clones this instance of \doxylink{classEntityBuffer}{Entity\+Buffer}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVertexArray}{Vertex\+Array}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVertexArray_a9e823dda6c6d94476e5a25e96388441a}{Vertex\+Array}} (const \mbox{\hyperlink{classShape}{Shape}} \&shape)
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{classVertexArray}{Vertex\+Array} using a \doxylink{classShape}{Shape} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVertexArray_a29e3dd03aec672b7f253615b5f5f1da6}{Vertex\+Array}} (const std\+::vector$<$ float $>$ \&shape, const \mbox{\hyperlink{classStride}{Stride}} \&stride)
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{classVertexArray}{Vertex\+Array} using a vector of floats and a \doxylink{classStride}{Stride}. \end{DoxyCompactList}\item 
+{\bfseries Vertex\+Array} (const \mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \&buffer)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor for \doxylink{classVertexArray}{Vertex\+Array}. \end{DoxyCompactList}\item 
+{\bfseries Vertex\+Array} (\mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \&\&buffer) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor for \doxylink{classVertexArray}{Vertex\+Array}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Vertex\+Array} () noexcept override
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classVertexArray}{Vertex\+Array}, frees memory held by VAO and VBO, if not used by another instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \& {\bfseries operator=} (const \mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \&buffer)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator for \doxylink{classVertexArray}{Vertex\+Array}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \& {\bfseries operator=} (\mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \&\&buffer) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator for \doxylink{classVertexArray}{Vertex\+Array}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classVertexArray_a96ef56f7f2367832ec811f5937425048}{draw}} (unsigned int draw\+Mode=GL\+\_\+\+TRIANGLES) const override
+\begin{DoxyCompactList}\small\item\em Draws vertices stored by instance to the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBuffer}{Buffer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Buffer} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classBuffer}{Buffer}. \end{DoxyCompactList}\item 
+unsigned int {\bfseries get\+VAO} () const
+\begin{DoxyCompactList}\small\item\em Gets the Vertex Array \doxylink{classObject}{Object} held by this instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classVertexArray}{Vertex\+Array}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Vertex\+Array} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for derived classes to use. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVertexArray_ae3452c56abf5dd5cf07e6f2ee01551e2}{assign\+Attributes}} (const \mbox{\hyperlink{classStride}{Stride}} \&stride)
+\begin{DoxyCompactList}\small\item\em Assign vertex attributes using the supplied \doxylink{classStride}{Stride}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVertexArray_ab3e7e8b44ce726d533a6e06ea9fd0be3}{generate\+Buffer}} (const \mbox{\hyperlink{classShape}{Shape}} \&shape)
+\begin{DoxyCompactList}\small\item\em Generate the VAO and VBO and set buffer data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVertexArray_a2d917ff2f1dcefeb337dea4e95f13c96}{bind\+Shape}} (const \mbox{\hyperlink{classShape}{Shape}} \&shape)
+\begin{DoxyCompactList}\small\item\em Initialise buffers using a \doxylink{classShape}{Shape}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classBuffer}{Buffer}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Buffer} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for derived classes to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classVertexArray}{Vertex\+Array}}}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int {\bfseries m\+\_\+\+VBO} \{\}
+\begin{DoxyCompactList}\small\item\em Vertex \doxylink{classBuffer}{Buffer} \doxylink{classObject}{Object} for storing vertex data. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+vertex\+Count} \{0\}
+\begin{DoxyCompactList}\small\item\em Total number of vertices in shape, needed for draw call. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBuffer}{Buffer}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ unsigned int $>$ \mbox{\hyperlink{classBuffer_adeef898e529daba7775a411f45df74a0}{m\+\_\+\+VAO}} \{std\+::make\+\_\+shared$<$unsigned int$>$(0)\}
+\begin{DoxyCompactList}\small\item\em Shared pointer to Vertex Array Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of \doxylink{classBuffer}{Buffer} using a Entity Buffering. 
+
+Used for indexed drawing. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEntityBuffer_afbe870c2f75a8a7694aa1399ed2c7780}\label{classEntityBuffer_afbe870c2f75a8a7694aa1399ed2c7780} 
+\index{EntityBuffer@{EntityBuffer}!EntityBuffer@{EntityBuffer}}
+\index{EntityBuffer@{EntityBuffer}!EntityBuffer@{EntityBuffer}}
+\doxysubsubsection{\texorpdfstring{EntityBuffer()}{EntityBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Entity\+Buffer\+::\+Entity\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIndexedShape}{Indexed\+Shape}} \&}]{shape }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classEntityBuffer}{Entity\+Buffer} using an \doxylink{classIndexedShape}{Indexed\+Shape} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & Constructed \doxylink{classShape}{Shape} object used for processing vertices. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classEntityBuffer_a4c17c032deea961559f70e2a0762cd4b}\label{classEntityBuffer_a4c17c032deea961559f70e2a0762cd4b} 
+\index{EntityBuffer@{EntityBuffer}!EntityBuffer@{EntityBuffer}}
+\index{EntityBuffer@{EntityBuffer}!EntityBuffer@{EntityBuffer}}
+\doxysubsubsection{\texorpdfstring{EntityBuffer()}{EntityBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Entity\+Buffer\+::\+Entity\+Buffer (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{shape,  }\item[{const \mbox{\hyperlink{classStride}{Stride}} \&}]{stride,  }\item[{const \mbox{\hyperlink{classIndexedShape_a76f918d2224dc589ce59c1ed50ef445f}{Indexed\+Shape\+::\+Indices}} \&}]{indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Override to avoid needing to construct an \doxylink{classIndexedShape}{Indexed\+Shape} Equivalent to constructing and passing an \doxylink{classIndexedShape}{Indexed\+Shape}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & Flattened array of vertices stored as a sequence of floats. \\
+\hline
+{\em stride} & \doxylink{classStride}{Stride} to define vertex attributes. \\
+\hline
+{\em indices} & List of indices which defines the order of vertices to be drawn. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEntityBuffer_a902b9195fe0181c21564b8dcbcdec340}\label{classEntityBuffer_a902b9195fe0181c21564b8dcbcdec340} 
+\index{EntityBuffer@{EntityBuffer}!clone@{clone}}
+\index{clone@{clone}!EntityBuffer@{EntityBuffer}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEntityBuffer}{Entity\+Buffer}} \texorpdfstring{$\ast$}{*} Entity\+Buffer\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clones this instance of \doxylink{classEntityBuffer}{Entity\+Buffer}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a new \doxylink{classEntityBuffer}{Entity\+Buffer} copied from this \doxylink{classEntityBuffer}{Entity\+Buffer}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classVertexArray_a24265cd9c733466f3156ad75f1ed53bb}{Vertex\+Array}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Entity\+Buffer.\+hpp\item 
+src/classes/Entity\+Buffer.\+cpp\end{DoxyCompactItemize}

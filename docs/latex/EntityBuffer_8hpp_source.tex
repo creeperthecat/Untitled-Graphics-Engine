@@ -1,0 +1,39 @@
+\doxysection{Entity\+Buffer.\+hpp}
+\hypertarget{EntityBuffer_8hpp_source}{}\label{EntityBuffer_8hpp_source}\index{src/headers/EntityBuffer.hpp@{src/headers/EntityBuffer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}IndexedShape.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Shape.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Stride.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Utility.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}VertexArray.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEntityBuffer}{EntityBuffer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classVertexArray}{VertexArray}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{classEntityBuffer}{EntityBuffer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIndexedShape}{IndexedShape}}\ \&shape);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00025\ \ \ \mbox{\hyperlink{classEntityBuffer_a4c17c032deea961559f70e2a0762cd4b}{EntityBuffer}}(\textcolor{keyword}{const}\ std::vector<float>\ \&shape,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classStride}{Stride}}\ \&stride,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classIndexedShape_a76f918d2224dc589ce59c1ed50ef445f}{IndexedShape::Indices}}\ \&indices)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classEntityBuffer}{EntityBuffer}}\{\mbox{\hyperlink{classIndexedShape}{IndexedShape}}\{shape,\ stride,\ indices\}\}\ \{\}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{classEntityBuffer_a426b06344711e22f1022a7529f430125}{EntityBuffer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEntityBuffer}{EntityBuffer}}\ \&buffer)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00032\ \ \ \mbox{\hyperlink{classEntityBuffer_addf35580db42eeeb26c2f73cf7067bee}{EntityBuffer}}(\mbox{\hyperlink{classEntityBuffer}{EntityBuffer}}\ \&\&buffer)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00035\ \ \ \mbox{\hyperlink{classEntityBuffer_a3fe676fbd763dc9ffc4c2353fc8c40e4}{\string~EntityBuffer}}()\ noexcept\textcolor{keyword}{\ override\ }\{\ free(\mbox{\hyperlink{classBuffer_adeef898e529daba7775a411f45df74a0}{m\_VAO}},\ m\_EBO);\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \ \ \mbox{\hyperlink{classEntityBuffer}{EntityBuffer}}\ \&\mbox{\hyperlink{classEntityBuffer_a06c0508c0d5dec081c58437d1f6229f9}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEntityBuffer}{EntityBuffer}}\ \&buffer);}
+\DoxyCodeLine{00040\ \ \ \mbox{\hyperlink{classEntityBuffer}{EntityBuffer}}\ \&\mbox{\hyperlink{classEntityBuffer_a06c0508c0d5dec081c58437d1f6229f9}{operator=}}(\mbox{\hyperlink{classEntityBuffer}{EntityBuffer}}\ \&\&buffer)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00044\ \ \ \mbox{\hyperlink{classEntityBuffer}{EntityBuffer}}\ *\mbox{\hyperlink{classEntityBuffer_a902b9195fe0181c21564b8dcbcdec340}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_EBO\{\};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordtype}{void}\ generateBuffer(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIndexedShape}{IndexedShape}}\ \&shape);}
+\DoxyCodeLine{00053\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ free(std::shared\_ptr<unsigned\ int>\ VAO,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ EBO);}
+\DoxyCodeLine{00054\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,34 @@
+\doxysection{Object.\+hpp}
+\hypertarget{Object_8hpp_source}{}\label{Object_8hpp_source}\index{src/headers/Object.hpp@{src/headers/Object.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Buffer.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Shader.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Utility.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classObject}{Object}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classShader}{Shader}}\ *\mbox{\hyperlink{classObject_a667b53eb43baedc1ea63b7a420e22ca2}{getShader}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00018\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classObject_aa395f809acaca8b8100ee7614888c65f}{setShader}}(\mbox{\hyperlink{classShader}{Shader}}\ *shader);}
+\DoxyCodeLine{00020\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classObject_a1b3e5d03fe4c6ff5858275b25af9e92f}{setID}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ID)\ \{\ \mbox{\hyperlink{classObject_a7e9c32a0ddc09790dec66d2ac3bb5e40}{m\_ID}}\ =\ ID;\ \}}
+\DoxyCodeLine{00022\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classObject_a51ea97f4d48730cd56860576cd7dc656}{getID}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classObject_a7e9c32a0ddc09790dec66d2ac3bb5e40}{m\_ID}};\ \}}
+\DoxyCodeLine{00024\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classObject_afd9e1cf36fb5f58012e31144399189c7}{getVAO}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classObject_a34cc6472495d0b562aaaa9d88c375017}{m\_buffer}}-\/>getVAO();\ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00028\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classObject_afcc65c4a0a42dc6159b5751c7972521d}{draw}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ drawMode\ =\ GL\_TRIANGLES)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classObject_ad405a082a0ef9a641cd5b83ff6dd33c0}{\string~Object}}()\ noexcept\ =\ default;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ protected:}
+\DoxyCodeLine{00035\ \ \ \mbox{\hyperlink{classObject}{Object}}()\ =\ default;}
+\DoxyCodeLine{00036\ \ \ \textcolor{comment}{//\ Internal\ object\ properties}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classObject_a7e9c32a0ddc09790dec66d2ac3bb5e40}{m\_ID}}\{\};}
+\DoxyCodeLine{00041\ \ \ std::shared\_ptr<Buffer>\ \mbox{\hyperlink{classObject_a34cc6472495d0b562aaaa9d88c375017}{m\_buffer}}\{\textcolor{keyword}{nullptr}\};}
+\DoxyCodeLine{00043\ \ \ std::shared\_ptr<Shader>\ \mbox{\hyperlink{classObject_a69ef113490d3a8a50f2c4af614529d3c}{m\_shader}}\{\textcolor{keyword}{nullptr}\};}
+\DoxyCodeLine{00044\ \};}
+
+\end{DoxyCode}

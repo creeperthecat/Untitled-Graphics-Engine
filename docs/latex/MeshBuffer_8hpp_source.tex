@@ -1,0 +1,48 @@
+\doxysection{Mesh\+Buffer.\+hpp}
+\hypertarget{MeshBuffer_8hpp_source}{}\label{MeshBuffer_8hpp_source}\index{src/headers/MeshBuffer.hpp@{src/headers/MeshBuffer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Buffer.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}ModelData.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Shape.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Stride.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Utility.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMeshBuffer}{MeshBuffer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBuffer}{Buffer}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{classMeshBuffer}{MeshBuffer}}(\textcolor{keyword}{const}\ std::vector<ModelData::Vertex>\ \&vertices,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<unsigned\ int>\ \&indices);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00021\ \ \ \mbox{\hyperlink{classMeshBuffer_adb8c796428a2b50301453625721a47f8}{MeshBuffer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classMeshBuffer}{MeshBuffer}}\ \&buffer)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00023\ \ \ \mbox{\hyperlink{classMeshBuffer_a3c462b3fc1746f3ba7c6c83abac8a9e0}{MeshBuffer}}(\mbox{\hyperlink{classMeshBuffer}{MeshBuffer}}\ \&\&buffer)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ \ \ \mbox{\hyperlink{classMeshBuffer_a19dae3ebecc35939788b9ccff6b648ce}{\string~MeshBuffer}}()\ noexcept\textcolor{keyword}{\ override\ }\{\ free(\mbox{\hyperlink{classBuffer_adeef898e529daba7775a411f45df74a0}{m\_VAO}},\ m\_VBO,\ m\_EBO);\ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMeshBuffer}{MeshBuffer}}\ \&\mbox{\hyperlink{classMeshBuffer_ab2316e999dc9046edd360d1b22ecc196}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classMeshBuffer}{MeshBuffer}}\ \&buffer);}
+\DoxyCodeLine{00031\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMeshBuffer}{MeshBuffer}}\ \&\mbox{\hyperlink{classMeshBuffer_ab2316e999dc9046edd360d1b22ecc196}{operator=}}(\mbox{\hyperlink{classMeshBuffer}{MeshBuffer}}\ \&\&buffer)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00035\ \ \ \mbox{\hyperlink{classMeshBuffer}{MeshBuffer}}\ *\mbox{\hyperlink{classMeshBuffer_ad59367a9e0acd87087d2f1e17874dd2f}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMeshBuffer_ac63045d351a10de614ae31d848aaea74}{draw}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ drawMode\ =\ GL\_TRIANGLES)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ \ \ \textcolor{comment}{//\ Shared\ pointers\ for\ arrays}}
+\DoxyCodeLine{00042\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_VBO\{\};}
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_EBO\{\};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordtype}{int}\ m\_vertexCount\ =\ 0;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \textcolor{comment}{//\ Functions\ for\ initialisation.}}
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordtype}{void}\ generateBuffer();}
+\DoxyCodeLine{00049\ \ \ \textcolor{keywordtype}{void}\ assignAttributes();}
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{void}\ bindMesh(\textcolor{keyword}{const}\ std::vector<ModelData::Vertex>\ \&vertices,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<unsigned\ int>\ \&indices);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ free(std::shared\_ptr<unsigned\ int>\ VAO,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ VBO,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ EBO);}
+\DoxyCodeLine{00056\ \};}
+
+\end{DoxyCode}

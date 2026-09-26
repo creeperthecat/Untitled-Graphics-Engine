@@ -1,0 +1,43 @@
+\doxysection{Model\+Instance\+Buffer.\+hpp}
+\hypertarget{ModelInstanceBuffer_8hpp_source}{}\label{ModelInstanceBuffer_8hpp_source}\index{src/headers/ModelInstanceBuffer.hpp@{src/headers/ModelInstanceBuffer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Buffer.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Mesh.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Stride.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Utility.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModelInstanceBuffer}{ModelInstanceBuffer}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{static\_assert}(\textcolor{keyword}{sizeof}(T)\ \%\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float})\ ==\ 0);}
+\DoxyCodeLine{00020\ \ \ \mbox{\hyperlink{classModelInstanceBuffer_a93969f822d7d2361b39f5b31d881601f}{ModelInstanceBuffer}}(\textcolor{keyword}{const}\ std::vector<T>\ \&instanceData,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classStride}{Stride}}\ \&dataStride\ =\ \{\textcolor{keyword}{sizeof}(T)\ /\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float})\});}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \ \ \mbox{\hyperlink{classModelInstanceBuffer_a31e32c573dcf8abe4f236efbfc1bb111}{ModelInstanceBuffer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classModelInstanceBuffer}{ModelInstanceBuffer}}\ \&buffer)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ \ \ \mbox{\hyperlink{classModelInstanceBuffer_a9436eb0c238108aa60a71d661ad575cd}{ModelInstanceBuffer}}(\mbox{\hyperlink{classModelInstanceBuffer}{ModelInstanceBuffer}}\ \&\&buffer)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{classModelInstanceBuffer_a10130f06638df2c736187508589e0f59}{\string~ModelInstanceBuffer}}()\ \{\ free(m\_instanceBuffer);\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \ \ \mbox{\hyperlink{classModelInstanceBuffer}{ModelInstanceBuffer}}\ \&\mbox{\hyperlink{classModelInstanceBuffer_a7b872c01361c6de5c3bf81bb85d969f4}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classModelInstanceBuffer}{ModelInstanceBuffer}}\ \&buffer);}
+\DoxyCodeLine{00034\ \ \ \mbox{\hyperlink{classModelInstanceBuffer}{ModelInstanceBuffer}}\ \&\mbox{\hyperlink{classModelInstanceBuffer_ae0f9e9c5c2d441f1af7ebfd2b09f755a}{operator=}}(\mbox{\hyperlink{classModelInstanceBuffer}{ModelInstanceBuffer}}\ \&\&buffer)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelInstanceBuffer_ae726845888698174b0b112333ba944b6}{assignData}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classMesh}{Mesh}}\ \&mesh,\ \textcolor{keywordtype}{int}\ start\_index,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classStride}{Stride}}\ \&stride);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00049\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModelInstanceBuffer_ad6edd53a60d28d6f97ff94336389854b}{draw}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classMesh}{Mesh}}\ \&mesh,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classShader}{Shader}}\ *shader,\ \textcolor{keywordtype}{bool}\ skipTextures\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ drawMode\ =\ GL\_TRIANGLES)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ std::shared\_ptr<unsigned\ int>\ m\_instanceBuffer\{\textcolor{keyword}{new}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\{0\}\};}
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordtype}{int}\ m\_instanceSize\{0\};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{void}\ generateBuffer(\textcolor{keyword}{const}\ std::vector<T>\ \&instanceData);}
+\DoxyCodeLine{00057\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ free(std::shared\_ptr<unsigned\ int>\ instanceBuffer);}
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#include\ "{}ModelInstanceBuffer.tpp"{}}}
+
+\end{DoxyCode}

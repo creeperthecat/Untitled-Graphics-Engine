@@ -1,0 +1,223 @@
+\doxysection{Standard\+Shader Class Reference}
+\hypertarget{classStandardShader}{}\label{classStandardShader}\index{StandardShader@{StandardShader}}
+
+
+Implementation of vertex and fragment shaders for use in \doxylink{classObject}{Object} instances.  
+
+
+
+
+{\ttfamily \#include $<$Standard\+Shader.\+hpp$>$}
+
+
+
+Inheritance diagram for Standard\+Shader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classStandardShader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Standard\+Shader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classStandardShader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStandardShader_aa2f006f052fba31f8ca5f28ba6a4a59d}{Standard\+Shader}} (std\+::string\+\_\+view vertex\+Shader\+File, std\+::string\+\_\+view fragment\+Shader\+File, bool free\+Shader=true)
+\begin{DoxyCompactList}\small\item\em Initialises the shader. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStandardShader_a1ac0c5ac141cc03f47c16ef6dcc90157}{Standard\+Shader}} (const \mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \&shader)
+\begin{DoxyCompactList}\small\item\em Copy constructor for \doxylink{classShader}{Shader}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStandardShader_a8cec9f9b390a0a6998f7c45e5e7617cd}{Standard\+Shader}} (const \mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \&shader, std\+::string\+\_\+view fragment\+Shader\+File, bool free\+Shader=true)
+\begin{DoxyCompactList}\small\item\em Copy constructor for \doxylink{classShader}{Shader}, specifying a new fragment shader to use. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStandardShader_a9eaf90d0f3d9768c426da4f7a5667267}{Standard\+Shader}} (\mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \&\&shader) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor for \doxylink{classShader}{Shader}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classStandardShader_ac2d91d4d4ef91da35850b1bcc47d4f7f}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Clones this instance of \doxylink{classStandardShader}{Standard\+Shader}. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \& \mbox{\hyperlink{classStandardShader_a4e4987db953c14f4efa7974aaa88431d}{operator=}} (const \mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \&shader)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator for \doxylink{classShader}{Shader}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \& \mbox{\hyperlink{classStandardShader_a8a0cc3d8bedaecdfe9b62f510d65692c}{operator=}} (\mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \&\&shader) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator for shader. \end{DoxyCompactList}\item 
+\Hypertarget{classStandardShader_a1d6abc2710f194d8c9ea641fffaf0904}\label{classStandardShader_a1d6abc2710f194d8c9ea641fffaf0904} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Standard\+Shader} () noexcept override
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classStandardShader}{Standard\+Shader}. Frees any memory held by shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classShader}{Shader}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classShader_a3c7896754f0e1fca8bde860cfef63832}{use}} () const
+\begin{DoxyCompactList}\small\item\em Sets current shader as active shader. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classShader_a4e34f78c033eb2257bc1def5145e2699}{valid\+Fetch}} (std\+::string\+\_\+view name) const
+\begin{DoxyCompactList}\small\item\em Checks if a variable is defined in a shader. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classShader_a47231ca51343ec45f9c1c81fe4ca119a}{get\+Bool}} (std\+::string\+\_\+view name) const
+\begin{DoxyCompactList}\small\item\em Returns the value of a boolean. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classShader_ae46128477d692fa8634ea13ebcbd1f66}{get\+Int}} (std\+::string\+\_\+view name) const
+\begin{DoxyCompactList}\small\item\em Returns the value of an integer defined in shader. \end{DoxyCompactList}\item 
+GLfloat \mbox{\hyperlink{classShader_a9efec6885f86a53e86eb818a73917399}{get\+Float}} (std\+::string\+\_\+view name) const
+\begin{DoxyCompactList}\small\item\em Returns the value of a float defined in shader. \end{DoxyCompactList}\item 
+unsigned int {\bfseries get\+ID} () const
+\begin{DoxyCompactList}\small\item\em Returns the shader ID. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classShader_a75cb0c3d7345fae4ac62086c9ea303d2}{get\+Uniform\+Block}} (std\+::string\+\_\+view block) const
+\begin{DoxyCompactList}\small\item\em Get uniform block by name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_ab01a0e7ef51575996672aba36bc62892}{set\+Bool}} (std\+::string\+\_\+view name, bool value) const
+\begin{DoxyCompactList}\small\item\em Sets a boolean defined in shader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_a7b7307af4b37d9a1ed317360bcdf7e7c}{set\+Int}} (std\+::string\+\_\+view name, int value) const
+\begin{DoxyCompactList}\small\item\em Sets an integer defined in shader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_ab575382fda84aeaf0ca80c3a045415d9}{set\+Float}} (std\+::string\+\_\+view name, float value) const
+\begin{DoxyCompactList}\small\item\em Sets a float defined in shader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_af1e05f2f60aa5ee2b9020a9a8257e46c}{set\+Vec2}} (std\+::string\+\_\+view name, const glm\+::vec2 \&value) const
+\begin{DoxyCompactList}\small\item\em Sets a vec2 defined in shader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_a758a5c11c450737294c1f331cde96829}{set\+Vec2}} (std\+::string\+\_\+view name, float x, float y) const
+\begin{DoxyCompactList}\small\item\em Sets a vec2 defined in shader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_aa6cd805654263af4144919f607f00181}{set\+Vec3}} (std\+::string\+\_\+view name, const glm\+::vec3 \&value) const
+\begin{DoxyCompactList}\small\item\em Sets a vec3 defined in shader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_acb5ae98f705e1dd6f02933ee56f891b8}{set\+Vec3}} (std\+::string\+\_\+view name, float x, float y, float z) const
+\begin{DoxyCompactList}\small\item\em Sets a vec3 defined in shader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_ae2e887e0b013c2816c41dfad0d5567a9}{set\+Mat4}} (std\+::string\+\_\+view name, const glm\+::mat4 \&matrix) const
+\begin{DoxyCompactList}\small\item\em Sets a 4x4 matrix defined in shader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_aebca4df7a0270f5afd5e7582f4048751}{set\+Block\+Index}} (unsigned int block, int index) const
+\begin{DoxyCompactList}\small\item\em Assign a uniform block\textquotesingle{}s index using its number. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShader_ae8f5dac087265318918a0115e2b53373}{set\+Block\+Index}} (std\+::string\+\_\+view block, int index) const
+\begin{DoxyCompactList}\small\item\em Assign a uniform block\textquotesingle{}s index using its name. \end{DoxyCompactList}\item 
+{\bfseries operator bool} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the shader is in a valid state. \end{DoxyCompactList}\item 
+{\bfseries Shader} (const \mbox{\hyperlink{classShader}{Shader}} \&shader)
+\begin{DoxyCompactList}\small\item\em Copy constructor for \doxylink{classShader}{Shader}. \end{DoxyCompactList}\item 
+{\bfseries Shader} (\mbox{\hyperlink{classShader}{Shader}} \&\&shader) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor for \doxylink{classShader}{Shader}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classShader}{Shader}} \& {\bfseries operator=} (const \mbox{\hyperlink{classShader}{Shader}} \&shader)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator for \doxylink{classShader}{Shader}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classShader}{Shader}} \& {\bfseries operator=} (\mbox{\hyperlink{classShader}{Shader}} \&\&shader) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator for \doxylink{classShader}{Shader}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Shader} () noexcept
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classShader}{Shader}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classShader}{Shader}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Shader} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for derived classes to use. \end{DoxyCompactList}\item 
+void {\bfseries terminate} ()
+\begin{DoxyCompactList}\small\item\em Frees resources held by the shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classShader}{Shader}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ unsigned int $>$ {\bfseries m\+\_\+\+ID} \{\}
+\begin{DoxyCompactList}\small\item\em ID of the shader. Must be initialised by derived classes. \end{DoxyCompactList}\item 
+bool {\bfseries m\+\_\+is\+Valid} \{true\}
+\begin{DoxyCompactList}\small\item\em Stores whether the shader is in a valid state for debugging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of vertex and fragment shaders for use in \doxylink{classObject}{Object} instances. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classStandardShader_aa2f006f052fba31f8ca5f28ba6a4a59d}\label{classStandardShader_aa2f006f052fba31f8ca5f28ba6a4a59d} 
+\index{StandardShader@{StandardShader}!StandardShader@{StandardShader}}
+\index{StandardShader@{StandardShader}!StandardShader@{StandardShader}}
+\doxysubsubsection{\texorpdfstring{StandardShader()}{StandardShader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Standard\+Shader\+::\+Standard\+Shader (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{vertex\+Shader\+File,  }\item[{std\+::string\+\_\+view}]{fragment\+Shader\+File,  }\item[{bool}]{free\+Shader = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Initialises the shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex\+Shader\+File} & Name of the vertex shader file used for this shader. \\
+\hline
+{\em fragment\+Shader\+File} & Name of the fragment shader file used for this shader. \\
+\hline
+{\em free\+Shader} & Controls whether to hold memory used by shaders for later. Default behaviour is to always free memory after construction. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStandardShader_a1ac0c5ac141cc03f47c16ef6dcc90157}\label{classStandardShader_a1ac0c5ac141cc03f47c16ef6dcc90157} 
+\index{StandardShader@{StandardShader}!StandardShader@{StandardShader}}
+\index{StandardShader@{StandardShader}!StandardShader@{StandardShader}}
+\doxysubsubsection{\texorpdfstring{StandardShader()}{StandardShader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Standard\+Shader\+::\+Standard\+Shader (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \&}]{shader }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for \doxylink{classShader}{Shader}. 
+
+Copies ID and shares ownership of compiled shaders \Hypertarget{classStandardShader_a8cec9f9b390a0a6998f7c45e5e7617cd}\label{classStandardShader_a8cec9f9b390a0a6998f7c45e5e7617cd} 
+\index{StandardShader@{StandardShader}!StandardShader@{StandardShader}}
+\index{StandardShader@{StandardShader}!StandardShader@{StandardShader}}
+\doxysubsubsection{\texorpdfstring{StandardShader()}{StandardShader()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Standard\+Shader\+::\+Standard\+Shader (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \&}]{shader,  }\item[{std\+::string\+\_\+view}]{fragment\+Shader\+File,  }\item[{bool}]{free\+Shader = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for \doxylink{classShader}{Shader}, specifying a new fragment shader to use. 
+
+The shader must still own memory held in vertex shader for this operation to be valid. If shader memory has been freed, construction will fail. 
+\begin{DoxyParams}{Parameters}
+{\em shader} & Shader to copy from \\
+\hline
+{\em fragment\+Shader\+File} & New fragment shader to use for this shader. \\
+\hline
+{\em free\+Shader} & Controls whether to hold fragment shader memory. Default behaviour is to always free memory after construction. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStandardShader_a9eaf90d0f3d9768c426da4f7a5667267}\label{classStandardShader_a9eaf90d0f3d9768c426da4f7a5667267} 
+\index{StandardShader@{StandardShader}!StandardShader@{StandardShader}}
+\index{StandardShader@{StandardShader}!StandardShader@{StandardShader}}
+\doxysubsubsection{\texorpdfstring{StandardShader()}{StandardShader()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Standard\+Shader\+::\+Standard\+Shader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \&\&}]{shader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move constructor for \doxylink{classShader}{Shader}. 
+
+Passes ownership of any memory held by shader object. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStandardShader_ac2d91d4d4ef91da35850b1bcc47d4f7f}\label{classStandardShader_ac2d91d4d4ef91da35850b1bcc47d4f7f} 
+\index{StandardShader@{StandardShader}!clone@{clone}}
+\index{clone@{clone}!StandardShader@{StandardShader}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \texorpdfstring{$\ast$}{*} Standard\+Shader\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clones this instance of \doxylink{classStandardShader}{Standard\+Shader}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a new \doxylink{classStandardShader}{Standard\+Shader} copied from this \doxylink{classStandardShader}{Standard\+Shader}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classShader_a8708e9ba59f863801fa5da2c5afdcde2}{Shader}}.
+
+\Hypertarget{classStandardShader_a4e4987db953c14f4efa7974aaa88431d}\label{classStandardShader_a4e4987db953c14f4efa7974aaa88431d} 
+\index{StandardShader@{StandardShader}!operator=@{operator=}}
+\index{operator=@{operator=}!StandardShader@{StandardShader}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \& Standard\+Shader\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \&}]{shader }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator for \doxylink{classShader}{Shader}. 
+
+Frees any memory currently held. Copies ID and shares ownership of compiled shaders \Hypertarget{classStandardShader_a8a0cc3d8bedaecdfe9b62f510d65692c}\label{classStandardShader_a8a0cc3d8bedaecdfe9b62f510d65692c} 
+\index{StandardShader@{StandardShader}!operator=@{operator=}}
+\index{operator=@{operator=}!StandardShader@{StandardShader}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \& Standard\+Shader\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStandardShader}{Standard\+Shader}} \&\&}]{shader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move assignment operator for shader. 
+
+Frees any memory held by shader, as it is no longer being used. Passes ownership of any memory held by shader object. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Standard\+Shader.\+hpp\item 
+src/classes/Standard\+Shader.\+cpp\end{DoxyCompactItemize}

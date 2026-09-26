@@ -1,0 +1,124 @@
+\doxysection{Cubemap Class Reference}
+\hypertarget{classCubemap}{}\label{classCubemap}\index{Cubemap@{Cubemap}}
+
+
+\doxylink{classObject}{Object} type used for rendering cubemaps.  
+
+
+
+
+{\ttfamily \#include $<$Cubemap.\+hpp$>$}
+
+
+
+Inheritance diagram for Cubemap\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{classCubemap__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cubemap\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{classCubemap__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCubemap_aa254b7d243bf75db3dc6082cd3f60027}{Cubemap}} (\mbox{\hyperlink{classBuffer}{Buffer}} \texorpdfstring{$\ast$}{*}buffer, \mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}shader, const std\+::vector$<$ std\+::string\+\_\+view $>$ \&faces, const \mbox{\hyperlink{structCubemapParams}{Cubemap\+Params}} \&params=\{\})
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classCubemap}{Cubemap} instances. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCubemap_adb1830e575f9fef038e8c45ddd6a9a6d}{draw}} (unsigned int draw\+Mode=GL\+\_\+\+TRIANGLES) const override
+\begin{DoxyCompactList}\small\item\em Uses shaders and binds textures before drawing the cubemap to the screen. \end{DoxyCompactList}\item 
+\Hypertarget{classCubemap_ac9943df0cdf3a03e6e9c71b97b8d7830}\label{classCubemap_ac9943df0cdf3a03e6e9c71b97b8d7830} 
+void {\bfseries bind} () const
+\begin{DoxyCompactList}\small\item\em Binds cubemap textures. \end{DoxyCompactList}\item 
+\Hypertarget{classCubemap_a815cc14115fcc93b74a57c13dea9026e}\label{classCubemap_a815cc14115fcc93b74a57c13dea9026e} 
+const \mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Shader} () const
+\begin{DoxyCompactList}\small\item\em Returns shader used by cubemap. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Shader} () const
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the shader used by this object. \end{DoxyCompactList}\item 
+void {\bfseries set\+Shader} (\mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}shader)
+\begin{DoxyCompactList}\small\item\em Sets the \doxylink{classShader}{Shader} used by this object. \end{DoxyCompactList}\item 
+void {\bfseries set\+ID} (unsigned int ID)
+\begin{DoxyCompactList}\small\item\em Sets object ID for use in \doxylink{classRenderer}{Renderer}. \end{DoxyCompactList}\item 
+unsigned int {\bfseries get\+ID} ()
+\begin{DoxyCompactList}\small\item\em Gets object ID for use in \doxylink{classRenderer}{Renderer}. \end{DoxyCompactList}\item 
+unsigned int {\bfseries get\+VAO} ()
+\begin{DoxyCompactList}\small\item\em Gets VAO used by owned \doxylink{classBuffer}{Buffer}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Object} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classObject}{Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Object} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for use in derived classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int {\bfseries m\+\_\+\+ID} \{\}
+\begin{DoxyCompactList}\small\item\em \doxylink{classObject}{Object} ID used by \doxylink{classRenderer}{Renderer} to identify objects. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ {\bfseries m\+\_\+buffer} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em \doxylink{classBuffer}{Buffer} instance needed to draw vertices to the screen. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classShader}{Shader}} $>$ {\bfseries m\+\_\+shader} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em \doxylink{classShader}{Shader} instance to determine how to draw object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classObject}{Object} type used for rendering cubemaps. 
+
+Commonly used for skyboxes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCubemap_aa254b7d243bf75db3dc6082cd3f60027}\label{classCubemap_aa254b7d243bf75db3dc6082cd3f60027} 
+\index{Cubemap@{Cubemap}!Cubemap@{Cubemap}}
+\index{Cubemap@{Cubemap}!Cubemap@{Cubemap}}
+\doxysubsubsection{\texorpdfstring{Cubemap()}{Cubemap()}}
+{\footnotesize\ttfamily Cubemap\+::\+Cubemap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBuffer}{Buffer}} \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{\mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}}]{shader,  }\item[{const std\+::vector$<$ std\+::string\+\_\+view $>$ \&}]{faces,  }\item[{const \mbox{\hyperlink{structCubemapParams}{Cubemap\+Params}} \&}]{params = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classCubemap}{Cubemap} instances. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Pointer to a constructed \doxylink{classBuffer}{Buffer}, needed for drawing vertices. \\
+\hline
+{\em shader} & Pointer to a constructed \doxylink{classShader}{Shader} for this cubemap to use. \\
+\hline
+{\em faces} & A vector of texture files used to construct the cubemap. \\
+\hline
+{\em params} & Optional specifier for texture parameters used when loading the cubemap. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCubemap_adb1830e575f9fef038e8c45ddd6a9a6d}\label{classCubemap_adb1830e575f9fef038e8c45ddd6a9a6d} 
+\index{Cubemap@{Cubemap}!draw@{draw}}
+\index{draw@{draw}!Cubemap@{Cubemap}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Cubemap\+::draw (\begin{DoxyParamCaption}\item[{unsigned int}]{draw\+Mode = {\ttfamily GL\+\_\+TRIANGLES} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Uses shaders and binds textures before drawing the cubemap to the screen. 
+
+
+
+Implements \mbox{\hyperlink{classObject_afcc65c4a0a42dc6159b5751c7972521d}{Object}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Cubemap.\+hpp\item 
+src/classes/Cubemap.\+cpp\end{DoxyCompactItemize}

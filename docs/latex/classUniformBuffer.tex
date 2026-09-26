@@ -1,0 +1,95 @@
+\doxysection{Uniform\+Buffer Class Reference}
+\hypertarget{classUniformBuffer}{}\label{classUniformBuffer}\index{UniformBuffer@{UniformBuffer}}
+
+
+The \doxylink{classUniformBuffer}{Uniform\+Buffer} class is used to assist shaders in managing uniform buffers.  
+
+
+
+
+{\ttfamily \#include $<$Uniform\+Buffer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUniformBuffer_ac5c39ffca8c0591354cd12f4e187ca3b}{Uniform\+Buffer}} (std\+::size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Creates a new uniform buffer. \end{DoxyCompactList}\item 
+\Hypertarget{classUniformBuffer_a44cb72507959b1ba40651b31468a32ab}\label{classUniformBuffer_a44cb72507959b1ba40651b31468a32ab} 
+void {\bfseries bind} () const
+\begin{DoxyCompactList}\small\item\em Bind uniform buffer for shaders to use. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classUniformBuffer_a633c29a6b25ab6d5801cc3538321ad63}{store\+Data}} (int offset, const T \&value) const
+\begin{DoxyCompactList}\small\item\em Stores data in the uniform buffer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classUniformBuffer_ac0f6063619fd2d5fa309157e6aa708b7}{add\+Data}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Adds data to the uniform buffer. \end{DoxyCompactList}\item 
+\Hypertarget{classUniformBuffer_aa97c6e8b9684440e6a9ace9ffbc4b79f}\label{classUniformBuffer_aa97c6e8b9684440e6a9ace9ffbc4b79f} 
+unsigned int {\bfseries get\+ID} () const
+\begin{DoxyCompactList}\small\item\em Returns the id of the uniform buffer. \end{DoxyCompactList}\item 
+\Hypertarget{classUniformBuffer_aa041e3afa6c091d4a95f3986f7f6df1d}\label{classUniformBuffer_aa041e3afa6c091d4a95f3986f7f6df1d} 
+int {\bfseries get\+Offset} () const
+\begin{DoxyCompactList}\small\item\em Returns how much of the buffer has been used i.\+e. where to place new data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classUniformBuffer}{Uniform\+Buffer} class is used to assist shaders in managing uniform buffers. 
+
+It is used to declare a set of global uniform variables, useful for when variables are often repeated. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classUniformBuffer_ac5c39ffca8c0591354cd12f4e187ca3b}\label{classUniformBuffer_ac5c39ffca8c0591354cd12f4e187ca3b} 
+\index{UniformBuffer@{UniformBuffer}!UniformBuffer@{UniformBuffer}}
+\index{UniformBuffer@{UniformBuffer}!UniformBuffer@{UniformBuffer}}
+\doxysubsubsection{\texorpdfstring{UniformBuffer()}{UniformBuffer()}}
+{\footnotesize\ttfamily Uniform\+Buffer\+::\+Uniform\+Buffer (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Creates a new uniform buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of the uniform buffer. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classUniformBuffer_ac0f6063619fd2d5fa309157e6aa708b7}\label{classUniformBuffer_ac0f6063619fd2d5fa309157e6aa708b7} 
+\index{UniformBuffer@{UniformBuffer}!addData@{addData}}
+\index{addData@{addData}!UniformBuffer@{UniformBuffer}}
+\doxysubsubsection{\texorpdfstring{addData()}{addData()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Uniform\+Buffer\+::add\+Data (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Adds data to the uniform buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & New data to be stored. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classUniformBuffer_a633c29a6b25ab6d5801cc3538321ad63}\label{classUniformBuffer_a633c29a6b25ab6d5801cc3538321ad63} 
+\index{UniformBuffer@{UniformBuffer}!storeData@{storeData}}
+\index{storeData@{storeData}!UniformBuffer@{UniformBuffer}}
+\doxysubsubsection{\texorpdfstring{storeData()}{storeData()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Uniform\+Buffer\+::store\+Data (\begin{DoxyParamCaption}\item[{int}]{offset,  }\item[{const T \&}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Stores data in the uniform buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Offset of the new data to be stored. \\
+\hline
+{\em value} & New data to be stored. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Uniform\+Buffer.\+hpp\item 
+src/classes/Uniform\+Buffer.\+cpp\end{DoxyCompactItemize}

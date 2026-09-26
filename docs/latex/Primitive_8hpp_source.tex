@@ -1,0 +1,36 @@
+\doxysection{Primitive.\+hpp}
+\hypertarget{Primitive_8hpp_source}{}\label{Primitive_8hpp_source}\index{src/headers/Primitive.hpp@{src/headers/Primitive.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Buffer.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Object.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Shader.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Texture.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Utility.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}VertexArray.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPrimitive}{Primitive}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classObject}{Object}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \mbox{\hyperlink{classPrimitive_aba34b9d202d73d0602f50e1d7dc3bd29}{Primitive}}(\mbox{\hyperlink{classVertexArray}{VertexArray}}\ *buffer,\ \mbox{\hyperlink{classShader}{Shader}}\ *shader,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classTexture}{Texture}}\ \&texture\ =\ \{\})}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ :\ m\_texture\{texture\}\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classObject_a34cc6472495d0b562aaaa9d88c375017}{m\_buffer}}\ =\ std::shared\_ptr<Buffer>(buffer);}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classObject_a69ef113490d3a8a50f2c4af614529d3c}{m\_shader}}\ =\ std::shared\_ptr<Shader>(shader);}
+\DoxyCodeLine{00025\ \ \ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classTexture}{Texture}}\ \&\mbox{\hyperlink{classPrimitive_a12995a01f092d5e4b4154421224a15a8}{getTexture}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPrimitive_aff1f44a2958273ac0367d8c610e2b2ea}{draw}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ drawMode\ =\ GL\_TRIANGLES)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{classPrimitive_a0b71a8ced9a14543d7a07c55d691a74e}{\string~Primitive}}()\ noexcept\ override\ =\ default;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ private:}
+\DoxyCodeLine{00039\ \ \ \textcolor{comment}{//\ Internal\ object\ properties}}
+\DoxyCodeLine{00040\ \ \ \mbox{\hyperlink{classTexture}{Texture}}\ m\_texture\{\};}
+\DoxyCodeLine{00041\ \};}
+
+\end{DoxyCode}

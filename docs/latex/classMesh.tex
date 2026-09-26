@@ -1,0 +1,96 @@
+\doxysection{Mesh Class Reference}
+\hypertarget{classMesh}{}\label{classMesh}\index{Mesh@{Mesh}}
+
+
+The \doxylink{classMesh}{Mesh} class is used by \doxylink{classModel}{Model} instances to help process model files, by breaking them up into meshes.  
+
+
+
+
+{\ttfamily \#include $<$Mesh.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMesh_a86b5f18ef0d87fa6c50702012c7d74a1}{Mesh}} (const std\+::vector$<$ \mbox{\hyperlink{structModelData_1_1Vertex}{Model\+Data\+::\+Vertex}} $>$ \&vertices, const std\+::vector$<$ unsigned int $>$ \&indices, const std\+::vector$<$ \mbox{\hyperlink{structModelData_1_1Texture}{Model\+Data\+::\+Texture}} $>$ \&textures)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classMesh}{Mesh}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMesh_aed40c5f184e8415c0d2375cccc8358e5}{draw}} (const \mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}shader, bool skip\+Textures=false, unsigned int draw\+Mode=GL\+\_\+\+TRIANGLES) const
+\begin{DoxyCompactList}\small\item\em Draws the mesh to the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMesh_af99231d9cb4f225f556118769f0eade3}{bind\+Textures}} (const \mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}shader, bool skip\+Textures=false) const
+\begin{DoxyCompactList}\small\item\em Binds textures to be drawn to the screen. \end{DoxyCompactList}\item 
+\Hypertarget{classMesh_a916fea5f0d62dd5552e619817a9d9561}\label{classMesh_a916fea5f0d62dd5552e619817a9d9561} 
+unsigned int {\bfseries get\+VAO} () const
+\begin{DoxyCompactList}\small\item\em Returns the VAO owned by this mesh. \end{DoxyCompactList}\item 
+\Hypertarget{classMesh_a5ba5ce24f4e5b8413a0e28ca1be0df70}\label{classMesh_a5ba5ce24f4e5b8413a0e28ca1be0df70} 
+int {\bfseries indices\+Size} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of indices used by this mesh. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classMesh}{Mesh} class is used by \doxylink{classModel}{Model} instances to help process model files, by breaking them up into meshes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMesh_a86b5f18ef0d87fa6c50702012c7d74a1}\label{classMesh_a86b5f18ef0d87fa6c50702012c7d74a1} 
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}}
+{\footnotesize\ttfamily Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structModelData_1_1Vertex}{Model\+Data\+::\+Vertex}} $>$ \&}]{vertices,  }\item[{const std\+::vector$<$ unsigned int $>$ \&}]{indices,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structModelData_1_1Texture}{Model\+Data\+::\+Texture}} $>$ \&}]{textures }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \doxylink{classMesh}{Mesh}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertices} & Vector of vertices for this mesh. \\
+\hline
+{\em indices} & Vector of indices for this mesh. \\
+\hline
+{\em textures} & Vector of texture data for this mesh. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMesh_af99231d9cb4f225f556118769f0eade3}\label{classMesh_af99231d9cb4f225f556118769f0eade3} 
+\index{Mesh@{Mesh}!bindTextures@{bindTextures}}
+\index{bindTextures@{bindTextures}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{bindTextures()}{bindTextures()}}
+{\footnotesize\ttfamily void Mesh\+::bind\+Textures (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}}]{shader,  }\item[{bool}]{skip\+Textures = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+
+
+Binds textures to be drawn to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & Pointer to the shader to be used with this texture. \\
+\hline
+{\em skip\+Textures} & Controls whether to skip textures. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMesh_aed40c5f184e8415c0d2375cccc8358e5}\label{classMesh_aed40c5f184e8415c0d2375cccc8358e5} 
+\index{Mesh@{Mesh}!draw@{draw}}
+\index{draw@{draw}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Mesh\+::draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}}]{shader,  }\item[{bool}]{skip\+Textures = {\ttfamily false},  }\item[{unsigned int}]{draw\+Mode = {\ttfamily GL\+\_\+TRIANGLES} }\end{DoxyParamCaption}) const}
+
+
+
+Draws the mesh to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & Pointer to the shader to use for drawing. \\
+\hline
+{\em skip\+Textures} & Controls whether to skip textures. \\
+\hline
+{\em draw\+Mode} & Specifies how to draw the vertices in the buffer. Usually drawn as triangles by default. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Mesh.\+hpp\item 
+src/classes/Mesh.\+cpp\end{DoxyCompactItemize}

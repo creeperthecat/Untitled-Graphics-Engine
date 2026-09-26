@@ -1,0 +1,55 @@
+\doxysection{File\+Manager.\+hpp}
+\hypertarget{FileManager_8hpp_source}{}\label{FileManager_8hpp_source}\index{src/headers/FileManager.hpp@{src/headers/FileManager.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TexParams.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string\_view>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceFileManager}{FileManager}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespaceFileManager_ac726e8af5fbebcc7c3db8e5f82330ca6}{ShaderType}}\ \{}
+\DoxyCodeLine{00016\ \ \ VERTEX,}
+\DoxyCodeLine{00017\ \ \ FRAGMENT,}
+\DoxyCodeLine{00018\ \ \ GEOMETRY,}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceFileManager_a76f2727e68abe5c8a3e82ac538a44531}{compileShaderFile}}(std::string\_view\ file,\ \mbox{\hyperlink{namespaceFileManager_ac726e8af5fbebcc7c3db8e5f82330ca6}{ShaderType}}\ type);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceFileManager_acfcc7ecf4337b01f5269ad99ea19876d}{loadTexture}}(std::string\_view\ file,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ID,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structTexParams}{TexParams}}\ \&params\ =\ \{\});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceFileManager_acfcc7ecf4337b01f5269ad99ea19876d}{loadTexture}}(std::string\_view\ file,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structTexParams}{TexParams}}\ \&params\ =\ \{\});}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceFileManager_acfcc7ecf4337b01f5269ad99ea19876d}{loadTexture}}(std::string\_view\ file,\ std::string\_view\ directory,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structTexParams}{TexParams}}\ \&params\ =\ \{\});}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceFileManager_a4f71010b6c62667080d87556ae642089}{loadCubemap}}(\textcolor{keyword}{const}\ std::vector<std::string\_view>\ \&faces,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ID,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structCubemapParams}{CubemapParams}}\ \&params\ =\ \{\});}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceFileManager_a4f71010b6c62667080d87556ae642089}{loadCubemap}}(\textcolor{keyword}{const}\ std::vector<std::string\_view>\ \&faces,}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structCubemapParams}{CubemapParams}}\ \&params\ =\ \{\});}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ std::string\ \mbox{\hyperlink{namespaceFileManager_a94aff1fd833b8468ef9d8f28509a410c}{readShaderFile}}(std::string\_view\ file);}
+\DoxyCodeLine{00077\ std::string\ \mbox{\hyperlink{namespaceFileManager_ad9d191c9b956b839b1532d83729ae3b7}{getShaderFilePath}}(std::string\_view\ file);}
+\DoxyCodeLine{00080\ std::string\ \mbox{\hyperlink{namespaceFileManager_a79989c8b0b817f6eaea7a507f1ddc771}{getTextureFilePath}}(std::string\_view\ file);}
+\DoxyCodeLine{00083\ std::string\ \mbox{\hyperlink{namespaceFileManager_a58b93d914eaab24360f7cc9a0b87b45f}{getModelFilePath}}(std::string\_view\ file);}
+\DoxyCodeLine{00086\ std::string\ \mbox{\hyperlink{namespaceFileManager_a66363b8440ccf2cc6f7df5461c74751a}{getFileDirectory}}(std::string\_view\ file);}
+\DoxyCodeLine{00088\ std::filesystem::path\ \mbox{\hyperlink{namespaceFileManager_afc07a74b704111e4478254b0b5f25a1a}{getExecutablePath}}();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceFileManager_a96a4ee22426ce38b20a2b56b5c97a5e4}{compile}}(\textcolor{keywordtype}{int}\ shaderType,\ std::string\_view\ shaderSource);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceFileManager_ab594a6497a53b36b3ac265bb48f636f8}{checkCompile}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ID);}
+\DoxyCodeLine{00103\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceFileManager_a21257b777eb88b05c303b58bee1de8e3}{checkLink}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ID);}
+\DoxyCodeLine{00107\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceFileManager_a2bdf508d30b99ceed3284a2b1e5faf9e}{loadTextureParameters}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ID,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structTexParams}{TexParams}}\ \&params\ =\ \{\});}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00112\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceFileManager_adae21a8dda87345f802486321ad717d7}{loadCubemapParameters}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ID,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structCubemapParams}{CubemapParams}}\ \&params\ =\ \{\});}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00116\ std::string\ \mbox{\hyperlink{namespaceFileManager_a940362f24b969da7b35a2d57c453281f}{getShaderTypeName}}(\mbox{\hyperlink{namespaceFileManager_ac726e8af5fbebcc7c3db8e5f82330ca6}{ShaderType}}\ type);}
+\DoxyCodeLine{00119\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceFileManager_a2edb268742d03d905b55551ce490b12f}{getGLShader}}(\mbox{\hyperlink{namespaceFileManager_ac726e8af5fbebcc7c3db8e5f82330ca6}{ShaderType}}\ type);}
+\DoxyCodeLine{00120\ \}\ \textcolor{comment}{//\ namespace\ FileManager}}
+
+\end{DoxyCode}

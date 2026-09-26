@@ -1,0 +1,39 @@
+\doxysection{Mesh.\+hpp}
+\hypertarget{Mesh_8hpp_source}{}\label{Mesh_8hpp_source}\index{src/headers/Mesh.hpp@{src/headers/Mesh.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}MeshBuffer.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}ModelData.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Shader.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Utility.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMesh}{Mesh}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{classMesh_a86b5f18ef0d87fa6c50702012c7d74a1}{Mesh}}(\textcolor{keyword}{const}\ std::vector<ModelData::Vertex>\ \&vertices,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<unsigned\ int>\ \&indices,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<ModelData::Texture>\ \&textures)}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ :\ m\_vertices\{vertices\},\ m\_indices\{indices\},\ m\_textures\{textures\},}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ m\_buffer\{vertices,\ indices\}\ \{\}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMesh_aed40c5f184e8415c0d2375cccc8358e5}{draw}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classShader}{Shader}}\ *shader,\ \textcolor{keywordtype}{bool}\ skipTextures\ =\ \textcolor{keyword}{false},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ drawMode\ =\ GL\_TRIANGLES)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMesh_af99231d9cb4f225f556118769f0eade3}{bindTextures}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classShader}{Shader}}\ *shader,\ \textcolor{keywordtype}{bool}\ skipTextures\ =\ \textcolor{keyword}{false})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMesh_a916fea5f0d62dd5552e619817a9d9561}{getVAO}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_buffer.\mbox{\hyperlink{classBuffer_ab83ccac615acd99f8a69e221440a9b50}{getVAO}}();\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMesh_a5ba5ce24f4e5b8413a0e28ca1be0df70}{indicesSize}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_indices.size();\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \textcolor{comment}{//\ mesh\ data}}
+\DoxyCodeLine{00044\ \ \ std::vector<ModelData::Vertex>\ m\_vertices\{\};}
+\DoxyCodeLine{00045\ \ \ std::vector<unsigned\ int>\ m\_indices\{\};}
+\DoxyCodeLine{00046\ \ \ std::vector<ModelData::Texture>\ m\_textures\{\};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \mbox{\hyperlink{classMeshBuffer}{MeshBuffer}}\ m\_buffer;}
+\DoxyCodeLine{00049\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,46 @@
+\doxysection{Frame\+Buffer.\+hpp}
+\hypertarget{FrameBuffer_8hpp_source}{}\label{FrameBuffer_8hpp_source}\index{src/headers/FrameBuffer.hpp@{src/headers/FrameBuffer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Window.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFrameBuffer}{FrameBuffer}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \mbox{\hyperlink{classFrameBuffer}{FrameBuffer}}(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{classFrameBuffer_a564a96e4c3d5dbd70eb1bcef46dfe4af}{FrameBuffer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classWindow}{Window}}\ \&window)}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classFrameBuffer}{FrameBuffer}}\{window.getWidth(),\ window.getHeight()\}\ \{\}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00021\ \ \ \mbox{\hyperlink{classFrameBuffer_ae05fbe26c40ed4ded8f6812f915bc119}{FrameBuffer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFrameBuffer}{FrameBuffer}}\ \&framebuffer)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00023\ \ \ \mbox{\hyperlink{classFrameBuffer_a31d4287910fd02740a2c42491bcedf4a}{FrameBuffer}}(\mbox{\hyperlink{classFrameBuffer}{FrameBuffer}}\ \&\&framebuffer)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00027\ \ \ \mbox{\hyperlink{classFrameBuffer_aef8be9884e8cc0fc3f3692e6c6968fa1}{\string~FrameBuffer}}()\ \{\ free(m\_rbo,\ m\_framebuffer);\ \}}
+\DoxyCodeLine{00029\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFrameBuffer_a16fa30984714c6070f4c5bde5b5b87f7}{bind}}();}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFrameBuffer_a14663cbe36ea50e94d64e9ba7f5fd959}{bindTexture}}();}
+\DoxyCodeLine{00033\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFrameBuffer_a18b62aeaa132527671396f5847407dae}{bindDefault}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{classFrameBuffer}{FrameBuffer}}\ \&\mbox{\hyperlink{classFrameBuffer_ae1412343560e97b476bf5bd9e56f4b4b}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classFrameBuffer}{FrameBuffer}}\ \&framebuffer);}
+\DoxyCodeLine{00038\ \ \ \mbox{\hyperlink{classFrameBuffer}{FrameBuffer}}\ \&\mbox{\hyperlink{classFrameBuffer_ae1412343560e97b476bf5bd9e56f4b4b}{operator=}}(\mbox{\hyperlink{classFrameBuffer}{FrameBuffer}}\ \&\&framebuffer);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ \ \ \textcolor{comment}{//\ Internal\ buffers\ used\ for\ framebuffering}}
+\DoxyCodeLine{00042\ \ \ std::shared\_ptr<unsigned\ int>\ m\_rbo\{\textcolor{keyword}{new}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\{0\}\};}
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_framebuffer\{\};}
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_textureColorbuffer\{\};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \textcolor{comment}{//\ Is\ false\ when\ framebuffer\ fails}}
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{bool}\ m\_isValid\{\textcolor{keyword}{true}\};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \textcolor{comment}{//\ Helper\ functions\ for\ creating\ the\ framebuffer.}}
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{void}\ generateFramebuffer();}
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordtype}{void}\ generateTextureBuffer(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordtype}{void}\ generateBufferObject(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordtype}{void}\ attachBuffer();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \textcolor{comment}{//\ Frees\ data\ held}}
+\DoxyCodeLine{00056\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ free(std::shared\_ptr<unsigned\ int>\ rbo,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ framebuffer);}
+\DoxyCodeLine{00057\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,143 @@
+\doxysection{Mesh\+Buffer Class Reference}
+\hypertarget{classMeshBuffer}{}\label{classMeshBuffer}\index{MeshBuffer@{MeshBuffer}}
+
+
+Implementation of \doxylink{classBuffer}{Buffer} which is used for \doxylink{classMesh}{Mesh} instances.  
+
+
+
+
+{\ttfamily \#include $<$Mesh\+Buffer.\+hpp$>$}
+
+
+
+Inheritance diagram for Mesh\+Buffer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classMeshBuffer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Mesh\+Buffer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classMeshBuffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMeshBuffer_aa2566875a7464bbd9c4a72bda2d21734}{Mesh\+Buffer}} (const std\+::vector$<$ \mbox{\hyperlink{structModelData_1_1Vertex}{Model\+Data\+::\+Vertex}} $>$ \&vertices, const std\+::vector$<$ unsigned int $>$ \&indices)
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{classMeshBuffer}{Mesh\+Buffer} using model data. \end{DoxyCompactList}\item 
+\Hypertarget{classMeshBuffer_adb8c796428a2b50301453625721a47f8}\label{classMeshBuffer_adb8c796428a2b50301453625721a47f8} 
+{\bfseries Mesh\+Buffer} (const \mbox{\hyperlink{classMeshBuffer}{Mesh\+Buffer}} \&buffer)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor for \doxylink{classMeshBuffer}{Mesh\+Buffer}. \end{DoxyCompactList}\item 
+\Hypertarget{classMeshBuffer_a3c462b3fc1746f3ba7c6c83abac8a9e0}\label{classMeshBuffer_a3c462b3fc1746f3ba7c6c83abac8a9e0} 
+{\bfseries Mesh\+Buffer} (\mbox{\hyperlink{classMeshBuffer}{Mesh\+Buffer}} \&\&buffer) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor for \doxylink{classMeshBuffer}{Mesh\+Buffer}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMeshBuffer_a19dae3ebecc35939788b9ccff6b648ce}{\texorpdfstring{$\sim$}{\string~}\+Mesh\+Buffer}} () noexcept override
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classMeshBuffer}{Mesh\+Buffer}. \end{DoxyCompactList}\item 
+\Hypertarget{classMeshBuffer_ab2316e999dc9046edd360d1b22ecc196}\label{classMeshBuffer_ab2316e999dc9046edd360d1b22ecc196} 
+const \mbox{\hyperlink{classMeshBuffer}{Mesh\+Buffer}} \& {\bfseries operator=} (const \mbox{\hyperlink{classMeshBuffer}{Mesh\+Buffer}} \&buffer)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator for \doxylink{classMeshBuffer}{Mesh\+Buffer}. \end{DoxyCompactList}\item 
+\Hypertarget{classMeshBuffer_a888b7673dd94b717ddf07fef593ad891}\label{classMeshBuffer_a888b7673dd94b717ddf07fef593ad891} 
+const \mbox{\hyperlink{classMeshBuffer}{Mesh\+Buffer}} \& {\bfseries operator=} (\mbox{\hyperlink{classMeshBuffer}{Mesh\+Buffer}} \&\&buffer) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator for \doxylink{classMeshBuffer}{Mesh\+Buffer}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMeshBuffer}{Mesh\+Buffer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMeshBuffer_ad59367a9e0acd87087d2f1e17874dd2f}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Clones this instance of \doxylink{classMeshBuffer}{Mesh\+Buffer}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMeshBuffer_ac63045d351a10de614ae31d848aaea74}{draw}} (unsigned int draw\+Mode=GL\+\_\+\+TRIANGLES) const override
+\begin{DoxyCompactList}\small\item\em Function which binds vertex array and draws to screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBuffer}{Buffer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Buffer} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classBuffer}{Buffer}. \end{DoxyCompactList}\item 
+unsigned int {\bfseries get\+VAO} () const
+\begin{DoxyCompactList}\small\item\em Gets the Vertex Array \doxylink{classObject}{Object} held by this instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classBuffer}{Buffer}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Buffer} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for derived classes to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBuffer}{Buffer}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ unsigned int $>$ \mbox{\hyperlink{classBuffer_adeef898e529daba7775a411f45df74a0}{m\+\_\+\+VAO}} \{std\+::make\+\_\+shared$<$unsigned int$>$(0)\}
+\begin{DoxyCompactList}\small\item\em Shared pointer to Vertex Array Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of \doxylink{classBuffer}{Buffer} which is used for \doxylink{classMesh}{Mesh} instances. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMeshBuffer_aa2566875a7464bbd9c4a72bda2d21734}\label{classMeshBuffer_aa2566875a7464bbd9c4a72bda2d21734} 
+\index{MeshBuffer@{MeshBuffer}!MeshBuffer@{MeshBuffer}}
+\index{MeshBuffer@{MeshBuffer}!MeshBuffer@{MeshBuffer}}
+\doxysubsubsection{\texorpdfstring{MeshBuffer()}{MeshBuffer()}}
+{\footnotesize\ttfamily Mesh\+Buffer\+::\+Mesh\+Buffer (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structModelData_1_1Vertex}{Model\+Data\+::\+Vertex}} $>$ \&}]{vertices,  }\item[{const std\+::vector$<$ unsigned int $>$ \&}]{indices }\end{DoxyParamCaption})}
+
+
+
+Construct a \doxylink{classMeshBuffer}{Mesh\+Buffer} using model data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertices} & Vertex data from model. \\
+\hline
+{\em indices} & Indices from model. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMeshBuffer_a19dae3ebecc35939788b9ccff6b648ce}\label{classMeshBuffer_a19dae3ebecc35939788b9ccff6b648ce} 
+\index{MeshBuffer@{MeshBuffer}!````~MeshBuffer@{\texorpdfstring{$\sim$}{\string~}MeshBuffer}}
+\index{````~MeshBuffer@{\texorpdfstring{$\sim$}{\string~}MeshBuffer}!MeshBuffer@{MeshBuffer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MeshBuffer()}{\string~MeshBuffer()}}
+{\footnotesize\ttfamily Mesh\+Buffer\+::\texorpdfstring{$\sim$}{\string~}\+Mesh\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+Destructor for \doxylink{classMeshBuffer}{Mesh\+Buffer}. 
+
+frees memory held, if not used by other instances. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMeshBuffer_ad59367a9e0acd87087d2f1e17874dd2f}\label{classMeshBuffer_ad59367a9e0acd87087d2f1e17874dd2f} 
+\index{MeshBuffer@{MeshBuffer}!clone@{clone}}
+\index{clone@{clone}!MeshBuffer@{MeshBuffer}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMeshBuffer}{Mesh\+Buffer}} \texorpdfstring{$\ast$}{*} Mesh\+Buffer\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clones this instance of \doxylink{classMeshBuffer}{Mesh\+Buffer}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a new \doxylink{classMeshBuffer}{Mesh\+Buffer} copied from this \doxylink{classInstancedArray}{Instanced\+Array}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBuffer_a600046eaae726fa5c78feaf2d797af1a}{Buffer}}.
+
+\Hypertarget{classMeshBuffer_ac63045d351a10de614ae31d848aaea74}\label{classMeshBuffer_ac63045d351a10de614ae31d848aaea74} 
+\index{MeshBuffer@{MeshBuffer}!draw@{draw}}
+\index{draw@{draw}!MeshBuffer@{MeshBuffer}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Mesh\+Buffer\+::draw (\begin{DoxyParamCaption}\item[{unsigned int}]{draw\+Mode = {\ttfamily GL\+\_\+TRIANGLES} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Function which binds vertex array and draws to screen. 
+
+
+
+Implements \mbox{\hyperlink{classBuffer_aa86031bf5b9f014191d22133b6f85f2b}{Buffer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Mesh\+Buffer.\+hpp\item 
+src/classes/Mesh\+Buffer.\+cpp\end{DoxyCompactItemize}

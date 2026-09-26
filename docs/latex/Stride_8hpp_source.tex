@@ -1,0 +1,39 @@
+\doxysection{Stride.\+hpp}
+\hypertarget{Stride_8hpp_source}{}\label{Stride_8hpp_source}\index{src/headers/Stride.hpp@{src/headers/Stride.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <initializer\_list>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStride}{Stride}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \mbox{\hyperlink{classStride_a358cb3eadd78803d9a319b9badfe6eb2}{Stride}}(\textcolor{keyword}{const}\ std::vector<int>\ \&attributes,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<int>\ \&pointers\ =\ \{\})}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ :\ m\_attributes\{attributes\},}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ m\_pointers\{pointers.empty()\ ?\ generatePointers()\ :\ pointers\}\ \{\}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \ \ \mbox{\hyperlink{classStride_aa2d14a89e6aade6f563e5931a3a3601a}{Stride}}(std::initializer\_list<int>\ attributes)}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ :\ m\_attributes\{attributes\},\ m\_pointers\{generatePointers()\}\ \{\}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{classStride_a0c98bae9e4a2f2947fa76a2cc79a18fb}{Stride}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classStride}{Stride}}\ \&stride,\ \textcolor{keyword}{const}\ std::vector<int>\ \&pointers)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classStride}{Stride}}\{stride.m\_attributes,\ pointers\}\ \{\}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00035\ \ \ std::size\_t\ \mbox{\hyperlink{classStride_a62412983a4c0e675d7522a49fc08fa65}{size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classStride_aaa606a82e267279e6e5cbb9de2e47a01}{attributeLength}}(\textcolor{keywordtype}{int}\ i)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ std::size\_t\ \mbox{\hyperlink{classStride_a2171c255d2d9df04cd52175bb42a4410}{attributeSize}}(\textcolor{keywordtype}{int}\ i)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classStride_a74a03eaafeebbb687d9cba600dd88415}{count}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \textcolor{keyword}{const}\ std::vector<int>\ \&\mbox{\hyperlink{classStride_aa04da70a8d11cf74c7784e997374cdcd}{getAttributes}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \textcolor{comment}{//\ Internal\ members}}
+\DoxyCodeLine{00049\ \ \ std::vector<int>\ m\_attributes\{\};}
+\DoxyCodeLine{00050\ \ \ std::vector<int>\ m\_pointers\{\};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{comment}{//\ Helper\ function\ for\ initialisation\ of\ attribute\ pointers}}
+\DoxyCodeLine{00053\ \ \ std::vector<int>\ generatePointers()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ \};}
+
+\end{DoxyCode}

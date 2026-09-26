@@ -1,0 +1,28 @@
+\doxysection{Buffer.\+hpp}
+\hypertarget{Buffer_8hpp_source}{}\label{Buffer_8hpp_source}\index{src/headers/Buffer.hpp@{src/headers/Buffer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}ModelData.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Shape.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Stride.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Utility.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBuffer}{Buffer}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBuffer_aa86031bf5b9f014191d22133b6f85f2b}{draw}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ drawMode\ =\ GL\_TRIANGLES)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00022\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classBuffer}{Buffer}}\ *\mbox{\hyperlink{classBuffer_a600046eaae726fa5c78feaf2d797af1a}{clone}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00024\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classBuffer_af3e27ddf1725bbb444df2956d8d267b9}{\string~Buffer}}()\ noexcept\ =\ default;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBuffer_ab83ccac615acd99f8a69e221440a9b50}{getVAO}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{classBuffer_adeef898e529daba7775a411f45df74a0}{m\_VAO}};\ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00031\ \ \ \mbox{\hyperlink{classBuffer_a92fd371409790ee64d2ca9bdaec2dd1a}{Buffer}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00034\ \ \ std::shared\_ptr<unsigned\ int>\ \mbox{\hyperlink{classBuffer_adeef898e529daba7775a411f45df74a0}{m\_VAO}}\{std::make\_shared<unsigned\ int>(0)\};}
+\DoxyCodeLine{00035\ \};}
+
+\end{DoxyCode}

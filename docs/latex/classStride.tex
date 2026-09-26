@@ -1,0 +1,112 @@
+\doxysection{Stride Class Reference}
+\hypertarget{classStride}{}\label{classStride}\index{Stride@{Stride}}
+
+
+\doxylink{classStride}{Stride} class which defines attributes of a shape.  
+
+
+
+
+{\ttfamily \#include $<$Stride.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStride_a358cb3eadd78803d9a319b9badfe6eb2}{Stride}} (const std\+::vector$<$ int $>$ \&attributes, const std\+::vector$<$ int $>$ \&pointers=\{\})
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classStride}{Stride}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStride_aa2d14a89e6aade6f563e5931a3a3601a}{Stride}} (std\+::initializer\+\_\+list$<$ int $>$ attributes)
+\begin{DoxyCompactList}\small\item\em Initialiser list constructor for \doxylink{classStride}{Stride}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStride_a0c98bae9e4a2f2947fa76a2cc79a18fb}{Stride}} (const \mbox{\hyperlink{classStride}{Stride}} \&stride, const std\+::vector$<$ int $>$ \&pointers)
+\begin{DoxyCompactList}\small\item\em Specialised copy constructor for \doxylink{classStride}{Stride} which redefines which attributes to use. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classStride_a62412983a4c0e675d7522a49fc08fa65}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns total size in bytes of a vertex. \end{DoxyCompactList}\item 
+\Hypertarget{classStride_aaa606a82e267279e6e5cbb9de2e47a01}\label{classStride_aaa606a82e267279e6e5cbb9de2e47a01} 
+int {\bfseries attribute\+Length} (int i) const
+\begin{DoxyCompactList}\small\item\em Gets the length of an attribute at index i. \end{DoxyCompactList}\item 
+\Hypertarget{classStride_a2171c255d2d9df04cd52175bb42a4410}\label{classStride_a2171c255d2d9df04cd52175bb42a4410} 
+std\+::size\+\_\+t {\bfseries attribute\+Size} (int i) const
+\begin{DoxyCompactList}\small\item\em Gets the size in bytes of an attribute at index i. \end{DoxyCompactList}\item 
+\Hypertarget{classStride_a74a03eaafeebbb687d9cba600dd88415}\label{classStride_a74a03eaafeebbb687d9cba600dd88415} 
+int {\bfseries count} () const
+\begin{DoxyCompactList}\small\item\em Gets total number of attributes. \end{DoxyCompactList}\item 
+const std\+::vector$<$ int $>$ \& \mbox{\hyperlink{classStride_aa04da70a8d11cf74c7784e997374cdcd}{get\+Attributes}} () const
+\begin{DoxyCompactList}\small\item\em Returns array of pointers for iteration over attributes which are in use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classStride}{Stride} class which defines attributes of a shape. 
+
+Used in \doxylink{classShape}{Shape} for defining vertex attributes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classStride_a358cb3eadd78803d9a319b9badfe6eb2}\label{classStride_a358cb3eadd78803d9a319b9badfe6eb2} 
+\index{Stride@{Stride}!Stride@{Stride}}
+\index{Stride@{Stride}!Stride@{Stride}}
+\doxysubsubsection{\texorpdfstring{Stride()}{Stride()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Stride\+::\+Stride (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{attributes,  }\item[{const std\+::vector$<$ int $>$ \&}]{pointers = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \doxylink{classStride}{Stride}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attributes} & Vector of integers which define the size of attributes for a single vertex. For example, xyz + rgb would be \{3,3\}. \\
+\hline
+{\em pointers} & Vector of pointers, which define which attributes should be used when drawing the shape. Default behaviour is all attributes. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStride_aa2d14a89e6aade6f563e5931a3a3601a}\label{classStride_aa2d14a89e6aade6f563e5931a3a3601a} 
+\index{Stride@{Stride}!Stride@{Stride}}
+\index{Stride@{Stride}!Stride@{Stride}}
+\doxysubsubsection{\texorpdfstring{Stride()}{Stride()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Stride\+::\+Stride (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ int $>$}]{attributes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialiser list constructor for \doxylink{classStride}{Stride}. 
+
+Only initialises attributes. 
+\begin{DoxyParams}{Parameters}
+{\em attributes} & Vector of integers defining the size of attributes for a single vertex. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStride_a0c98bae9e4a2f2947fa76a2cc79a18fb}\label{classStride_a0c98bae9e4a2f2947fa76a2cc79a18fb} 
+\index{Stride@{Stride}!Stride@{Stride}}
+\index{Stride@{Stride}!Stride@{Stride}}
+\doxysubsubsection{\texorpdfstring{Stride()}{Stride()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Stride\+::\+Stride (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStride}{Stride}} \&}]{stride,  }\item[{const std\+::vector$<$ int $>$ \&}]{pointers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Specialised copy constructor for \doxylink{classStride}{Stride} which redefines which attributes to use. 
+
+Useful for when you want to use the same vertices for a different shape, but exclude some if its attributes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStride_aa04da70a8d11cf74c7784e997374cdcd}\label{classStride_aa04da70a8d11cf74c7784e997374cdcd} 
+\index{Stride@{Stride}!getAttributes@{getAttributes}}
+\index{getAttributes@{getAttributes}!Stride@{Stride}}
+\doxysubsubsection{\texorpdfstring{getAttributes()}{getAttributes()}}
+{\footnotesize\ttfamily const std\+::vector$<$ int $>$ \& Stride\+::get\+Attributes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns array of pointers for iteration over attributes which are in use. 
+
+By default, iterates consecutively over all attributes. \Hypertarget{classStride_a62412983a4c0e675d7522a49fc08fa65}\label{classStride_a62412983a4c0e675d7522a49fc08fa65} 
+\index{Stride@{Stride}!size@{size}}
+\index{size@{size}!Stride@{Stride}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Stride\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns total size in bytes of a vertex. 
+
+Used when assigning attributes in a \doxylink{classBuffer}{Buffer}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Stride.\+hpp\item 
+src/classes/Stride.\+cpp\end{DoxyCompactItemize}

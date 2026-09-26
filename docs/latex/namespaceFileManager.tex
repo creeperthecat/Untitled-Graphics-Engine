@@ -1,0 +1,363 @@
+\doxysection{File\+Manager Namespace Reference}
+\hypertarget{namespaceFileManager}{}\label{namespaceFileManager}\index{FileManager@{FileManager}}
+
+
+Namespace for managing files.  
+
+
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespaceFileManager_ac726e8af5fbebcc7c3db8e5f82330ca6}\label{namespaceFileManager_ac726e8af5fbebcc7c3db8e5f82330ca6} 
+enum class \mbox{\hyperlink{namespaceFileManager_ac726e8af5fbebcc7c3db8e5f82330ca6}{Shader\+Type}} \{ {\bfseries VERTEX}
+, {\bfseries FRAGMENT}
+, {\bfseries GEOMETRY}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerator of shader types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{namespaceFileManager_a76f2727e68abe5c8a3e82ac538a44531}{compile\+Shader\+File}} (std\+::string\+\_\+view file, \mbox{\hyperlink{namespaceFileManager_ac726e8af5fbebcc7c3db8e5f82330ca6}{Shader\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Reads and compile a vertex shader file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceFileManager_acfcc7ecf4337b01f5269ad99ea19876d}{load\+Texture}} (std\+::string\+\_\+view file, unsigned int ID, const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&params=\{\})
+\begin{DoxyCompactList}\small\item\em Loads a texture file. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{namespaceFileManager_a885b8f2a68f97515acfb38b32949c58a}{load\+Texture}} (std\+::string\+\_\+view file, const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&params=\{\})
+\begin{DoxyCompactList}\small\item\em Generates a texture ID and loads texture file. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{namespaceFileManager_aecc5c96e17115b612f2110b24fb625f8}{load\+Texture}} (std\+::string\+\_\+view file, std\+::string\+\_\+view directory, const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&params=\{\})
+\begin{DoxyCompactList}\small\item\em Generates a texture ID and loads texture file using a directory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceFileManager_a4f71010b6c62667080d87556ae642089}{load\+Cubemap}} (const std\+::vector$<$ std\+::string\+\_\+view $>$ \&faces, unsigned int ID, const \mbox{\hyperlink{structCubemapParams}{Cubemap\+Params}} \&params=\{\})
+\begin{DoxyCompactList}\small\item\em Loads a cubemap. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{namespaceFileManager_a23178efe1efbf39a29e5655462b9a030}{load\+Cubemap}} (const std\+::vector$<$ std\+::string\+\_\+view $>$ \&faces, const \mbox{\hyperlink{structCubemapParams}{Cubemap\+Params}} \&params=\{\})
+\begin{DoxyCompactList}\small\item\em Generates a cubemap ID and loads a cubemap. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceFileManager_a94aff1fd833b8468ef9d8f28509a410c}{read\+Shader\+File}} (std\+::string\+\_\+view file)
+\begin{DoxyCompactList}\small\item\em Reads a shader file into an std\+::string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceFileManager_ad9d191c9b956b839b1532d83729ae3b7}{get\+Shader\+File\+Path}} (std\+::string\+\_\+view file)
+\begin{DoxyCompactList}\small\item\em Returns the absolute path of a shader file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceFileManager_a79989c8b0b817f6eaea7a507f1ddc771}{get\+Texture\+File\+Path}} (std\+::string\+\_\+view file)
+\begin{DoxyCompactList}\small\item\em Returns the absolute path of a texture file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceFileManager_a58b93d914eaab24360f7cc9a0b87b45f}{get\+Model\+File\+Path}} (std\+::string\+\_\+view file)
+\begin{DoxyCompactList}\small\item\em Returns the absolute path of a model file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceFileManager_a66363b8440ccf2cc6f7df5461c74751a}{get\+File\+Directory}} (std\+::string\+\_\+view file)
+\begin{DoxyCompactList}\small\item\em Returns parent directory of a file. \end{DoxyCompactList}\item 
+\Hypertarget{namespaceFileManager_afc07a74b704111e4478254b0b5f25a1a}\label{namespaceFileManager_afc07a74b704111e4478254b0b5f25a1a} 
+std\+::filesystem\+::path {\bfseries get\+Executable\+Path} ()
+\begin{DoxyCompactList}\small\item\em Returns the file path of the currently running executable. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{namespaceFileManager_a96a4ee22426ce38b20a2b56b5c97a5e4}{compile}} (int shader\+Type, std\+::string\+\_\+view shader\+Source)
+\begin{DoxyCompactList}\small\item\em Compiles a shader, specified by shader\+Type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceFileManager_ab594a6497a53b36b3ac265bb48f636f8}{check\+Compile}} (unsigned int ID)
+\begin{DoxyCompactList}\small\item\em Checks if compilation of a shader has been successful. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceFileManager_a21257b777eb88b05c303b58bee1de8e3}{check\+Link}} (unsigned int ID)
+\begin{DoxyCompactList}\small\item\em Checks if linking of shaders has been successful. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceFileManager_a2bdf508d30b99ceed3284a2b1e5faf9e}{load\+Texture\+Parameters}} (unsigned int ID, const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&params=\{\})
+\begin{DoxyCompactList}\small\item\em Sets texture parameters for a texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceFileManager_adae21a8dda87345f802486321ad717d7}{load\+Cubemap\+Parameters}} (unsigned int ID, const \mbox{\hyperlink{structCubemapParams}{Cubemap\+Params}} \&params=\{\})
+\begin{DoxyCompactList}\small\item\em Sets texture parameters for a cubemap. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceFileManager_a940362f24b969da7b35a2d57c453281f}{get\+Shader\+Type\+Name}} (\mbox{\hyperlink{namespaceFileManager_ac726e8af5fbebcc7c3db8e5f82330ca6}{Shader\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Gets the name of a shader type as a string. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{namespaceFileManager_a2edb268742d03d905b55551ce490b12f}{get\+GLShader}} (\mbox{\hyperlink{namespaceFileManager_ac726e8af5fbebcc7c3db8e5f82330ca6}{Shader\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Converts a Shader\+Type into the open\+GL representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Namespace for managing files. 
+
+Handles opening and reading for files. Used for shaders and textures. All files must be in the correct directory to be found. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceFileManager_ab594a6497a53b36b3ac265bb48f636f8}\label{namespaceFileManager_ab594a6497a53b36b3ac265bb48f636f8} 
+\index{FileManager@{FileManager}!checkCompile@{checkCompile}}
+\index{checkCompile@{checkCompile}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{checkCompile()}{checkCompile()}}
+{\footnotesize\ttfamily void File\+Manager\+::check\+Compile (\begin{DoxyParamCaption}\item[{unsigned int}]{ID }\end{DoxyParamCaption})}
+
+
+
+Checks if compilation of a shader has been successful. 
+
+Throws runtime exception if an error has occurred. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & Integer referencing a compiled shader \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_a21257b777eb88b05c303b58bee1de8e3}\label{namespaceFileManager_a21257b777eb88b05c303b58bee1de8e3} 
+\index{FileManager@{FileManager}!checkLink@{checkLink}}
+\index{checkLink@{checkLink}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{checkLink()}{checkLink()}}
+{\footnotesize\ttfamily void File\+Manager\+::check\+Link (\begin{DoxyParamCaption}\item[{unsigned int}]{ID }\end{DoxyParamCaption})}
+
+
+
+Checks if linking of shaders has been successful. 
+
+Throws runtime exception if an error has occurred. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & Integer referencing a compiled shader \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_a96a4ee22426ce38b20a2b56b5c97a5e4}\label{namespaceFileManager_a96a4ee22426ce38b20a2b56b5c97a5e4} 
+\index{FileManager@{FileManager}!compile@{compile}}
+\index{compile@{compile}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{compile()}{compile()}}
+{\footnotesize\ttfamily unsigned int File\+Manager\+::compile (\begin{DoxyParamCaption}\item[{int}]{shader\+Type,  }\item[{std\+::string\+\_\+view}]{shader\+Source }\end{DoxyParamCaption})}
+
+
+
+Compiles a shader, specified by shader\+Type. 
+
+Returns unsigned int representing shader. 
+\begin{DoxyParams}{Parameters}
+{\em shader\+Type} & integer representing open\+GL\textquotesingle{}s shader types \\
+\hline
+{\em shader\+Source} & Source code of the shader. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_a76f2727e68abe5c8a3e82ac538a44531}\label{namespaceFileManager_a76f2727e68abe5c8a3e82ac538a44531} 
+\index{FileManager@{FileManager}!compileShaderFile@{compileShaderFile}}
+\index{compileShaderFile@{compileShaderFile}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{compileShaderFile()}{compileShaderFile()}}
+{\footnotesize\ttfamily unsigned int File\+Manager\+::compile\+Shader\+File (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{file,  }\item[{\mbox{\hyperlink{namespaceFileManager_ac726e8af5fbebcc7c3db8e5f82330ca6}{Shader\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Reads and compile a vertex shader file. 
+
+Throws runtime exception on read failure or compilation failure. \begin{DoxyReturn}{Returns}
+The compiled Vertex shader as an unsigned int. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The name of the shader file to compile. \\
+\hline
+{\em type} & The type of shader used by the shader file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_a66363b8440ccf2cc6f7df5461c74751a}\label{namespaceFileManager_a66363b8440ccf2cc6f7df5461c74751a} 
+\index{FileManager@{FileManager}!getFileDirectory@{getFileDirectory}}
+\index{getFileDirectory@{getFileDirectory}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{getFileDirectory()}{getFileDirectory()}}
+{\footnotesize\ttfamily std\+::string File\+Manager\+::get\+File\+Directory (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{file }\end{DoxyParamCaption})}
+
+
+
+Returns parent directory of a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_a2edb268742d03d905b55551ce490b12f}\label{namespaceFileManager_a2edb268742d03d905b55551ce490b12f} 
+\index{FileManager@{FileManager}!getGLShader@{getGLShader}}
+\index{getGLShader@{getGLShader}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{getGLShader()}{getGLShader()}}
+{\footnotesize\ttfamily unsigned int File\+Manager\+::get\+GLShader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceFileManager_ac726e8af5fbebcc7c3db8e5f82330ca6}{Shader\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Converts a Shader\+Type into the open\+GL representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Enum storing the type of a shader. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_a58b93d914eaab24360f7cc9a0b87b45f}\label{namespaceFileManager_a58b93d914eaab24360f7cc9a0b87b45f} 
+\index{FileManager@{FileManager}!getModelFilePath@{getModelFilePath}}
+\index{getModelFilePath@{getModelFilePath}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{getModelFilePath()}{getModelFilePath()}}
+{\footnotesize\ttfamily std\+::string File\+Manager\+::get\+Model\+File\+Path (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{file }\end{DoxyParamCaption})}
+
+
+
+Returns the absolute path of a model file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the model file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_ad9d191c9b956b839b1532d83729ae3b7}\label{namespaceFileManager_ad9d191c9b956b839b1532d83729ae3b7} 
+\index{FileManager@{FileManager}!getShaderFilePath@{getShaderFilePath}}
+\index{getShaderFilePath@{getShaderFilePath}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{getShaderFilePath()}{getShaderFilePath()}}
+{\footnotesize\ttfamily std\+::string File\+Manager\+::get\+Shader\+File\+Path (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{file }\end{DoxyParamCaption})}
+
+
+
+Returns the absolute path of a shader file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the shader file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_a940362f24b969da7b35a2d57c453281f}\label{namespaceFileManager_a940362f24b969da7b35a2d57c453281f} 
+\index{FileManager@{FileManager}!getShaderTypeName@{getShaderTypeName}}
+\index{getShaderTypeName@{getShaderTypeName}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{getShaderTypeName()}{getShaderTypeName()}}
+{\footnotesize\ttfamily std\+::string File\+Manager\+::get\+Shader\+Type\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceFileManager_ac726e8af5fbebcc7c3db8e5f82330ca6}{Shader\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Gets the name of a shader type as a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Enum storing the type of a shader. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_a79989c8b0b817f6eaea7a507f1ddc771}\label{namespaceFileManager_a79989c8b0b817f6eaea7a507f1ddc771} 
+\index{FileManager@{FileManager}!getTextureFilePath@{getTextureFilePath}}
+\index{getTextureFilePath@{getTextureFilePath}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{getTextureFilePath()}{getTextureFilePath()}}
+{\footnotesize\ttfamily std\+::string File\+Manager\+::get\+Texture\+File\+Path (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{file }\end{DoxyParamCaption})}
+
+
+
+Returns the absolute path of a texture file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the texture file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_a23178efe1efbf39a29e5655462b9a030}\label{namespaceFileManager_a23178efe1efbf39a29e5655462b9a030} 
+\index{FileManager@{FileManager}!loadCubemap@{loadCubemap}}
+\index{loadCubemap@{loadCubemap}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{loadCubemap()}{loadCubemap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned int File\+Manager\+::load\+Cubemap (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string\+\_\+view $>$ \&}]{faces,  }\item[{const \mbox{\hyperlink{structCubemapParams}{Cubemap\+Params}} \&}]{params = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Generates a cubemap ID and loads a cubemap. 
+
+Throws runtime exception if load fails. 
+\begin{DoxyParams}{Parameters}
+{\em faces} & Vector of texture files used as the faces of the cubemap \\
+\hline
+{\em params} & Optional specifier for texture parameters used when loading the cubemap. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_a4f71010b6c62667080d87556ae642089}\label{namespaceFileManager_a4f71010b6c62667080d87556ae642089} 
+\index{FileManager@{FileManager}!loadCubemap@{loadCubemap}}
+\index{loadCubemap@{loadCubemap}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{loadCubemap()}{loadCubemap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void File\+Manager\+::load\+Cubemap (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string\+\_\+view $>$ \&}]{faces,  }\item[{unsigned int}]{ID,  }\item[{const \mbox{\hyperlink{structCubemapParams}{Cubemap\+Params}} \&}]{params = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Loads a cubemap. 
+
+Throws runtime exception if load fails. 
+\begin{DoxyParams}{Parameters}
+{\em faces} & Vector of texture files used as the faces of the cubemap \\
+\hline
+{\em ID} & \doxylink{classCubemap}{Cubemap} id which is used to bind cubemap. \\
+\hline
+{\em params} & Optional specifier for texture parameters used when loading the cubemap. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_adae21a8dda87345f802486321ad717d7}\label{namespaceFileManager_adae21a8dda87345f802486321ad717d7} 
+\index{FileManager@{FileManager}!loadCubemapParameters@{loadCubemapParameters}}
+\index{loadCubemapParameters@{loadCubemapParameters}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{loadCubemapParameters()}{loadCubemapParameters()}}
+{\footnotesize\ttfamily void File\+Manager\+::load\+Cubemap\+Parameters (\begin{DoxyParamCaption}\item[{unsigned int}]{ID,  }\item[{const \mbox{\hyperlink{structCubemapParams}{Cubemap\+Params}} \&}]{params = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Sets texture parameters for a cubemap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The cubemap ID of the cubemap to set parameters for. \\
+\hline
+{\em params} & The new parameters of the cubemap. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_a885b8f2a68f97515acfb38b32949c58a}\label{namespaceFileManager_a885b8f2a68f97515acfb38b32949c58a} 
+\index{FileManager@{FileManager}!loadTexture@{loadTexture}}
+\index{loadTexture@{loadTexture}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{loadTexture()}{loadTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily unsigned int File\+Manager\+::load\+Texture (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{file,  }\item[{const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&}]{params = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Generates a texture ID and loads texture file. 
+
+Throws runtime exception if load fails. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The name of the texture file to load. \\
+\hline
+{\em params} & Optional specifier for texture parameters used when loading the texture. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_aecc5c96e17115b612f2110b24fb625f8}\label{namespaceFileManager_aecc5c96e17115b612f2110b24fb625f8} 
+\index{FileManager@{FileManager}!loadTexture@{loadTexture}}
+\index{loadTexture@{loadTexture}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{loadTexture()}{loadTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily unsigned int File\+Manager\+::load\+Texture (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{file,  }\item[{std\+::string\+\_\+view}]{directory,  }\item[{const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&}]{params = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Generates a texture ID and loads texture file using a directory. 
+
+Throws runtime exception if load fails. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The name of the texture file to load. \\
+\hline
+{\em directory} & The directory of the texture file. \\
+\hline
+{\em params} & Optional specifier for texture parameters used when loading the texture. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_acfcc7ecf4337b01f5269ad99ea19876d}\label{namespaceFileManager_acfcc7ecf4337b01f5269ad99ea19876d} 
+\index{FileManager@{FileManager}!loadTexture@{loadTexture}}
+\index{loadTexture@{loadTexture}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{loadTexture()}{loadTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void File\+Manager\+::load\+Texture (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{file,  }\item[{unsigned int}]{ID,  }\item[{const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&}]{params = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Loads a texture file. 
+
+Used in \doxylink{classTexture}{Texture} to load new file. Throws runtime exception if load fails. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The name of the texture file to load. \\
+\hline
+{\em ID} & \doxylink{classTexture}{Texture} id which is used to bind texture. \\
+\hline
+{\em params} & Optional specifier for texture parameters used when loading the texture. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_a2bdf508d30b99ceed3284a2b1e5faf9e}\label{namespaceFileManager_a2bdf508d30b99ceed3284a2b1e5faf9e} 
+\index{FileManager@{FileManager}!loadTextureParameters@{loadTextureParameters}}
+\index{loadTextureParameters@{loadTextureParameters}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{loadTextureParameters()}{loadTextureParameters()}}
+{\footnotesize\ttfamily void File\+Manager\+::load\+Texture\+Parameters (\begin{DoxyParamCaption}\item[{unsigned int}]{ID,  }\item[{const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&}]{params = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Sets texture parameters for a texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The texture ID of the texture to set parameters for. \\
+\hline
+{\em params} & The new parameters of the texture. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceFileManager_a94aff1fd833b8468ef9d8f28509a410c}\label{namespaceFileManager_a94aff1fd833b8468ef9d8f28509a410c} 
+\index{FileManager@{FileManager}!readShaderFile@{readShaderFile}}
+\index{readShaderFile@{readShaderFile}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{readShaderFile()}{readShaderFile()}}
+{\footnotesize\ttfamily std\+::string File\+Manager\+::read\+Shader\+File (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{file }\end{DoxyParamCaption})}
+
+
+
+Reads a shader file into an std\+::string. 
+
+Throws runtime exception on failure. 
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the shader file to read. \\
+\hline
+\end{DoxyParams}

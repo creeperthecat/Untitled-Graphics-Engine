@@ -1,0 +1,121 @@
+\doxysection{Model\+Instance\+Buffer\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classModelInstanceBuffer}{}\label{classModelInstanceBuffer}\index{ModelInstanceBuffer$<$ T $>$@{ModelInstanceBuffer$<$ T $>$}}
+
+
+The \doxylink{classModelInstanceBuffer}{Model\+Instance\+Buffer} is used by \doxylink{classInstancedModel}{Instanced\+Model} to allow for instancing of the model.  
+
+
+
+
+{\ttfamily \#include $<$Model\+Instance\+Buffer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelInstanceBuffer_a93969f822d7d2361b39f5b31d881601f}{Model\+Instance\+Buffer}} (const std\+::vector$<$ T $>$ \&instance\+Data, const \mbox{\hyperlink{classStride}{Stride}} \&data\+Stride=\{sizeof(T)/sizeof(float)\})
+\begin{DoxyCompactList}\small\item\em Creates buffers for instancing. \end{DoxyCompactList}\item 
+\Hypertarget{classModelInstanceBuffer_a31e32c573dcf8abe4f236efbfc1bb111}\label{classModelInstanceBuffer_a31e32c573dcf8abe4f236efbfc1bb111} 
+{\bfseries Model\+Instance\+Buffer} (const \mbox{\hyperlink{classModelInstanceBuffer}{Model\+Instance\+Buffer}} \&buffer)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor for \doxylink{classModelInstanceBuffer}{Model\+Instance\+Buffer}. \end{DoxyCompactList}\item 
+\Hypertarget{classModelInstanceBuffer_a9436eb0c238108aa60a71d661ad575cd}\label{classModelInstanceBuffer_a9436eb0c238108aa60a71d661ad575cd} 
+{\bfseries Model\+Instance\+Buffer} (\mbox{\hyperlink{classModelInstanceBuffer}{Model\+Instance\+Buffer}} \&\&buffer)=default
+\begin{DoxyCompactList}\small\item\em Move constructor for \doxylink{classModelInstanceBuffer}{Model\+Instance\+Buffer}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classModelInstanceBuffer_a10130f06638df2c736187508589e0f59}{\texorpdfstring{$\sim$}{\string~}\+Model\+Instance\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classModelInstanceBuffer}{Model\+Instance\+Buffer}. \end{DoxyCompactList}\item 
+\Hypertarget{classModelInstanceBuffer_a7b872c01361c6de5c3bf81bb85d969f4}\label{classModelInstanceBuffer_a7b872c01361c6de5c3bf81bb85d969f4} 
+\mbox{\hyperlink{classModelInstanceBuffer}{Model\+Instance\+Buffer}} \& {\bfseries operator=} (const \mbox{\hyperlink{classModelInstanceBuffer}{Model\+Instance\+Buffer}} \&buffer)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator for \doxylink{classModelInstanceBuffer}{Model\+Instance\+Buffer}. \end{DoxyCompactList}\item 
+\Hypertarget{classModelInstanceBuffer_ae0f9e9c5c2d441f1af7ebfd2b09f755a}\label{classModelInstanceBuffer_ae0f9e9c5c2d441f1af7ebfd2b09f755a} 
+\mbox{\hyperlink{classModelInstanceBuffer}{Model\+Instance\+Buffer}} \& {\bfseries operator=} (\mbox{\hyperlink{classModelInstanceBuffer}{Model\+Instance\+Buffer}} \&\&buffer) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator for \doxylink{classModelInstanceBuffer}{Model\+Instance\+Buffer}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModelInstanceBuffer_ae726845888698174b0b112333ba944b6}{assign\+Data}} (const \mbox{\hyperlink{classMesh}{Mesh}} \&mesh, int start\+\_\+index, const \mbox{\hyperlink{classStride}{Stride}} \&stride)
+\begin{DoxyCompactList}\small\item\em Assigns instance data to a mesh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModelInstanceBuffer_ad6edd53a60d28d6f97ff94336389854b}{draw}} (const \mbox{\hyperlink{classMesh}{Mesh}} \&mesh, const \mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}shader, bool skip\+Textures=false, unsigned int draw\+Mode=GL\+\_\+\+TRIANGLES) const
+\begin{DoxyCompactList}\small\item\em Draws all instances of the mesh to the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Model\+Instance\+Buffer$<$ T $>$}
+The \doxylink{classModelInstanceBuffer}{Model\+Instance\+Buffer} is used by \doxylink{classInstancedModel}{Instanced\+Model} to allow for instancing of the model. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classModelInstanceBuffer_a93969f822d7d2361b39f5b31d881601f}\label{classModelInstanceBuffer_a93969f822d7d2361b39f5b31d881601f} 
+\index{ModelInstanceBuffer$<$ T $>$@{ModelInstanceBuffer$<$ T $>$}!ModelInstanceBuffer@{ModelInstanceBuffer}}
+\index{ModelInstanceBuffer@{ModelInstanceBuffer}!ModelInstanceBuffer$<$ T $>$@{ModelInstanceBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ModelInstanceBuffer()}{ModelInstanceBuffer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classModelInstanceBuffer}{Model\+Instance\+Buffer}}$<$ T $>$\mbox{\hyperlink{classModelInstanceBuffer}{\+::\+Model\+Instance\+Buffer}} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{instance\+Data,  }\item[{const \mbox{\hyperlink{classStride}{Stride}} \&}]{data\+Stride = {\ttfamily \{sizeof(T)/sizeof(float)\}} }\end{DoxyParamCaption})}
+
+
+
+Creates buffers for instancing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance\+Data} & Vector of data to pass to each instance. \\
+\hline
+{\em data\+Stride} & \doxylink{classStride}{Stride} object specifying how to split T into floats, e.\+g. 4,4,4,4 for a 4x4 matrix \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelInstanceBuffer_a10130f06638df2c736187508589e0f59}\label{classModelInstanceBuffer_a10130f06638df2c736187508589e0f59} 
+\index{ModelInstanceBuffer$<$ T $>$@{ModelInstanceBuffer$<$ T $>$}!````~ModelInstanceBuffer@{\texorpdfstring{$\sim$}{\string~}ModelInstanceBuffer}}
+\index{````~ModelInstanceBuffer@{\texorpdfstring{$\sim$}{\string~}ModelInstanceBuffer}!ModelInstanceBuffer$<$ T $>$@{ModelInstanceBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ModelInstanceBuffer()}{\string~ModelInstanceBuffer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classModelInstanceBuffer}{Model\+Instance\+Buffer}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classModelInstanceBuffer}{Model\+Instance\+Buffer}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor for \doxylink{classModelInstanceBuffer}{Model\+Instance\+Buffer}. 
+
+Frees memory held by buffers, if not held by other instances. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classModelInstanceBuffer_ae726845888698174b0b112333ba944b6}\label{classModelInstanceBuffer_ae726845888698174b0b112333ba944b6} 
+\index{ModelInstanceBuffer$<$ T $>$@{ModelInstanceBuffer$<$ T $>$}!assignData@{assignData}}
+\index{assignData@{assignData}!ModelInstanceBuffer$<$ T $>$@{ModelInstanceBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{assignData()}{assignData()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classModelInstanceBuffer}{Model\+Instance\+Buffer}}$<$ T $>$\+::assign\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMesh}{Mesh}} \&}]{mesh,  }\item[{int}]{start\+\_\+index,  }\item[{const \mbox{\hyperlink{classStride}{Stride}} \&}]{stride }\end{DoxyParamCaption})}
+
+
+
+Assigns instance data to a mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & the \doxylink{classMesh}{Mesh} to assign the data to. \\
+\hline
+{\em start\+\_\+index} & The attribute index to start on, after the mesh has assigned its vertex attributes. \\
+\hline
+{\em stride} & \doxylink{classStride}{Stride} object specifying how to split T into floats. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classModelInstanceBuffer_ad6edd53a60d28d6f97ff94336389854b}\label{classModelInstanceBuffer_ad6edd53a60d28d6f97ff94336389854b} 
+\index{ModelInstanceBuffer$<$ T $>$@{ModelInstanceBuffer$<$ T $>$}!draw@{draw}}
+\index{draw@{draw}!ModelInstanceBuffer$<$ T $>$@{ModelInstanceBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classModelInstanceBuffer}{Model\+Instance\+Buffer}}$<$ T $>$\+::draw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMesh}{Mesh}} \&}]{mesh,  }\item[{const \mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}}]{shader,  }\item[{bool}]{skip\+Textures = {\ttfamily false},  }\item[{unsigned int}]{draw\+Mode = {\ttfamily GL\+\_\+TRIANGLES} }\end{DoxyParamCaption}) const}
+
+
+
+Draws all instances of the mesh to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & The mesh to draw. \\
+\hline
+{\em shader} & Pointer to the shader to be used with this mesh. \\
+\hline
+{\em skip\+Textures} & Controls whether to skip textures. \\
+\hline
+{\em draw\+Mode} & Specifies how to draw the vertices in the buffer. Usually drawn as triangles by default. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Model\+Instance\+Buffer.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,36 @@
+\doxysection{Texture.\+hpp}
+\hypertarget{Texture_8hpp_source}{}\label{Texture_8hpp_source}\index{src/headers/Texture.hpp@{src/headers/Texture.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TexParams.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <glad/gl.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <initializer\_list>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string\_view>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTexture}{Texture}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \mbox{\hyperlink{classTexture_a66179be276016021e80b1c67c047d4ad}{Texture}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00023\ \ \ \mbox{\hyperlink{classTexture_a66179be276016021e80b1c67c047d4ad}{Texture}}(std::initializer\_list<std::string\_view>\ files,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structTexParams}{TexParams}}\ \&params\ =\ \{\});}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{classTexture_ad5b8c4e1362631ad14acc55090331389}{Texture}}(std::string\_view\ file,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structTexParams}{TexParams}}\ \&params\ =\ \{\})}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classTexture}{Texture}}\{\{file\},\ params\}\ \{\}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00035\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classTexture}{Texture}}(\textcolor{keywordtype}{int}\ length);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{void}\ add(std::string\_view\ file,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structTexParams}{TexParams}}\ \&params\ =\ \{\});}
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordtype}{void}\ add(\textcolor{keyword}{const}\ std::vector<std::string\_view>\ \&files,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structTexParams}{TexParams}}\ \&params\ =\ \{\});}
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{void}\ use()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \textcolor{comment}{//\ Internal\ members}}
+\DoxyCodeLine{00054\ \ \ std::vector<unsigned\ int>\ m\_textures\{\};}
+\DoxyCodeLine{00055\ \ \ \textcolor{comment}{//\ Binds\ a\ texture\ referenced\ by\ index.}}
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{void}\ use(\textcolor{keywordtype}{int}\ index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \};}
+
+\end{DoxyCode}

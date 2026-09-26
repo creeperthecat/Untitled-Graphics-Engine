@@ -1,0 +1,21 @@
+\doxysection{Utility.\+hpp}
+\hypertarget{Utility_8hpp_source}{}\label{Utility_8hpp_source}\index{src/headers/Utility.hpp@{src/headers/Utility.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <glad/gl.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{constexpr}\ std::size\_t\ toUZ(T\ value)\ \{}
+\DoxyCodeLine{00009\ \ \ \textcolor{keyword}{static\_assert}(std::is\_integral<T>()\ ||\ std::is\_enum<T>());}
+\DoxyCodeLine{00010\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}std::size\_t\textcolor{keyword}{>}(value);}
+\DoxyCodeLine{00011\ \}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{constexpr}\ GLint\ toInt(T\ value)\ \{}
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{static\_assert}(std::is\_integral<T>()\ ||\ std::is\_enum<T>());}
+\DoxyCodeLine{00016\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}GLint\textcolor{keyword}{>}(value);}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}

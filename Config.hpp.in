@@ -1,0 +1,3 @@
+#define SharedFileDirectory "@SharedFileDirectory@"
+#define ShaderDirectory "@ShaderDirectory@"
+#define TextureDirectory "@TextureDirectory@"

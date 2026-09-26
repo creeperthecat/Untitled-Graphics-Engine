@@ -1,0 +1,36 @@
+\doxysection{Geometry\+Shader.\+hpp}
+\hypertarget{GeometryShader_8hpp_source}{}\label{GeometryShader_8hpp_source}\index{src/headers/GeometryShader.hpp@{src/headers/GeometryShader.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Shader.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGeometryShader}{GeometryShader}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classShader}{Shader}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{classGeometryShader}{GeometryShader}}(std::string\_view\ vertexShaderFile,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\_view\ fragmentShaderFile,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\_view\ geometryShaderFile,\ \textcolor{keywordtype}{bool}\ freeShader\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00023\ \ \ \mbox{\hyperlink{classGeometryShader}{GeometryShader}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGeometryShader}{GeometryShader}}\ \&shader);}
+\DoxyCodeLine{00025\ \ \ \mbox{\hyperlink{classGeometryShader}{GeometryShader}}(\mbox{\hyperlink{classGeometryShader}{GeometryShader}}\ \&\&shader)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classGeometryShader}{GeometryShader}}\ \&\mbox{\hyperlink{classGeometryShader_a92954cd4f7ddf008f35e8996566d1775}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGeometryShader}{GeometryShader}}\ \&shader);}
+\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{classGeometryShader}{GeometryShader}}\ \&\mbox{\hyperlink{classGeometryShader_a92954cd4f7ddf008f35e8996566d1775}{operator=}}(\mbox{\hyperlink{classGeometryShader}{GeometryShader}}\ \&\&shader)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \ \ \mbox{\hyperlink{classGeometryShader_a6fb36cb067bef590108ad822cec46917}{\string~GeometryShader}}()\ \textcolor{keyword}{noexcept}\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00037\ \ \ \mbox{\hyperlink{classGeometryShader}{GeometryShader}}\ *\mbox{\hyperlink{classGeometryShader_a94150163680132173adeb3a190014755}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00040\ \ \ std::shared\_ptr<unsigned\ int>\ m\_vertexShader\{\};}
+\DoxyCodeLine{00041\ \ \ std::shared\_ptr<unsigned\ int>\ m\_fragmentShader\{\};}
+\DoxyCodeLine{00042\ \ \ std::shared\_ptr<unsigned\ int>\ m\_geometryShader\{\};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{void}\ free();}
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordtype}{void}\ linkShaders(std::string\_view\ vertexShader,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\_view\ fragmentShader,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\_view\ geometryShader);}
+\DoxyCodeLine{00048\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,26 @@
+\doxysection{Cubemap.\+hpp}
+\hypertarget{Cubemap_8hpp_source}{}\label{Cubemap_8hpp_source}\index{src/headers/Cubemap.hpp@{src/headers/Cubemap.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}Buffer.hpp"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Object.hpp"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Shader.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TexParams.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Utility.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string\_view>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCubemap}{Cubemap}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classObject}{Object}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \mbox{\hyperlink{classCubemap}{Cubemap}}(\mbox{\hyperlink{classBuffer}{Buffer}}\ *buffer,\ \mbox{\hyperlink{classShader}{Shader}}\ *shader,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string\_view>\ \&faces,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structCubemapParams}{CubemapParams}}\ \&params\ =\ \{\});}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCubemap_adb1830e575f9fef038e8c45ddd6a9a6d}{draw}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ drawMode\ =\ GL\_TRIANGLES)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00028\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCubemap_ac9943df0cdf3a03e6e9c71b97b8d7830}{bind}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classShader}{Shader}}\ *\mbox{\hyperlink{classCubemap_a815cc14115fcc93b74a57c13dea9026e}{getShader}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \};}
+
+\end{DoxyCode}

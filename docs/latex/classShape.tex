@@ -1,0 +1,150 @@
+\doxysection{Shape Class Reference}
+\hypertarget{classShape}{}\label{classShape}\index{Shape@{Shape}}
+
+
+Helper class for use with \doxylink{classBuffer}{Buffer} objects to store and process vertices.  
+
+
+
+
+{\ttfamily \#include $<$Shape.\+hpp$>$}
+
+
+
+Inheritance diagram for Shape\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classShape__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classShape_ad64c19f6d92f221aeb14fc348fa33c0e}\label{classShape_ad64c19f6d92f221aeb14fc348fa33c0e} 
+using {\bfseries Vertex} = std\+::vector$<$ float $>$
+\begin{DoxyCompactList}\small\item\em Type alias for a single vertex in a shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classShape_aedd26706daa14ebfd4c943f52621e155}{Shape}} (std\+::vector$<$ \mbox{\hyperlink{classShape_ad64c19f6d92f221aeb14fc348fa33c0e}{Vertex}} $>$ \&\&shape, const \mbox{\hyperlink{classStride}{Stride}} \&stride)
+\begin{DoxyCompactList}\small\item\em Move constructor using a 2D array of vertices. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classShape_a43f2647f8b8c5f992e2dc59956ae1053}{Shape}} (const std\+::vector$<$ \mbox{\hyperlink{classShape_ad64c19f6d92f221aeb14fc348fa33c0e}{Vertex}} $>$ \&shape, const \mbox{\hyperlink{classStride}{Stride}} \&stride)
+\begin{DoxyCompactList}\small\item\em Copy constructor using a 2D array of vertices. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classShape_a33e212018db1749cdaa7d821645dc1a1}{Shape}} (std\+::vector$<$ float $>$ \&\&shape, const \mbox{\hyperlink{classStride}{Stride}} \&stride)
+\begin{DoxyCompactList}\small\item\em Move constructor using a flattened array of floats. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classShape_a87ae03f6f2d54933cff175a07ff1956e}{Shape}} (const std\+::vector$<$ float $>$ \&shape, const \mbox{\hyperlink{classStride}{Stride}} \&stride)
+\begin{DoxyCompactList}\small\item\em Copy construct using a flattened array of floats. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classShape_acc3e7ce46fc699eca9413c581afa59ec}{Shape}} (const \mbox{\hyperlink{classShape}{Shape}} \&shape, const \mbox{\hyperlink{classStride}{Stride}} \&stride)
+\begin{DoxyCompactList}\small\item\em Specialised copy constructor to change definition of stride and attributes. \end{DoxyCompactList}\item 
+\Hypertarget{classShape_a9f532e34d1d365d178993e64cf7f2d3f}\label{classShape_a9f532e34d1d365d178993e64cf7f2d3f} 
+int {\bfseries vertex\+Count} () const
+\begin{DoxyCompactList}\small\item\em Get number of vertices in shape. Needed for \doxylink{classBuffer}{Buffer} to draw the shape. \end{DoxyCompactList}\item 
+\Hypertarget{classShape_ad1c342bf7f45efe75961705fe72125f2}\label{classShape_ad1c342bf7f45efe75961705fe72125f2} 
+std\+::size\+\_\+t {\bfseries size} () const
+\begin{DoxyCompactList}\small\item\em Get total size in bytes of the shape. \end{DoxyCompactList}\item 
+\Hypertarget{classShape_af3c6c7d76697d5e91dde9c64fdc8a297}\label{classShape_af3c6c7d76697d5e91dde9c64fdc8a297} 
+const float \texorpdfstring{$\ast$}{*} {\bfseries get\+Vertices} () const
+\begin{DoxyCompactList}\small\item\em Return internal vertex array of shape. \end{DoxyCompactList}\item 
+\Hypertarget{classShape_ac0b9d4862151b7dfa6bbba5b0ad8e4ce}\label{classShape_ac0b9d4862151b7dfa6bbba5b0ad8e4ce} 
+const \mbox{\hyperlink{classStride}{Stride}} \& {\bfseries get\+Stride} () const
+\begin{DoxyCompactList}\small\item\em Return \doxylink{classStride}{Stride}, which stores attributes of shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper class for use with \doxylink{classBuffer}{Buffer} objects to store and process vertices. 
+
+Invokes move semantics where possible (using std\+::vector). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classShape_aedd26706daa14ebfd4c943f52621e155}\label{classShape_aedd26706daa14ebfd4c943f52621e155} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classShape_ad64c19f6d92f221aeb14fc348fa33c0e}{Vertex}} $>$ \&\&}]{shape,  }\item[{const \mbox{\hyperlink{classStride}{Stride}} \&}]{stride }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move constructor using a 2D array of vertices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & List of vertices to be moved into this class for processing. \\
+\hline
+{\em stride} & \doxylink{classStride}{Stride} to define vertex attributes. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classShape_a43f2647f8b8c5f992e2dc59956ae1053}\label{classShape_a43f2647f8b8c5f992e2dc59956ae1053} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classShape_ad64c19f6d92f221aeb14fc348fa33c0e}{Vertex}} $>$ \&}]{shape,  }\item[{const \mbox{\hyperlink{classStride}{Stride}} \&}]{stride }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor using a 2D array of vertices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & List of vertices to be moved into this class for processing. \\
+\hline
+{\em stride} & \doxylink{classStride}{Stride} to define vertex attributes. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classShape_a33e212018db1749cdaa7d821645dc1a1}\label{classShape_a33e212018db1749cdaa7d821645dc1a1} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$ \&\&}]{shape,  }\item[{const \mbox{\hyperlink{classStride}{Stride}} \&}]{stride }\end{DoxyParamCaption})}
+
+
+
+Move constructor using a flattened array of floats. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & Flattened array of vertices stored as a sequence of floats. \\
+\hline
+{\em stride} & \doxylink{classStride}{Stride} to define vertex attributes. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classShape_a87ae03f6f2d54933cff175a07ff1956e}\label{classShape_a87ae03f6f2d54933cff175a07ff1956e} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{shape,  }\item[{const \mbox{\hyperlink{classStride}{Stride}} \&}]{stride }\end{DoxyParamCaption})}
+
+
+
+Copy construct using a flattened array of floats. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & Flattened array of vertices stored as a sequence of floats. \\
+\hline
+{\em stride} & \doxylink{classStride}{Stride} to define vertex attributes. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classShape_acc3e7ce46fc699eca9413c581afa59ec}\label{classShape_acc3e7ce46fc699eca9413c581afa59ec} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classShape}{Shape}} \&}]{shape,  }\item[{const \mbox{\hyperlink{classStride}{Stride}} \&}]{stride }\end{DoxyParamCaption})}
+
+
+
+Specialised copy constructor to change definition of stride and attributes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & \doxylink{classShape}{Shape} to copy from. \\
+\hline
+{\em stride} & \doxylink{classStride}{Stride} to define vertex attributes. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Shape.\+hpp\item 
+src/classes/Shape.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classShape.html" title="Helper class for use with Buffer objects to store and process vertices." alt="" coords="5,5,68,31"/>
+<area shape="rect" id="Node000001" href="$classIndexedShape.html" title="Helper class inheriting from Shape for use with EntityBuffer objects to store and process vertices." alt="" coords="116,5,229,31"/>
+<area shape="poly" id="edge11_Node000000_Node000001" title=" " alt="" coords="82,15,115,15,115,21,82,21"/>
+</map>

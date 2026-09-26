@@ -1,0 +1,11 @@
+<map id="Buffer" name="Buffer">
+<area shape="rect" id="Node000001" title="Abstract class for processing and drawing vertices to the screen." alt="" coords="83,5,144,31"/>
+<area shape="rect" id="Node000002" href="$classMeshBuffer.html" title="Implementation of Buffer which is used for Mesh instances." alt="" coords="5,79,101,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,43,65,80,61,77,93,40"/>
+<area shape="rect" id="Node000003" href="$classVertexArray.html" title="Implementation of Buffer using a VAO and VBO." alt="" coords="125,79,224,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,40,167,77,163,80,130,43"/>
+<area shape="rect" id="Node000004" href="$classEntityBuffer.html" title="Implementation of Buffer using a Entity Buffering." alt="" coords="48,152,147,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="154,115,112,154,108,150,150,111"/>
+<area shape="rect" id="Node000005" href="$classInstancedArray.html" title="Implementation of Buffer using instancing." alt="" coords="171,152,330,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="199,111,240,150,236,154,195,115"/>
+</map>

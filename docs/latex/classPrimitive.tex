@@ -1,0 +1,125 @@
+\doxysection{Primitive Class Reference}
+\hypertarget{classPrimitive}{}\label{classPrimitive}\index{Primitive@{Primitive}}
+
+
+The \doxylink{classPrimitive}{Primitive} class provides functionality to render basic shapes to the screen.  
+
+
+
+
+{\ttfamily \#include $<$Primitive.\+hpp$>$}
+
+
+
+Inheritance diagram for Primitive\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{classPrimitive__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Primitive\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{classPrimitive__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPrimitive_aba34b9d202d73d0602f50e1d7dc3bd29}{Primitive}} (\mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \texorpdfstring{$\ast$}{*}buffer, \mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}shader, const \mbox{\hyperlink{classTexture}{Texture}} \&texture=\{\})
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{classPrimitive}{Primitive} and prepare for drawing to the screen. \end{DoxyCompactList}\item 
+\Hypertarget{classPrimitive_a12995a01f092d5e4b4154421224a15a8}\label{classPrimitive_a12995a01f092d5e4b4154421224a15a8} 
+const \mbox{\hyperlink{classTexture}{Texture}} \& {\bfseries get\+Texture} () const
+\begin{DoxyCompactList}\small\item\em Returns \doxylink{classTexture}{Texture} held by object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPrimitive_aff1f44a2958273ac0367d8c610e2b2ea}{draw}} (unsigned int draw\+Mode=GL\+\_\+\+TRIANGLES) const override
+\begin{DoxyCompactList}\small\item\em Draws the primitive to the screen. \end{DoxyCompactList}\item 
+\Hypertarget{classPrimitive_a0b71a8ced9a14543d7a07c55d691a74e}\label{classPrimitive_a0b71a8ced9a14543d7a07c55d691a74e} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Primitive} () noexcept override=default
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classPrimitive}{Primitive}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Shader} () const
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the shader used by this object. \end{DoxyCompactList}\item 
+void {\bfseries set\+Shader} (\mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}shader)
+\begin{DoxyCompactList}\small\item\em Sets the \doxylink{classShader}{Shader} used by this object. \end{DoxyCompactList}\item 
+void {\bfseries set\+ID} (unsigned int ID)
+\begin{DoxyCompactList}\small\item\em Sets object ID for use in \doxylink{classRenderer}{Renderer}. \end{DoxyCompactList}\item 
+unsigned int {\bfseries get\+ID} ()
+\begin{DoxyCompactList}\small\item\em Gets object ID for use in \doxylink{classRenderer}{Renderer}. \end{DoxyCompactList}\item 
+unsigned int {\bfseries get\+VAO} ()
+\begin{DoxyCompactList}\small\item\em Gets VAO used by owned \doxylink{classBuffer}{Buffer}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Object} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classObject}{Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Object} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for use in derived classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int {\bfseries m\+\_\+\+ID} \{\}
+\begin{DoxyCompactList}\small\item\em \doxylink{classObject}{Object} ID used by \doxylink{classRenderer}{Renderer} to identify objects. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ {\bfseries m\+\_\+buffer} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em \doxylink{classBuffer}{Buffer} instance needed to draw vertices to the screen. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classShader}{Shader}} $>$ {\bfseries m\+\_\+shader} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em \doxylink{classShader}{Shader} instance to determine how to draw object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classPrimitive}{Primitive} class provides functionality to render basic shapes to the screen. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPrimitive_aba34b9d202d73d0602f50e1d7dc3bd29}\label{classPrimitive_aba34b9d202d73d0602f50e1d7dc3bd29} 
+\index{Primitive@{Primitive}!Primitive@{Primitive}}
+\index{Primitive@{Primitive}!Primitive@{Primitive}}
+\doxysubsubsection{\texorpdfstring{Primitive()}{Primitive()}}
+{\footnotesize\ttfamily Primitive\+::\+Primitive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{\mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}}]{shader,  }\item[{const \mbox{\hyperlink{classTexture}{Texture}} \&}]{texture = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a \doxylink{classPrimitive}{Primitive} and prepare for drawing to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Pointer to a \doxylink{classVertexArray}{Vertex\+Array} to draw vertices to the screen. \\
+\hline
+{\em shader} & Pointer to the shader for this primitive to use. \\
+\hline
+{\em texture} & Optional textures to use for this primitive. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPrimitive_aff1f44a2958273ac0367d8c610e2b2ea}\label{classPrimitive_aff1f44a2958273ac0367d8c610e2b2ea} 
+\index{Primitive@{Primitive}!draw@{draw}}
+\index{draw@{draw}!Primitive@{Primitive}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Primitive\+::draw (\begin{DoxyParamCaption}\item[{unsigned int}]{draw\+Mode = {\ttfamily GL\+\_\+TRIANGLES} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws the primitive to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em draw\+Mode} & Specifies how to draw the vertices in the buffer. Usually drawn as triangles by default. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classObject_afcc65c4a0a42dc6159b5751c7972521d}{Object}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Primitive.\+hpp\item 
+src/classes/Primitive.\+cpp\end{DoxyCompactItemize}

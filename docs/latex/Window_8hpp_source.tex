@@ -1,0 +1,49 @@
+\doxysection{Window.\+hpp}
+\hypertarget{Window_8hpp_source}{}\label{Window_8hpp_source}\index{src/headers/Window.hpp@{src/headers/Window.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <glm/ext/vector\_float3.hpp>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ GLFW\_INCLUDE\_NONE}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <GLFW/glfw3.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <glad/gl.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string\_view>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classWindow}{Window}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \mbox{\hyperlink{classWindow}{Window}}(std::string\_view\ name\ =\ \{\textcolor{stringliteral}{"{}Window"{}}\},\ \textcolor{keywordtype}{int}\ width\ =\ 800,\ \textcolor{keywordtype}{int}\ height\ =\ 600);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00024\ \ \ \mbox{\hyperlink{classWindow}{Window}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classWindow}{Window}}\ \&window);}
+\DoxyCodeLine{00027\ \ \ \mbox{\hyperlink{classWindow}{Window}}(\mbox{\hyperlink{classWindow}{Window}}\ \&\&window)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{classWindow_a245d821e6016fa1f6970ccbbedd635f6}{\string~Window}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00033\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classWindow}{Window}}\ \&\mbox{\hyperlink{classWindow_a32fc81345fb163d3378d2d29eee1c74a}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classWindow}{Window}}\ \&window);}
+\DoxyCodeLine{00036\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classWindow}{Window}}\ \&\mbox{\hyperlink{classWindow_a32fc81345fb163d3378d2d29eee1c74a}{operator=}}(\mbox{\hyperlink{classWindow}{Window}}\ \&\&window)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \ \ \textcolor{keyword}{operator}\ GLFWwindow\ *()\ \textcolor{keyword}{const}\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classWindow_a35fe56fa471a7e5c031dc658f97146d9}{get}}();\ \}}
+\DoxyCodeLine{00041\ \ \ \textcolor{keyword}{operator}\ bool()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_window;\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \ \ GLFWwindow\ *\mbox{\hyperlink{classWindow_a35fe56fa471a7e5c031dc658f97146d9}{get}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_window;\ \}}
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWindow_a985b092a7c5e9e15700d9ed7dea0c5b9}{clear}}(\textcolor{keywordtype}{float}\ red\ =\ 0.1f,\ \textcolor{keywordtype}{float}\ green\ =\ 0.1f,\ \textcolor{keywordtype}{float}\ blue\ =\ 0.1f)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWindow_a985b092a7c5e9e15700d9ed7dea0c5b9}{clear}}(\textcolor{keyword}{const}\ glm::vec3\ \&color)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWindow_adb197056d79de77c9a5856770e56e933}{close}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classWindow_a24ec3b91abc7689a10a983d08cac1217}{getRatio}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classWindow_a60757b2b0dbcec9889e3a09f5655adbe}{getHeight}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classWindow_aee31a875d654a8c8f7d796d072657791}{getWidth}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWindow_aa38cb2caebd16fb3837307b0c04b96a4}{terminate}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00069\ \ \ \textcolor{comment}{//\ Internal\ data}}
+\DoxyCodeLine{00070\ \ \ GLFWwindow\ *m\_window\{\};}
+\DoxyCodeLine{00071\ \ \ \textcolor{keywordtype}{int}\ m\_width\{\};}
+\DoxyCodeLine{00072\ \ \ \textcolor{keywordtype}{int}\ m\_height\{\};}
+\DoxyCodeLine{00073\ \ \ \textcolor{comment}{//\ Helper\ functions\ for\ initialisation}}
+\DoxyCodeLine{00074\ \ \ \textcolor{keywordtype}{void}\ initialize(std::string\_view\ name,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00075\ \ \ \textcolor{keywordtype}{void}\ initializeGLAD();}
+\DoxyCodeLine{00076\ \ \ \textcolor{comment}{//\ Callback\ functions\ for\ window\ resize.}}
+\DoxyCodeLine{00077\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ framebufferSizeCallback(GLFWwindow\ *window,\ \textcolor{keywordtype}{int}\ height,}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ width);}
+\DoxyCodeLine{00079\ \};}
+
+\end{DoxyCode}

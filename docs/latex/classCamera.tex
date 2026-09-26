@@ -1,0 +1,238 @@
+\doxysection{Camera Class Reference}
+\hypertarget{classCamera}{}\label{classCamera}\index{Camera@{Camera}}
+
+
+The \doxylink{classCamera}{Camera} class enables control of how the scene is viewed.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classCamera_a80cb65605322d27ad3b6d973484509ec}{Direction}} \{ {\bfseries FORWARD}
+, {\bfseries BACKWARD}
+, {\bfseries LEFT}
+, {\bfseries RIGHT}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumerable for camera direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCamera_a78c648f0ddbf92d356409cc84b6c37ea}{Camera}} (glm\+::vec3 pos=\{0.\+0f, 0.\+0f, 0.\+0f\}, glm\+::vec3 up=\{0.\+0f, 1.\+0f, 0.\+0f\}, float yaw=-\/90.\+0f, float pitch=0.\+0f)
+\begin{DoxyCompactList}\small\item\em Constructor for camera. \end{DoxyCompactList}\item 
+\Hypertarget{classCamera_a5ec1871e6f296d8528e64157c6371c09}\label{classCamera_a5ec1871e6f296d8528e64157c6371c09} 
+float {\bfseries get\+FOV} ()
+\begin{DoxyCompactList}\small\item\em Returns current FOV of camera. \end{DoxyCompactList}\item 
+\Hypertarget{classCamera_a132a6a63a195faebccc458e539276f1e}\label{classCamera_a132a6a63a195faebccc458e539276f1e} 
+const glm\+::mat4 {\bfseries view} ()
+\begin{DoxyCompactList}\small\item\em Calculates and returns view matrix. \end{DoxyCompactList}\item 
+\Hypertarget{classCamera_aa5fecb1c4a025b07e8d93944ab0be0c6}\label{classCamera_aa5fecb1c4a025b07e8d93944ab0be0c6} 
+const glm\+::vec3 \& {\bfseries get\+Position} ()
+\begin{DoxyCompactList}\small\item\em Gets current camera position. \end{DoxyCompactList}\item 
+\Hypertarget{classCamera_abc07c5b072f2f9cfe3ff3e780df9ae3a}\label{classCamera_abc07c5b072f2f9cfe3ff3e780df9ae3a} 
+const glm\+::vec3 \& {\bfseries front} ()
+\begin{DoxyCompactList}\small\item\em Gets the direction which the camera is facing. \end{DoxyCompactList}\item 
+\Hypertarget{classCamera_a3305f685261fe20585b8acd45bb12c51}\label{classCamera_a3305f685261fe20585b8acd45bb12c51} 
+float {\bfseries get\+Pitch} ()
+\begin{DoxyCompactList}\small\item\em Gets the current pitch of the camera in degrees. \end{DoxyCompactList}\item 
+\Hypertarget{classCamera_a4ee608166ec0552a703010e4e36a0f1e}\label{classCamera_a4ee608166ec0552a703010e4e36a0f1e} 
+float {\bfseries get\+Yaw} ()
+\begin{DoxyCompactList}\small\item\em Gets the current yaw of the camera in degrees. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_af073e5018dbe94c9a074c660cb4b731f}{set\+Speed}} (float speed)
+\begin{DoxyCompactList}\small\item\em Sets the speed of camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a0d40263320e7d4f9f1abb06b3f3bffc2}{set\+Sensitivity}} (float sensitivity)
+\begin{DoxyCompactList}\small\item\em Sets the mouse sensitivity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a833db52b14b697eca9aee2f4fe7d2b6a}{set\+Pitch}} (float pitch)
+\begin{DoxyCompactList}\small\item\em Sets the pitch of the camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_aab7e59c001ffe4dcbad59461cdffbcb6}{set\+Yaw}} (float yaw)
+\begin{DoxyCompactList}\small\item\em Set the yaw of the camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a04bb3f42bb51c226328d8975e31e5e40}{move}} (\mbox{\hyperlink{classCamera_a80cb65605322d27ad3b6d973484509ec}{Direction}} direction, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Move the camera for one frame of length delta\+Time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a1a4b89149e915fe943bd804c6f5cc07d}{mouse\+Callback}} (double xoffset, double yoffset)
+\begin{DoxyCompactList}\small\item\em Callback for mouse entry into window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a70d488b0385fabe4095e51fa3cf1dcea}{process\+Mouse}} (double xoffset, double yoffset, bool constrain\+Pitch=true)
+\begin{DoxyCompactList}\small\item\em Rotates camera based on mouse movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_abc553f87d3f7e5e637e44f41f91721d6}{process\+Scroll}} (double yoffset)
+\begin{DoxyCompactList}\small\item\em Zooms in camera based on mouse scroll. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classCamera}{Camera} class enables control of how the scene is viewed. 
+
+Used in \doxylink{classRenderer}{Renderer} for viewing scene. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classCamera_a80cb65605322d27ad3b6d973484509ec}\label{classCamera_a80cb65605322d27ad3b6d973484509ec} 
+\index{Camera@{Camera}!Direction@{Direction}}
+\index{Direction@{Direction}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classCamera_a80cb65605322d27ad3b6d973484509ec}{Camera\+::\+Direction}}}
+
+
+
+Enumerable for camera direction. 
+
+Forward by default. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCamera_a78c648f0ddbf92d356409cc84b6c37ea}\label{classCamera_a78c648f0ddbf92d356409cc84b6c37ea} 
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{pos = {\ttfamily \{0.0f,~0.0f,~0.0f\}},  }\item[{glm\+::vec3}]{up = {\ttfamily \{0.0f,~1.0f,~0.0f\}},  }\item[{float}]{yaw = {\ttfamily -\/90.0f},  }\item[{float}]{pitch = {\ttfamily 0.0f} }\end{DoxyParamCaption})}
+
+
+
+Constructor for camera. 
+
+Default constructs to a camera at the origin facing forwards. 
+\begin{DoxyParams}{Parameters}
+{\em pos} & Initial position of the camera. \\
+\hline
+{\em up} & The up vector used to define the 3d axes of the camera. \\
+\hline
+{\em yaw} & Initial yaw angle in degrees. \\
+\hline
+{\em pitch} & Initial pitch angle in degrees. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCamera_a1a4b89149e915fe943bd804c6f5cc07d}\label{classCamera_a1a4b89149e915fe943bd804c6f5cc07d} 
+\index{Camera@{Camera}!mouseCallback@{mouseCallback}}
+\index{mouseCallback@{mouseCallback}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{mouseCallback()}{mouseCallback()}}
+{\footnotesize\ttfamily void Camera\+::mouse\+Callback (\begin{DoxyParamCaption}\item[{double}]{xoffset,  }\item[{double}]{yoffset }\end{DoxyParamCaption})}
+
+
+
+Callback for mouse entry into window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xoffset} & The difference in x of the mouse position between the last frame and the current frame. \\
+\hline
+{\em yoffset} & The difference in x of the mouse position between the last frame and the current frame. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCamera_a04bb3f42bb51c226328d8975e31e5e40}\label{classCamera_a04bb3f42bb51c226328d8975e31e5e40} 
+\index{Camera@{Camera}!move@{move}}
+\index{move@{move}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Camera\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCamera_a80cb65605322d27ad3b6d973484509ec}{Direction}}}]{direction,  }\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Move the camera for one frame of length delta\+Time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & The Direction to move the camera in. \\
+\hline
+{\em delta\+Time} & The time elapsed between the last frame and the current frame. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCamera_a70d488b0385fabe4095e51fa3cf1dcea}\label{classCamera_a70d488b0385fabe4095e51fa3cf1dcea} 
+\index{Camera@{Camera}!processMouse@{processMouse}}
+\index{processMouse@{processMouse}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{processMouse()}{processMouse()}}
+{\footnotesize\ttfamily void Camera\+::process\+Mouse (\begin{DoxyParamCaption}\item[{double}]{xoffset,  }\item[{double}]{yoffset,  }\item[{bool}]{constrain\+Pitch = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Rotates camera based on mouse movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xoffset} & The difference in x of the mouse position between the last frame and the current frame. \\
+\hline
+{\em yoffset} & The difference in x of the mouse position between the last frame and the current frame. \\
+\hline
+{\em constrain\+Pitch} & Controls whether to constrain the pitch to avoid the camera facing 90 degrees up or down. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCamera_abc553f87d3f7e5e637e44f41f91721d6}\label{classCamera_abc553f87d3f7e5e637e44f41f91721d6} 
+\index{Camera@{Camera}!processScroll@{processScroll}}
+\index{processScroll@{processScroll}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{processScroll()}{processScroll()}}
+{\footnotesize\ttfamily void Camera\+::process\+Scroll (\begin{DoxyParamCaption}\item[{double}]{yoffset }\end{DoxyParamCaption})}
+
+
+
+Zooms in camera based on mouse scroll. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em yoffset} & Amount scrolled between the last frame and current frame. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCamera_a833db52b14b697eca9aee2f4fe7d2b6a}\label{classCamera_a833db52b14b697eca9aee2f4fe7d2b6a} 
+\index{Camera@{Camera}!setPitch@{setPitch}}
+\index{setPitch@{setPitch}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setPitch()}{setPitch()}}
+{\footnotesize\ttfamily void Camera\+::set\+Pitch (\begin{DoxyParamCaption}\item[{float}]{pitch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the pitch of the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pitch} & New pitch of the camera (in degrees). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCamera_a0d40263320e7d4f9f1abb06b3f3bffc2}\label{classCamera_a0d40263320e7d4f9f1abb06b3f3bffc2} 
+\index{Camera@{Camera}!setSensitivity@{setSensitivity}}
+\index{setSensitivity@{setSensitivity}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setSensitivity()}{setSensitivity()}}
+{\footnotesize\ttfamily void Camera\+::set\+Sensitivity (\begin{DoxyParamCaption}\item[{float}]{sensitivity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the mouse sensitivity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensitivity} & New sensitivity of the camera. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCamera_af073e5018dbe94c9a074c660cb4b731f}\label{classCamera_af073e5018dbe94c9a074c660cb4b731f} 
+\index{Camera@{Camera}!setSpeed@{setSpeed}}
+\index{setSpeed@{setSpeed}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setSpeed()}{setSpeed()}}
+{\footnotesize\ttfamily void Camera\+::set\+Speed (\begin{DoxyParamCaption}\item[{float}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the speed of camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & New speed of the camera. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCamera_aab7e59c001ffe4dcbad59461cdffbcb6}\label{classCamera_aab7e59c001ffe4dcbad59461cdffbcb6} 
+\index{Camera@{Camera}!setYaw@{setYaw}}
+\index{setYaw@{setYaw}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setYaw()}{setYaw()}}
+{\footnotesize\ttfamily void Camera\+::set\+Yaw (\begin{DoxyParamCaption}\item[{float}]{yaw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the yaw of the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em yaw} & New yaw of the camera (in degrees). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Camera.\+hpp\item 
+src/classes/Camera.\+cpp\end{DoxyCompactItemize}

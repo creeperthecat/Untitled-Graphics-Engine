@@ -1,0 +1,98 @@
+\doxysection{Frame\+Buffer Class Reference}
+\hypertarget{classFrameBuffer}{}\label{classFrameBuffer}\index{FrameBuffer@{FrameBuffer}}
+
+
+The \doxylink{classFrameBuffer}{Frame\+Buffer} class is used for the management and use of framebuffers during rendering, which allows rendering the screen to a texture.  
+
+
+
+
+{\ttfamily \#include $<$Frame\+Buffer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFrameBuffer_aab4c897d360f51c5a96b4782e67e98a9}{Frame\+Buffer}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Constructs framebuffer and prepares for binding. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFrameBuffer_a564a96e4c3d5dbd70eb1bcef46dfe4af}{Frame\+Buffer}} (const \mbox{\hyperlink{classWindow}{Window}} \&window)
+\begin{DoxyCompactList}\small\item\em Constructs framebuffer and prepares for binding. \end{DoxyCompactList}\item 
+\Hypertarget{classFrameBuffer_ae05fbe26c40ed4ded8f6812f915bc119}\label{classFrameBuffer_ae05fbe26c40ed4ded8f6812f915bc119} 
+{\bfseries Frame\+Buffer} (const \mbox{\hyperlink{classFrameBuffer}{Frame\+Buffer}} \&framebuffer)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor for \doxylink{classFrameBuffer}{Frame\+Buffer}. \end{DoxyCompactList}\item 
+\Hypertarget{classFrameBuffer_a31d4287910fd02740a2c42491bcedf4a}\label{classFrameBuffer_a31d4287910fd02740a2c42491bcedf4a} 
+{\bfseries Frame\+Buffer} (\mbox{\hyperlink{classFrameBuffer}{Frame\+Buffer}} \&\&framebuffer)=default
+\begin{DoxyCompactList}\small\item\em Move constructor for \doxylink{classFrameBuffer}{Frame\+Buffer}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFrameBuffer_aef8be9884e8cc0fc3f3692e6c6968fa1}{\texorpdfstring{$\sim$}{\string~}\+Frame\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classFrameBuffer}{Frame\+Buffer}. \end{DoxyCompactList}\item 
+\Hypertarget{classFrameBuffer_a16fa30984714c6070f4c5bde5b5b87f7}\label{classFrameBuffer_a16fa30984714c6070f4c5bde5b5b87f7} 
+void {\bfseries bind} ()
+\begin{DoxyCompactList}\small\item\em Binds framebuffer to be the output of rendering calls. \end{DoxyCompactList}\item 
+\Hypertarget{classFrameBuffer_a14663cbe36ea50e94d64e9ba7f5fd959}\label{classFrameBuffer_a14663cbe36ea50e94d64e9ba7f5fd959} 
+void {\bfseries bind\+Texture} ()
+\begin{DoxyCompactList}\small\item\em Binds texture for framebuffer to draw to. \end{DoxyCompactList}\item 
+\Hypertarget{classFrameBuffer_ae1412343560e97b476bf5bd9e56f4b4b}\label{classFrameBuffer_ae1412343560e97b476bf5bd9e56f4b4b} 
+\mbox{\hyperlink{classFrameBuffer}{Frame\+Buffer}} \& {\bfseries operator=} (const \mbox{\hyperlink{classFrameBuffer}{Frame\+Buffer}} \&framebuffer)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator for \doxylink{classFrameBuffer}{Frame\+Buffer}. \end{DoxyCompactList}\item 
+\Hypertarget{classFrameBuffer_a6e537e2e1c45293422090ef78e98c219}\label{classFrameBuffer_a6e537e2e1c45293422090ef78e98c219} 
+\mbox{\hyperlink{classFrameBuffer}{Frame\+Buffer}} \& {\bfseries operator=} (\mbox{\hyperlink{classFrameBuffer}{Frame\+Buffer}} \&\&framebuffer)
+\begin{DoxyCompactList}\small\item\em Move assignment operator for \doxylink{classFrameBuffer}{Frame\+Buffer}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classFrameBuffer_a18b62aeaa132527671396f5847407dae}\label{classFrameBuffer_a18b62aeaa132527671396f5847407dae} 
+static void {\bfseries bind\+Default} ()
+\begin{DoxyCompactList}\small\item\em Unbinds the framebuffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classFrameBuffer}{Frame\+Buffer} class is used for the management and use of framebuffers during rendering, which allows rendering the screen to a texture. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFrameBuffer_aab4c897d360f51c5a96b4782e67e98a9}\label{classFrameBuffer_aab4c897d360f51c5a96b4782e67e98a9} 
+\index{FrameBuffer@{FrameBuffer}!FrameBuffer@{FrameBuffer}}
+\index{FrameBuffer@{FrameBuffer}!FrameBuffer@{FrameBuffer}}
+\doxysubsubsection{\texorpdfstring{FrameBuffer()}{FrameBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Frame\+Buffer\+::\+Frame\+Buffer (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Constructs framebuffer and prepares for binding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & width in pixels of the framebuffer. \\
+\hline
+{\em height} & height in pixels of the framebuffer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFrameBuffer_a564a96e4c3d5dbd70eb1bcef46dfe4af}\label{classFrameBuffer_a564a96e4c3d5dbd70eb1bcef46dfe4af} 
+\index{FrameBuffer@{FrameBuffer}!FrameBuffer@{FrameBuffer}}
+\index{FrameBuffer@{FrameBuffer}!FrameBuffer@{FrameBuffer}}
+\doxysubsubsection{\texorpdfstring{FrameBuffer()}{FrameBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Frame\+Buffer\+::\+Frame\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWindow}{Window}} \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs framebuffer and prepares for binding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window currently in use by the \doxylink{classRenderer}{Renderer}, used to get window dimensions. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFrameBuffer_aef8be9884e8cc0fc3f3692e6c6968fa1}\label{classFrameBuffer_aef8be9884e8cc0fc3f3692e6c6968fa1} 
+\index{FrameBuffer@{FrameBuffer}!````~FrameBuffer@{\texorpdfstring{$\sim$}{\string~}FrameBuffer}}
+\index{````~FrameBuffer@{\texorpdfstring{$\sim$}{\string~}FrameBuffer}!FrameBuffer@{FrameBuffer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FrameBuffer()}{\string~FrameBuffer()}}
+{\footnotesize\ttfamily Frame\+Buffer\+::\texorpdfstring{$\sim$}{\string~}\+Frame\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor for \doxylink{classFrameBuffer}{Frame\+Buffer}. 
+
+Frees data held by framebuffer, if not being held by another instance. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Frame\+Buffer.\+hpp\item 
+src/classes/Frame\+Buffer.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,148 @@
+\doxysection{Texture Class Reference}
+\hypertarget{classTexture}{}\label{classTexture}\index{Texture@{Texture}}
+
+
+The \doxylink{classTexture}{Texture} class is used for loading and managing textures to be used with shaders.  
+
+
+
+
+{\ttfamily \#include $<$Texture.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTexture_a66179be276016021e80b1c67c047d4ad}{Texture}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{classTexture}{Texture}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTexture_a4ca7d38465d6e74c673a1d16dd682966}{Texture}} (std\+::initializer\+\_\+list$<$ std\+::string\+\_\+view $>$ files, const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&params=\{\})
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classTexture}{Texture} using a list of files. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTexture_ad5b8c4e1362631ad14acc55090331389}{Texture}} (std\+::string\+\_\+view file, const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&params=\{\})
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classTexture}{Texture} using a texture file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTexture_aae21f3e9b390357e5b33b29ccd08afc4}{Texture}} (int length)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classTexture}{Texture} which sets an initial number of textures to store. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTexture_a41b2f7d725052f6eaa44e32896eb5472}{add}} (std\+::string\+\_\+view file, const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&params=\{\})
+\begin{DoxyCompactList}\small\item\em Loads an additional texture file into memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTexture_a01bd66085a7172da3677175935316d32}{add}} (const std\+::vector$<$ std\+::string\+\_\+view $>$ \&files, const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&params=\{\})
+\begin{DoxyCompactList}\small\item\em Loads a list of texture files into memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTexture_a7d0507cf511f62106fa3bfda7d5824e7}{use}} () const
+\begin{DoxyCompactList}\small\item\em Binds all textures currently held. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classTexture}{Texture} class is used for loading and managing textures to be used with shaders. 
+
+The same instance can store multiple texture files, which can then all be sent to the shader. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classTexture_a66179be276016021e80b1c67c047d4ad}\label{classTexture_a66179be276016021e80b1c67c047d4ad} 
+\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Texture\+::\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor for \doxylink{classTexture}{Texture}. 
+
+Initialises an empty list of textures and sets parameters to default. \Hypertarget{classTexture_a4ca7d38465d6e74c673a1d16dd682966}\label{classTexture_a4ca7d38465d6e74c673a1d16dd682966} 
+\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ std\+::string\+\_\+view $>$}]{files,  }\item[{const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&}]{params = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classTexture}{Texture} using a list of files. 
+
+Automatically finds, reads and loads textures into memory. All files in the list will use the same parameters, if you wish to specify different parameters, consider using \doxylink{classTexture_a41b2f7d725052f6eaa44e32896eb5472}{add()} and redefining them. 
+\begin{DoxyParams}{Parameters}
+{\em files} & List of files to load. \\
+\hline
+{\em params} & Optional specifier for texture parameters used when loading \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTexture_ad5b8c4e1362631ad14acc55090331389}\label{classTexture_ad5b8c4e1362631ad14acc55090331389} 
+\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{file,  }\item[{const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&}]{params = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \doxylink{classTexture}{Texture} using a texture file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of file to load. \\
+\hline
+{\em params} & Optional specifier for texture parameters used when loading file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTexture_aae21f3e9b390357e5b33b29ccd08afc4}\label{classTexture_aae21f3e9b390357e5b33b29ccd08afc4} 
+\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor for \doxylink{classTexture}{Texture} which sets an initial number of textures to store. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & Number of textures to reserve space for. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTexture_a01bd66085a7172da3677175935316d32}\label{classTexture_a01bd66085a7172da3677175935316d32} 
+\index{Texture@{Texture}!add@{add}}
+\index{add@{add}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Texture\+::add (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string\+\_\+view $>$ \&}]{files,  }\item[{const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&}]{params = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Loads a list of texture files into memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em files} & List of files to add. \\
+\hline
+{\em params} & Optional specifier for texture parameters used when loading files. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTexture_a41b2f7d725052f6eaa44e32896eb5472}\label{classTexture_a41b2f7d725052f6eaa44e32896eb5472} 
+\index{Texture@{Texture}!add@{add}}
+\index{add@{add}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Texture\+::add (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{file,  }\item[{const \mbox{\hyperlink{structTexParams}{Tex\+Params}} \&}]{params = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Loads an additional texture file into memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of file to add. \\
+\hline
+{\em params} & Optional specifier for texture parameters used when loading file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTexture_a7d0507cf511f62106fa3bfda7d5824e7}\label{classTexture_a7d0507cf511f62106fa3bfda7d5824e7} 
+\index{Texture@{Texture}!use@{use}}
+\index{use@{use}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Texture\+::use (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Binds all textures currently held. 
+
+Used in \doxylink{classObject}{Object} for drawing to the screen. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Texture.\+hpp\item 
+src/classes/Texture.\+cpp\end{DoxyCompactItemize}

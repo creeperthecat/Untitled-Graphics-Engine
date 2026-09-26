@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['setblockindex_0',['setblockindex',['../classShader.html#ae8f5dac087265318918a0115e2b53373',1,'Shader::setBlockIndex(std::string_view block, int index) const'],['../classShader.html#aebca4df7a0270f5afd5e7582f4048751',1,'Shader::setBlockIndex(unsigned int block, int index) const']]],
+  ['setbool_1',['setBool',['../classShader.html#ab01a0e7ef51575996672aba36bc62892',1,'Shader']]],
+  ['setclearcolor_2',['setclearcolor',['../classRenderer.html#a08fe445e910bd3fd243483238ec1af5a',1,'Renderer::setClearColor(const glm::vec3 &amp;color)'],['../classRenderer.html#a909bbe6a34b5cf447b9b99016a96e207',1,'Renderer::setClearColor(float red, float green, float blue)']]],
+  ['setfloat_3',['setFloat',['../classShader.html#ab575382fda84aeaf0ca80c3a045415d9',1,'Shader']]],
+  ['setid_4',['setID',['../classObject.html#a1b3e5d03fe4c6ff5858275b25af9e92f',1,'Object']]],
+  ['setint_5',['setInt',['../classShader.html#a7b7307af4b37d9a1ed317360bcdf7e7c',1,'Shader']]],
+  ['setkeybind_6',['setKeybind',['../classRenderer.html#aac03d8e188330486d5a3aad4bf784002',1,'Renderer']]],
+  ['setmat4_7',['setMat4',['../classShader.html#ae2e887e0b013c2816c41dfad0d5567a9',1,'Shader']]],
+  ['setmousecallback_8',['setMouseCallback',['../classRenderer.html#a593d5545d03a29184bece7922c730c08',1,'Renderer']]],
+  ['setpitch_9',['setPitch',['../classCamera.html#a833db52b14b697eca9aee2f4fe7d2b6a',1,'Camera']]],
+  ['setscrollcallback_10',['setScrollCallback',['../classRenderer.html#ad72bb8ccb700d678c7b6da93cc24ca82',1,'Renderer']]],
+  ['setsensitivity_11',['setSensitivity',['../classCamera.html#a0d40263320e7d4f9f1abb06b3f3bffc2',1,'Camera']]],
+  ['setshader_12',['setShader',['../classObject.html#aa395f809acaca8b8100ee7614888c65f',1,'Object']]],
+  ['setspeed_13',['setSpeed',['../classCamera.html#af073e5018dbe94c9a074c660cb4b731f',1,'Camera']]],
+  ['setvec2_14',['setvec2',['../classShader.html#af1e05f2f60aa5ee2b9020a9a8257e46c',1,'Shader::setVec2(std::string_view name, const glm::vec2 &amp;value) const'],['../classShader.html#a758a5c11c450737294c1f331cde96829',1,'Shader::setVec2(std::string_view name, float x, float y) const']]],
+  ['setvec3_15',['setvec3',['../classShader.html#aa6cd805654263af4144919f607f00181',1,'Shader::setVec3(std::string_view name, const glm::vec3 &amp;value) const'],['../classShader.html#acb5ae98f705e1dd6f02933ee56f891b8',1,'Shader::setVec3(std::string_view name, float x, float y, float z) const']]],
+  ['setyaw_16',['setYaw',['../classCamera.html#aab7e59c001ffe4dcbad59461cdffbcb6',1,'Camera']]],
+  ['shader_17',['shader',['../classShader.html#a653b879e1c06925325b5aa1945bd4ea8',1,'Shader::Shader(Shader &amp;&amp;shader) noexcept'],['../classShader.html#aedc63e240e965b496f246ffc214918b4',1,'Shader::Shader()=default'],['../classShader.html#a2a760436b250532af297ab5b2a8798ae',1,'Shader::Shader(const Shader &amp;shader)']]],
+  ['shape_18',['shape',['../classShape.html#aedd26706daa14ebfd4c943f52621e155',1,'Shape::Shape(std::vector&lt; Vertex &gt; &amp;&amp;shape, const Stride &amp;stride)'],['../classShape.html#a43f2647f8b8c5f992e2dc59956ae1053',1,'Shape::Shape(const std::vector&lt; Vertex &gt; &amp;shape, const Stride &amp;stride)'],['../classShape.html#a33e212018db1749cdaa7d821645dc1a1',1,'Shape::Shape(std::vector&lt; float &gt; &amp;&amp;shape, const Stride &amp;stride)'],['../classShape.html#a87ae03f6f2d54933cff175a07ff1956e',1,'Shape::Shape(const std::vector&lt; float &gt; &amp;shape, const Stride &amp;stride)'],['../classShape.html#acc3e7ce46fc699eca9413c581afa59ec',1,'Shape::Shape(const Shape &amp;shape, const Stride &amp;stride)']]],
+  ['size_19',['size',['../classStride.html#a62412983a4c0e675d7522a49fc08fa65',1,'Stride::size()'],['../classShape.html#ad1c342bf7f45efe75961705fe72125f2',1,'Shape::size()']]],
+  ['standardshader_20',['standardshader',['../classStandardShader.html#aa2f006f052fba31f8ca5f28ba6a4a59d',1,'StandardShader::StandardShader(std::string_view vertexShaderFile, std::string_view fragmentShaderFile, bool freeShader=true)'],['../classStandardShader.html#a1ac0c5ac141cc03f47c16ef6dcc90157',1,'StandardShader::StandardShader(const StandardShader &amp;shader)'],['../classStandardShader.html#a8cec9f9b390a0a6998f7c45e5e7617cd',1,'StandardShader::StandardShader(const StandardShader &amp;shader, std::string_view fragmentShaderFile, bool freeShader=true)'],['../classStandardShader.html#a9eaf90d0f3d9768c426da4f7a5667267',1,'StandardShader::StandardShader(StandardShader &amp;&amp;shader) noexcept']]],
+  ['start_21',['start',['../classRenderer.html#a59c09ec7a99b4cafddc056893a049984',1,'Renderer']]],
+  ['storedata_22',['storeData',['../classUniformBuffer.html#a633c29a6b25ab6d5801cc3538321ad63',1,'UniformBuffer']]],
+  ['stride_23',['stride',['../classStride.html#a358cb3eadd78803d9a319b9badfe6eb2',1,'Stride::Stride(const std::vector&lt; int &gt; &amp;attributes, const std::vector&lt; int &gt; &amp;pointers={})'],['../classStride.html#aa2d14a89e6aade6f563e5931a3a3601a',1,'Stride::Stride(std::initializer_list&lt; int &gt; attributes)'],['../classStride.html#a0c98bae9e4a2f2947fa76a2cc79a18fb',1,'Stride::Stride(const Stride &amp;stride, const std::vector&lt; int &gt; &amp;pointers)']]]
+];

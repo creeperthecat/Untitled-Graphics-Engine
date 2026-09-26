@@ -1,0 +1,106 @@
+\doxysection{Buffer Class Reference}
+\hypertarget{classBuffer}{}\label{classBuffer}\index{Buffer@{Buffer}}
+
+
+Abstract class for processing and drawing vertices to the screen.  
+
+
+
+
+{\ttfamily \#include $<$Buffer.\+hpp$>$}
+
+
+
+Inheritance diagram for Buffer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classBuffer__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classBuffer_aa86031bf5b9f014191d22133b6f85f2b}{draw}} (unsigned int draw\+Mode=GL\+\_\+\+TRIANGLES) const =0
+\begin{DoxyCompactList}\small\item\em Draws vertices stored by instance to the screen. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classBuffer}{Buffer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBuffer_a600046eaae726fa5c78feaf2d797af1a}{clone}} () const =0
+\begin{DoxyCompactList}\small\item\em Clones this instance of \doxylink{classBuffer}{Buffer}. \end{DoxyCompactList}\item 
+\Hypertarget{classBuffer_af3e27ddf1725bbb444df2956d8d267b9}\label{classBuffer_af3e27ddf1725bbb444df2956d8d267b9} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Buffer} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classBuffer}{Buffer}. \end{DoxyCompactList}\item 
+\Hypertarget{classBuffer_ab83ccac615acd99f8a69e221440a9b50}\label{classBuffer_ab83ccac615acd99f8a69e221440a9b50} 
+unsigned int {\bfseries get\+VAO} () const
+\begin{DoxyCompactList}\small\item\em Gets the Vertex Array \doxylink{classObject}{Object} held by this instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classBuffer_a92fd371409790ee64d2ca9bdaec2dd1a}\label{classBuffer_a92fd371409790ee64d2ca9bdaec2dd1a} 
+{\bfseries Buffer} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for derived classes to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ unsigned int $>$ \mbox{\hyperlink{classBuffer_adeef898e529daba7775a411f45df74a0}{m\+\_\+\+VAO}} \{std\+::make\+\_\+shared$<$unsigned int$>$(0)\}
+\begin{DoxyCompactList}\small\item\em Shared pointer to Vertex Array Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for processing and drawing vertices to the screen. 
+
+Stores a VAO as a shared pointer for use within draw calls. Used by all \doxylink{classObject}{Object} instances. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBuffer_a600046eaae726fa5c78feaf2d797af1a}\label{classBuffer_a600046eaae726fa5c78feaf2d797af1a} 
+\index{Buffer@{Buffer}!clone@{clone}}
+\index{clone@{clone}!Buffer@{Buffer}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classBuffer}{Buffer}} \texorpdfstring{$\ast$}{*} Buffer\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Clones this instance of \doxylink{classBuffer}{Buffer}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a new \doxylink{classBuffer}{Buffer} copied from this \doxylink{classBuffer}{Buffer}. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classEntityBuffer_a902b9195fe0181c21564b8dcbcdec340}{Entity\+Buffer}}, \mbox{\hyperlink{classInstancedArray_a3cd9a18ea178960791cf4b4e681eca9f}{Instanced\+Array$<$ T $>$}}, \mbox{\hyperlink{classMeshBuffer_ad59367a9e0acd87087d2f1e17874dd2f}{Mesh\+Buffer}}, and \mbox{\hyperlink{classVertexArray_a24265cd9c733466f3156ad75f1ed53bb}{Vertex\+Array}}.
+
+\Hypertarget{classBuffer_aa86031bf5b9f014191d22133b6f85f2b}\label{classBuffer_aa86031bf5b9f014191d22133b6f85f2b} 
+\index{Buffer@{Buffer}!draw@{draw}}
+\index{draw@{draw}!Buffer@{Buffer}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void Buffer\+::draw (\begin{DoxyParamCaption}\item[{unsigned int}]{draw\+Mode = {\ttfamily GL\+\_\+TRIANGLES} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Draws vertices stored by instance to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em draw\+Mode} & Specifies how to draw the vertices in the buffer. Usually drawn as triangles by default. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classInstancedArray_a26529662afe9a6060b3c61ae20907dcb}{Instanced\+Array$<$ T $>$}}, \mbox{\hyperlink{classMeshBuffer_ac63045d351a10de614ae31d848aaea74}{Mesh\+Buffer}}, and \mbox{\hyperlink{classVertexArray_a96ef56f7f2367832ec811f5937425048}{Vertex\+Array}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classBuffer_adeef898e529daba7775a411f45df74a0}\label{classBuffer_adeef898e529daba7775a411f45df74a0} 
+\index{Buffer@{Buffer}!m\_VAO@{m\_VAO}}
+\index{m\_VAO@{m\_VAO}!Buffer@{Buffer}}
+\doxysubsubsection{\texorpdfstring{m\_VAO}{m\_VAO}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$unsigned int$>$ Buffer\+::m\+\_\+\+VAO \{std\+::make\+\_\+shared$<$unsigned int$>$(0)\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Shared pointer to Vertex Array Object. 
+
+Must be initialised by derived classes. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Buffer.\+hpp\end{DoxyCompactItemize}

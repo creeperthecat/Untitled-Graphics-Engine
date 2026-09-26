@@ -1,0 +1,160 @@
+\doxysection{Instanced\+Model\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classInstancedModel}{}\label{classInstancedModel}\index{InstancedModel$<$ T $>$@{InstancedModel$<$ T $>$}}
+
+
+Variation of \doxylink{classModel}{Model} which allows for instancing.  
+
+
+
+
+{\ttfamily \#include $<$Instanced\+Model.\+hpp$>$}
+
+
+
+Inheritance diagram for Instanced\+Model\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classInstancedModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Instanced\+Model\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classInstancedModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInstancedModel_a1ed3f289033d95f19935433f1273b3ab}{Instanced\+Model}} (std\+::string\+\_\+view path, \mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}shader, std\+::vector$<$ T $>$ \&instance\+Data, const \mbox{\hyperlink{classStride}{Stride}} \&data\+Stride=\{sizeof(T)/sizeof(float)\})
+\begin{DoxyCompactList}\small\item\em Creates and processes a model file for drawing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInstancedModel_a3a9a38d27f22b1f00fa7580912d4d3ea}{draw}} (unsigned int draw\+Mode=GL\+\_\+\+TRIANGLES) const override
+\begin{DoxyCompactList}\small\item\em Draws model to the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInstancedModel_a22dd4b1c8ddee6f8a36158d208178839}{draw}} (bool skip\+Textures, unsigned int draw\+Mode=GL\+\_\+\+TRIANGLES) const
+\begin{DoxyCompactList}\small\item\em Draws model to the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classModel}{Model}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModel_a3de27a9d6eb75ec4e71151a8ac2ea3e8}{Model}} (std\+::string\+\_\+view path, \mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}shader)
+\begin{DoxyCompactList}\small\item\em Creates and processes a model file for drawing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModel_ab585a996dcebcb3c353380795785262b}{draw}} (unsigned int draw\+Mode=GL\+\_\+\+TRIANGLES) const override
+\begin{DoxyCompactList}\small\item\em Draws model to the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classModel_a35afefe27ea1915b19702101cbc581c3}{draw}} (bool skip\+Textures, unsigned int draw\+Mode=GL\+\_\+\+TRIANGLES) const
+\begin{DoxyCompactList}\small\item\em Draws model to the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Shader} () const
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the shader used by this object. \end{DoxyCompactList}\item 
+void {\bfseries set\+Shader} (\mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}shader)
+\begin{DoxyCompactList}\small\item\em Sets the \doxylink{classShader}{Shader} used by this object. \end{DoxyCompactList}\item 
+void {\bfseries set\+ID} (unsigned int ID)
+\begin{DoxyCompactList}\small\item\em Sets object ID for use in \doxylink{classRenderer}{Renderer}. \end{DoxyCompactList}\item 
+unsigned int {\bfseries get\+ID} ()
+\begin{DoxyCompactList}\small\item\em Gets object ID for use in \doxylink{classRenderer}{Renderer}. \end{DoxyCompactList}\item 
+unsigned int {\bfseries get\+VAO} ()
+\begin{DoxyCompactList}\small\item\em Gets VAO used by owned \doxylink{classBuffer}{Buffer}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Object} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classObject}{Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Object} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for use in derived classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classModel}{Model}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classMesh}{Mesh}} $>$ {\bfseries m\+\_\+meshes} \{\}
+\begin{DoxyCompactList}\small\item\em Vector of meshes in the model. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structModelData_1_1Texture}{Model\+Data\+::\+Texture}} $>$ {\bfseries m\+\_\+textures\+Loaded} \{\}
+\begin{DoxyCompactList}\small\item\em Vector of the textures in the model which have been successfully loaded. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int {\bfseries m\+\_\+\+ID} \{\}
+\begin{DoxyCompactList}\small\item\em \doxylink{classObject}{Object} ID used by \doxylink{classRenderer}{Renderer} to identify objects. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBuffer}{Buffer}} $>$ {\bfseries m\+\_\+buffer} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em \doxylink{classBuffer}{Buffer} instance needed to draw vertices to the screen. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classShader}{Shader}} $>$ {\bfseries m\+\_\+shader} \{nullptr\}
+\begin{DoxyCompactList}\small\item\em \doxylink{classShader}{Shader} instance to determine how to draw object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Instanced\+Model$<$ T $>$}
+Variation of \doxylink{classModel}{Model} which allows for instancing. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classInstancedModel_a1ed3f289033d95f19935433f1273b3ab}\label{classInstancedModel_a1ed3f289033d95f19935433f1273b3ab} 
+\index{InstancedModel$<$ T $>$@{InstancedModel$<$ T $>$}!InstancedModel@{InstancedModel}}
+\index{InstancedModel@{InstancedModel}!InstancedModel$<$ T $>$@{InstancedModel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InstancedModel()}{InstancedModel()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classInstancedModel}{Instanced\+Model}}$<$ T $>$\mbox{\hyperlink{classInstancedModel}{\+::\+Instanced\+Model}} (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path,  }\item[{\mbox{\hyperlink{classShader}{Shader}} \texorpdfstring{$\ast$}{*}}]{shader,  }\item[{std\+::vector$<$ T $>$ \&}]{instance\+Data,  }\item[{const \mbox{\hyperlink{classStride}{Stride}} \&}]{data\+Stride = {\ttfamily \{sizeof(T)/sizeof(float)\}} }\end{DoxyParamCaption})}
+
+
+
+Creates and processes a model file for drawing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Name of the model file. \\
+\hline
+{\em shader} & Pointer to the shader to use to draw the model. \\
+\hline
+{\em instance\+Data} & Vector of data to pass to each instance. \\
+\hline
+{\em data\+Stride} & \doxylink{classStride}{Stride} object specifying how to split T into floats, e.\+g. 4,4,4,4 for a 4x4 matrix \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classInstancedModel_a22dd4b1c8ddee6f8a36158d208178839}\label{classInstancedModel_a22dd4b1c8ddee6f8a36158d208178839} 
+\index{InstancedModel$<$ T $>$@{InstancedModel$<$ T $>$}!draw@{draw}}
+\index{draw@{draw}!InstancedModel$<$ T $>$@{InstancedModel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classInstancedModel}{Instanced\+Model}}$<$ T $>$\+::draw (\begin{DoxyParamCaption}\item[{bool}]{skip\+Textures,  }\item[{unsigned int}]{draw\+Mode = {\ttfamily GL\+\_\+TRIANGLES} }\end{DoxyParamCaption}) const}
+
+
+
+Draws model to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em skip\+Textures} & Controls whether to skip textures during rendering. \\
+\hline
+{\em draw\+Mode} & Specifies how to draw the vertices in the buffer. Usually drawn as triangles by default. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classInstancedModel_a3a9a38d27f22b1f00fa7580912d4d3ea}\label{classInstancedModel_a3a9a38d27f22b1f00fa7580912d4d3ea} 
+\index{InstancedModel$<$ T $>$@{InstancedModel$<$ T $>$}!draw@{draw}}
+\index{draw@{draw}!InstancedModel$<$ T $>$@{InstancedModel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classInstancedModel}{Instanced\+Model}}$<$ T $>$\+::draw (\begin{DoxyParamCaption}\item[{unsigned int}]{draw\+Mode = {\ttfamily GL\+\_\+TRIANGLES} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws model to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em draw\+Mode} & Specifies how to draw the vertices in the buffer. Usually drawn as triangles by default. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classObject_afcc65c4a0a42dc6159b5751c7972521d}{Object}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/Instanced\+Model.\+hpp\end{DoxyCompactItemize}

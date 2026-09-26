@@ -1,0 +1,52 @@
+\doxysection{Model.\+hpp}
+\hypertarget{Model_8hpp_source}{}\label{Model_8hpp_source}\index{src/headers/Model.hpp@{src/headers/Model.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}FileManager.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Mesh.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}ModelData.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Object.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Shader.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}TexParams.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}assimp/Importer.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}assimp/material.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}assimp/mesh.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}assimp/scene.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}assimp/types.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <string\_view>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModel}{Model}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classObject}{Object}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \mbox{\hyperlink{classModel_a3de27a9d6eb75ec4e71151a8ac2ea3e8}{Model}}(std::string\_view\ path,\ \mbox{\hyperlink{classShader}{Shader}}\ *shader)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classObject_aa395f809acaca8b8100ee7614888c65f}{setShader}}(shader);}
+\DoxyCodeLine{00026\ \ \ \ \ loadModel(\mbox{\hyperlink{namespaceFileManager_a58b93d914eaab24360f7cc9a0b87b45f}{FileManager::getModelFilePath}}(path));}
+\DoxyCodeLine{00027\ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModel_ab585a996dcebcb3c353380795785262b}{draw}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ drawMode\ =\ GL\_TRIANGLES)\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classModel_ab585a996dcebcb3c353380795785262b}{draw}}(\textcolor{keyword}{false},\ drawMode);}
+\DoxyCodeLine{00034\ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModel_ab585a996dcebcb3c353380795785262b}{draw}}(\textcolor{keywordtype}{bool}\ skipTextures,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ drawMode\ =\ GL\_TRIANGLES)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00044\ \ \ std::vector<Mesh>\ \mbox{\hyperlink{classModel_a86585cd89a2fd2b8016e16c1e148d716}{m\_meshes}}\{\};}
+\DoxyCodeLine{00046\ \ \ std::vector<ModelData::Texture>\ \mbox{\hyperlink{classModel_aa464ed03c318feab2b6fe5587280e305}{m\_texturesLoaded}}\{\};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \textcolor{comment}{//\ model\ data}}
+\DoxyCodeLine{00050\ \ \ std::string\ m\_directory\{\};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordtype}{void}\ loadModel(std::string\_view\ path);}
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordtype}{void}\ processNode(aiNode\ *node,\ \textcolor{keyword}{const}\ aiScene\ *scene);}
+\DoxyCodeLine{00054\ \ \ \mbox{\hyperlink{classMesh}{Mesh}}\ processMesh(aiMesh\ *mesh,\ \textcolor{keyword}{const}\ aiScene\ *scene);}
+\DoxyCodeLine{00055\ \ \ std::vector<ModelData::Texture>}
+\DoxyCodeLine{00056\ \ \ loadMaterialTextures(aiMaterial\ *mat,\ aiTextureType\ type,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\_view\ typeName);}
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{bool}\ isLoaded(\textcolor{keyword}{const}\ aiString\ \&\textcolor{keywordtype}{string},}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<ModelData::Texture>\ \&textures);}
+\DoxyCodeLine{00060\ \};}
+
+\end{DoxyCode}

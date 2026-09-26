@@ -1,0 +1,81 @@
+\doxysection{Renderer.\+hpp}
+\hypertarget{Renderer_8hpp_source}{}\label{Renderer_8hpp_source}\index{src/headers/Renderer.hpp@{src/headers/Renderer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GLFW\_INCLUDE\_NONE}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Camera.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GLFW/glfw3.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Object.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Window.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <glm/ext/vector\_float3.hpp>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRenderer}{Renderer}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classRenderer_aa84052251eb9d0a68df60c878e02553c}{KeyBind}}\ =\ std::function<void()>;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \ \ \mbox{\hyperlink{classRenderer_a50b47f673e0e4f7b5fef74ddd908efa5}{Renderer}}(\mbox{\hyperlink{classWindow}{Window}}\ \&\&window,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classCamera}{Camera}}\ \&camera)}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ :\ m\_window\{std::move(window)\},\ m\_camera\{camera\}\ \{\}}
+\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{classRenderer_a449ab01e110efc259f59eef175abeb22}{Renderer}}(std::string\_view\ windowName,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classCamera}{Camera}}\ \&camera)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ :\ m\_window\{windowName\},\ m\_camera\{camera\}\ \{\}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_a59c09ec7a99b4cafddc056893a049984}{start}}()\ \{\}}
+\DoxyCodeLine{00036\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_a2c0c44152a14ace4713b51c325ebf5a7}{update}}()\ \{\}}
+\DoxyCodeLine{00038\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_a935975d7fac3ac151811a78c80b36732}{onTerminate}}()\ \{\}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classRenderer_ad3b84741ffefad45b61eee6175b51e85}{deltaTime}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_deltaTime;\ \}}
+\DoxyCodeLine{00043\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classWindow}{Window}}\ \&\mbox{\hyperlink{classRenderer_a95268b5089e626505dd2dd6ac55791eb}{getWindow}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_window;\ \}}
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{classObject}{Object}}\ *\mbox{\hyperlink{classRenderer_a0cb5c66f625197b5d483c5c680bc364e}{getObject}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00048\ \ \ \mbox{\hyperlink{classCamera}{Camera}}\ \&\mbox{\hyperlink{classRenderer_a54aa85ddc12b8004873456a011932d36}{getCamera}}()\ \{\ \textcolor{keywordflow}{return}\ m\_camera;\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_aac03d8e188330486d5a3aad4bf784002}{setKeybind}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ keycode,\ \mbox{\hyperlink{classRenderer_aa84052251eb9d0a68df60c878e02553c}{KeyBind}}\ keybind);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_a593d5545d03a29184bece7922c730c08}{setMouseCallback}}(}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ std::function<\textcolor{keywordtype}{void}(GLFWwindow\ *window,\ \textcolor{keywordtype}{double}\ xPos,\ \textcolor{keywordtype}{double}\ yPos)>}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ mouseCallback);}
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_ad72bb8ccb700d678c7b6da93cc24ca82}{setScrollCallback}}(}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ std::function<\textcolor{keywordtype}{void}(GLFWwindow\ *window,\ \textcolor{keywordtype}{double}\ xOffset,\ \textcolor{keywordtype}{double}\ yOffset)>}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ scrollCallback);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_a08fe445e910bd3fd243483238ec1af5a}{setClearColor}}(\textcolor{keyword}{const}\ glm::vec3\ \&color);}
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_a08fe445e910bd3fd243483238ec1af5a}{setClearColor}}(\textcolor{keywordtype}{float}\ red,\ \textcolor{keywordtype}{float}\ green,\ \textcolor{keywordtype}{float}\ blue);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classRenderer_a0e06874a35df9914c58a0ff8480ac2c2}{addObject}}(\mbox{\hyperlink{classObject}{Object}}\ *\textcolor{keywordtype}{object});}
+\DoxyCodeLine{00085\ \ \ std::vector<int>\ \mbox{\hyperlink{classRenderer_accb7c66cafde1d4900566bee4b091787}{addObjects}}(\textcolor{keyword}{const}\ std::vector<Object\ *>\ \&objects);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00088\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_aea08e9a81c0c44bc6553f0e2bf5e44dc}{renderLoop}}();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRenderer_ad41f44a7320e212c19b178e03c0c4333}{closeWindow}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00094\ \ \ \textcolor{comment}{//\ Internal\ members}}
+\DoxyCodeLine{00095\ \ \ \mbox{\hyperlink{classWindow}{Window}}\ m\_window;}
+\DoxyCodeLine{00096\ \ \ \mbox{\hyperlink{classCamera}{Camera}}\ m\_camera;}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ std::vector<Object\ *>\ m\_objects\{\};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ std::map<unsigned\ int,\ KeyBind>\ keybinds\{\};}
+\DoxyCodeLine{00101\ \ \ glm::vec3\ m\_clearColor\{0.1f,\ 0.1f,\ 0.1f\};}
+\DoxyCodeLine{00102\ \ \ \textcolor{comment}{//\ Object\ ID\ for\ assigning\ new\ objects.}}
+\DoxyCodeLine{00103\ \ \ \textcolor{keywordtype}{int}\ m\_objectID\{0\};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \textcolor{comment}{//\ Returns\ new\ ID\ for\ creating\ object.}}
+\DoxyCodeLine{00106\ \ \ \textcolor{keywordtype}{int}\ getObjectID();}
+\DoxyCodeLine{00107\ \ \ \textcolor{comment}{//\ Called\ before\ first\ iteration\ of\ render\ loop.}}
+\DoxyCodeLine{00108\ \ \ \textcolor{comment}{//\ Calls\ userStart.}}
+\DoxyCodeLine{00109\ \ \ \textcolor{keywordtype}{void}\ awake();}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \textcolor{comment}{//\ Internal\ timing\ variables\ for\ frames}}
+\DoxyCodeLine{00112\ \ \ \textcolor{keywordtype}{float}\ m\_deltaTime\{\};}
+\DoxyCodeLine{00113\ \ \ \textcolor{keywordtype}{float}\ m\_lastFrame\{\};}
+\DoxyCodeLine{00114\ \ \ \textcolor{comment}{//\ Helper\ functions\ for\ use\ in\ render\ loop.}}
+\DoxyCodeLine{00115\ \ \ \textcolor{keywordtype}{void}\ processInput();}
+\DoxyCodeLine{00116\ \ \ \textcolor{keywordtype}{void}\ updateTime();}
+\DoxyCodeLine{00117\ \ \ \textcolor{comment}{//\ Called\ at\ end\ of\ render\ loop\ to\ clean\ up\ memory.}}
+\DoxyCodeLine{00118\ \ \ \textcolor{keywordtype}{void}\ terminate();}
+\DoxyCodeLine{00119\ \};}
+
+\end{DoxyCode}

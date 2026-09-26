@@ -1,0 +1,67 @@
+\doxysection{Camera.\+hpp}
+\hypertarget{Camera_8hpp_source}{}\label{Camera_8hpp_source}\index{src/headers/Camera.hpp@{src/headers/Camera.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}glm/ext/vector\_float3.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}glm/fwd.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structMouse}{Mouse}}\ \{}
+\DoxyCodeLine{00010\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structMouse_a48d238bc64a5819f4f7a2586ebf25e2f}{firstMouse}}\{\textcolor{keyword}{true}\};}
+\DoxyCodeLine{00012\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structMouse_a2e21d9a0864a594f05eb6a6d5e4a673f}{lastX}}\{400\};}
+\DoxyCodeLine{00014\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structMouse_ae1a167eacffd559cf649e625d7759a40}{lastY}}\{300\};}
+\DoxyCodeLine{00016\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structMouse_a08b2aaa1e19e06a73b25462604a403e1}{sensitivity}}\{0.1f\};}
+\DoxyCodeLine{00017\ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCamera}{Camera}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classCamera_a80cb65605322d27ad3b6d973484509ec}{Direction}}\ \{\ FORWARD,\ BACKWARD,\ LEFT,\ RIGHT\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00033\ \ \ \mbox{\hyperlink{classCamera}{Camera}}(glm::vec3\ pos\ =\ \{0.0f,\ 0.0f,\ 0.0f\},\ glm::vec3\ up\ =\ \{0.0f,\ 1.0f,\ 0.0f\},}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ yaw\ =\ -\/90.0f,\ \textcolor{keywordtype}{float}\ pitch\ =\ 0.0f);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classCamera_a5ec1871e6f296d8528e64157c6371c09}{getFOV}}()\ \{\ \textcolor{keywordflow}{return}\ m\_fov;\ \}}
+\DoxyCodeLine{00039\ \ \ \textcolor{keyword}{const}\ glm::mat4\ \mbox{\hyperlink{classCamera_a132a6a63a195faebccc458e539276f1e}{view}}();}
+\DoxyCodeLine{00041\ \ \ \textcolor{keyword}{const}\ glm::vec3\ \&\mbox{\hyperlink{classCamera_aa5fecb1c4a025b07e8d93944ab0be0c6}{getPosition}}()\ \{\ \textcolor{keywordflow}{return}\ m\_pos;\ \};}
+\DoxyCodeLine{00043\ \ \ \textcolor{keyword}{const}\ glm::vec3\ \&\mbox{\hyperlink{classCamera_abc07c5b072f2f9cfe3ff3e780df9ae3a}{front}}()\ \{\ \textcolor{keywordflow}{return}\ m\_front;\ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classCamera_a3305f685261fe20585b8acd45bb12c51}{getPitch}}()\ \{\ \textcolor{keywordflow}{return}\ m\_pitch;\ \};}
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classCamera_a4ee608166ec0552a703010e4e36a0f1e}{getYaw}}()\ \{\ \textcolor{keywordflow}{return}\ m\_yaw;\ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCamera_af073e5018dbe94c9a074c660cb4b731f}{setSpeed}}(\textcolor{keywordtype}{float}\ speed)\ \{\ m\_speed\ =\ speed;\ \}}
+\DoxyCodeLine{00055\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCamera_a0d40263320e7d4f9f1abb06b3f3bffc2}{setSensitivity}}(\textcolor{keywordtype}{float}\ sensitivity)\ \{\ m\_mouse.\mbox{\hyperlink{structMouse_a08b2aaa1e19e06a73b25462604a403e1}{sensitivity}}\ =\ sensitivity;\ \}}
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCamera_a833db52b14b697eca9aee2f4fe7d2b6a}{setPitch}}(\textcolor{keywordtype}{float}\ pitch)\ \{\ m\_pitch\ =\ pitch;\ \}}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCamera_aab7e59c001ffe4dcbad59461cdffbcb6}{setYaw}}(\textcolor{keywordtype}{float}\ yaw)\ \{\ m\_yaw\ =\ yaw;\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCamera_a04bb3f42bb51c226328d8975e31e5e40}{move}}(\mbox{\hyperlink{classCamera_a80cb65605322d27ad3b6d973484509ec}{Direction}}\ direction,\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00073\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCamera_a1a4b89149e915fe943bd804c6f5cc07d}{mouseCallback}}(\textcolor{keywordtype}{double}\ xoffset,\ \textcolor{keywordtype}{double}\ yoffset);}
+\DoxyCodeLine{00081\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCamera_a70d488b0385fabe4095e51fa3cf1dcea}{processMouse}}(\textcolor{keywordtype}{double}\ xoffset,\ \textcolor{keywordtype}{double}\ yoffset,\ \textcolor{keywordtype}{bool}\ constrainPitch\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCamera_abc553f87d3f7e5e637e44f41f91721d6}{processScroll}}(\textcolor{keywordtype}{double}\ yoffset);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00087\ \ \ \textcolor{comment}{//\ Constant\ word\ up\ vector\ for\ construction\ of\ basis\ vectors.}}
+\DoxyCodeLine{00088\ \ \ \textcolor{keyword}{const}\ glm::vec3\ m\_worldUp\{0,\ 1,\ 0\};}
+\DoxyCodeLine{00089\ \ \ \textcolor{comment}{//\ Mouse\ data\ used\ to\ calculate\ viewing\ angle.}}
+\DoxyCodeLine{00090\ \ \ \mbox{\hyperlink{structMouse}{Mouse}}\ m\_mouse\{\};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \textcolor{comment}{//\ Euler\ angles\ used\ to\ determine\ view\ vectors.}}
+\DoxyCodeLine{00093\ \ \ \textcolor{keywordtype}{float}\ m\_yaw\{-\/90.0f\};}
+\DoxyCodeLine{00094\ \ \ \textcolor{keywordtype}{float}\ m\_pitch\{0.0f\};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \textcolor{comment}{//\ Internal\ view\ vectors\ and\ position\ used\ in\ calculation\ of\ view\ matrix.}}
+\DoxyCodeLine{00097\ \ \ glm::vec3\ m\_front\{0,\ 0,\ -\/1\};}
+\DoxyCodeLine{00098\ \ \ glm::vec3\ m\_right\{1,\ 0,\ 0\};}
+\DoxyCodeLine{00099\ \ \ glm::vec3\ m\_up\{0,\ 1,\ 0\};}
+\DoxyCodeLine{00100\ \ \ glm::vec3\ m\_pos\{0\};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \textcolor{comment}{//\ Configurable\ parameters\ to\ determine\ camera\ behaviour.}}
+\DoxyCodeLine{00103\ \ \ \textcolor{keywordtype}{float}\ m\_speed\{1.0f\};}
+\DoxyCodeLine{00104\ \ \ \textcolor{keywordtype}{float}\ m\_fov\{45.0f\};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \textcolor{comment}{//\ Private\ member\ function\ called\ at\ each\ frame.}}
+\DoxyCodeLine{00107\ \ \ \textcolor{comment}{//\ Updates\ the\ 3\ axes\ of\ the\ camera.}}
+\DoxyCodeLine{00108\ \ \ \textcolor{keywordtype}{void}\ updateVectors();}
+\DoxyCodeLine{00109\ \};}
+
+\end{DoxyCode}
