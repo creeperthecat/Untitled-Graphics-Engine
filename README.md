@@ -8,6 +8,7 @@ A demo scene has been provided which renders the asteroids scene from [learnopen
 
 (The asteroids scene, rendering 10,000 asteroids to a window using instancing.)
 
+If you do not feel like compiling from source, you may find precompiled binaries of the asteroids scene in [Releases](https://github.com/creeperthecat/Untitled-Graphics-Engine/releases/tag/Initial).
 # To build:
 ## Linux:
 
