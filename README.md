@@ -8,6 +8,7 @@ A demo scene has been provided which renders the asteroids scene from [learnopen
 
 (The asteroids scene, rendering 10,000 asteroids to a window using instancing.)
 
+<br></br>
 If you do not feel like compiling from source, you may find precompiled binaries of the asteroids scene in [Releases](https://github.com/creeperthecat/Untitled-Graphics-Engine/releases/tag/Initial).
 # To build:
 ## Linux:
@@ -23,7 +24,7 @@ cmake --build .
 The executable should build in bin/app
 
 ## Windows:
-Open Developer Command Prompt for VS 2022.
+Open Developer Command Prompt for VS 2022 (most versions should work, but it must be new enough to have C++23).
 
 Navigate to the repo directory e.g.
 ```cd C:\Users\username\path\to\repo```
